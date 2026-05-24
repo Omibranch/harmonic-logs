@@ -1,0 +1,20 @@
+# GPU execution profile — Harmonic vs Transformer
+# Date: 2026-05-24T23:54:56.210725
+# Hardware: NVIDIA H100 80GB HBM3
+# H100 BF16 peak: 1979 TFLOPS | Memory BW: 3.35 TB/s
+# BATCH=2, N_REPS=20, N_WARMUP=5, dtype=bfloat16
+
+model           seq   time_ms   TFLOPS   MFU%  mem_GB  gpu_util%  power_W
+-------------------------------------------------------------------------
+Harmonic       1024      4.64     13.3    0.7%   0.303        0.0      119
+Transformer    1024      1.39     53.4    2.7%   0.338        0.0      126
+Harmonic       2048      5.46     22.6    1.1%   0.516        0.5      136
+Transformer    2048      2.07     79.9    4.0%   0.551        0.0      144
+Harmonic       4096      7.57     32.7    1.7%   0.943       41.4      170
+Transformer    4096      3.49    114.6    5.8%   0.979       27.0      188
+Harmonic       8192     14.43     34.3    1.7%   1.795       53.1      238
+Transformer    8192      7.16    150.1    7.6%   1.831       10.8      266
+Harmonic      16384     29.34     33.7    1.7%   3.502       75.9      321
+Transformer   16384     15.99    203.2   10.3%   3.537       32.2      363
+Harmonic      32768     58.77     33.7    1.7%   6.912       95.5      431
+Transformer   32768     37.12    293.5   14.8%   6.948       87.5      440
