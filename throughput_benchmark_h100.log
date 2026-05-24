@@ -1,0 +1,37 @@
+device: cuda
+GPU: NVIDIA H100 80GB HBM3  torch: 2.12.0+cu130
+
+Testing Triton SSM scan...
+  Triton SSM scan: OK - enabled
+  torch.compile: enabled
+
+Loading wikitext-2...
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+
+[1AGenerating test split:   0%|          | 0/4358 [00:00<?, ? examples/s]Generating test split: 100%|██████████| 4358/4358 [00:00<00:00, 505273.57 examples/s]
+
+[1AGenerating train split:   0%|          | 0/36718 [00:00<?, ? examples/s]Generating train split: 100%|██████████| 36718/36718 [00:00<00:00, 1217991.14 examples/s]
+
+[1AGenerating validation split:   0%|          | 0/3760 [00:00<?, ? examples/s]
+[1AGenerating validation split: 100%|██████████| 3760/3760 [00:00<00:00, 891597.87 examples/s]
+  train 2.4M  val 0.2M  tokens
+Compiling models...
+  warmup Harmonic...
+/usr/local/lib/python3.11/site-packages/torch/_inductor/compile_fx.py:320: UserWarning: TensorFloat32 tensor cores for float32 matrix multiplication available but not enabled. Consider setting `torch.set_float32_matmul_precision('high')` for better performance.
+  warnings.warn(
+  warmup done - measurements use compiled models.
+
+HarmonicFair    27,965,952 params
+batch=2  seq=8192  steps=5000  total_tokens=81.9M
+
+[ HarmonicFair ]
+  Harmonic  step= 100  val_bpt=10.018  loss=6.9392  avg=3.14M  win=3.14M tok/s
+  Harmonic  step= 200  val_bpt=9.644  loss=6.5208  avg=4.09M  win=5.86M tok/s
+  Harmonic  step= 300  val_bpt=9.366  loss=6.4031  avg=4.56M  win=5.92M tok/s
+  Harmonic  step= 400  val_bpt=9.101  loss=6.1363  avg=4.81M  win=5.74M tok/s
+  Harmonic  step= 500  val_bpt=9.016  loss=5.7857  avg=4.98M  win=5.81M tok/s
+  Harmonic  step= 600  val_bpt=8.956  loss=5.8727  avg=5.11M  win=5.90M tok/s
+  Harmonic  step= 700  val_bpt=8.756  loss=5.8081  avg=5.19M  win=5.69M tok/s
+  Harmonic  step= 800  val_bpt=8.747  loss=5.8733  avg=5.27M  win=5.90M tok/s
+  Harmonic  step= 900  val_bpt=8.676  loss=5.7171  avg=5.33M  win=5.88M tok/s
+  Harmonic  step=1000  val_bpt=8.606  loss=5.3956  avg=5.38M  win=5.88M tok/s

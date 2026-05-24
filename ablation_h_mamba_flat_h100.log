@@ -1,0 +1,613 @@
+device: cuda
+GPU: NVIDIA H100 80GB HBM3  torch: 2.12.0+cu130
+
+Testing Triton SSM scan...
+device: cuda
+device: cuda
+GPU: NVIDIA H100 80GB HBM3  torch: 2.12.0+cu130
+
+Testing Triton SSM scan...
+GPU: NVIDIA H100 80GB HBM3  torch: 2.12.0+cu130
+
+Testing Triton SSM scan...
+  Triton SSM scan: OK - enabled
+  torch.compile: enabled
+
+Loading wikitext-2...
+  Triton SSM scan: OK - enabled
+  torch.compile: enabled
+
+Loading wikitext-2...
+device: cuda
+GPU: NVIDIA H100 80GB HBM3  torch: 2.12.0+cu130
+
+Testing Triton SSM scan...
+  Triton SSM scan: OK - enabled
+  torch.compile: enabled
+
+Loading wikitext-2...
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+  Triton SSM scan: OK - enabled
+  torch.compile: enabled
+
+Loading wikitext-2...
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+
+[1AGenerating test split:   0%|          | 0/4358 [00:00<?, ? examples/s]
+[1AGenerating test split: 100%|██████████| 4358/4358 [00:00<00:00, 422513.45 examples/s]
+
+[1AGenerating train split:   0%|          | 0/36718 [00:00<?, ? examples/s]
+[1AGenerating train split: 100%|██████████| 36718/36718 [00:00<00:00, 1136604.16 examples/s]
+
+[1AGenerating validation split:   0%|          | 0/3760 [00:00<?, ? examples/s]
+[1AGenerating validation split: 100%|██████████| 3760/3760 [00:00<00:00, 893062.07 examples/s]
+
+[1AGenerating test split:   0%|          | 0/4358 [00:00<?, ? examples/s]
+[1AGenerating test split: 100%|██████████| 4358/4358 [00:00<00:00, 450637.96 examples/s]
+
+[1AGenerating train split:   0%|          | 0/36718 [00:00<?, ? examples/s]
+[1AGenerating train split: 100%|██████████| 36718/36718 [00:00<00:00, 1256939.03 examples/s]
+
+[1AGenerating validation split:   0%|          | 0/3760 [00:00<?, ? examples/s]
+[1AGenerating validation split: 100%|██████████| 3760/3760 [00:00<00:00, 947922.28 examples/s]
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+
+[1AGenerating test split:   0%|          | 0/4358 [00:00<?, ? examples/s]Generating test split: 100%|██████████| 4358/4358 [00:00<00:00, 350752.73 examples/s]
+
+[1AGenerating train split:   0%|          | 0/36718 [00:00<?, ? examples/s]Generating train split: 100%|██████████| 36718/36718 [00:00<00:00, 901202.26 examples/s]
+
+[1AGenerating validation split:   0%|          | 0/3760 [00:00<?, ? examples/s]Generating validation split: 100%|██████████| 3760/3760 [00:00<00:00, 716812.10 examples/s]
+  train 2.4M  val 0.2M  tokens
+
+[1AGenerating test split:   0%|          | 0/4358 [00:00<?, ? examples/s]Generating test split: 100%|██████████| 4358/4358 [00:00<00:00, 425246.06 examples/s]
+
+[1AGenerating train split:   0%|          | 0/36718 [00:00<?, ? examples/s]
+[1AGenerating train split: 100%|██████████| 36718/36718 [00:00<00:00, 1004673.85 examples/s]
+
+[1AGenerating validation split:   0%|          | 0/3760 [00:00<?, ? examples/s]
+[1AGenerating validation split: 100%|██████████| 3760/3760 [00:00<00:00, 757727.53 examples/s]
+Compiling models...
+  train 2.4M  val 0.2M  tokens
+  train 2.4M  val 0.2M  tokens
+Compiling models...
+Compiling models...
+  train 2.4M  val 0.2M  tokens
+Compiling models...
+  warmup Harmonic...
+  warmup NoPred...
+  warmup Flat...
+  warmup Mamba...
+/usr/local/lib/python3.11/site-packages/torch/_inductor/compile_fx.py:320: UserWarning: TensorFloat32 tensor cores for float32 matrix multiplication available but not enabled. Consider setting `torch.set_float32_matmul_precision('high')` for better performance.
+  warnings.warn(
+/usr/local/lib/python3.11/site-packages/torch/_inductor/compile_fx.py:320: UserWarning: TensorFloat32 tensor cores for float32 matrix multiplication available but not enabled. Consider setting `torch.set_float32_matmul_precision('high')` for better performance.
+  warnings.warn(
+/usr/local/lib/python3.11/site-packages/torch/_inductor/compile_fx.py:320: UserWarning: TensorFloat32 tensor cores for float32 matrix multiplication available but not enabled. Consider setting `torch.set_float32_matmul_precision('high')` for better performance.
+  warnings.warn(
+/usr/local/lib/python3.11/site-packages/torch/_inductor/compile_fx.py:320: UserWarning: TensorFloat32 tensor cores for float32 matrix multiplication available but not enabled. Consider setting `torch.set_float32_matmul_precision('high')` for better performance.
+  warnings.warn(
+  warmup done - measurements use compiled models.
+
+FlatTimescale   27,965,952 params
+batch=2  seq=8192  steps=5000  total_tokens=81.9M
+
+[ FlatTimescale (ablation: без иерархии tau) ]
+  warmup done - measurements use compiled models.
+
+HarmonicFair    27,965,952 params
+batch=2  seq=8192  steps=5000  total_tokens=81.9M
+
+[ HarmonicFair ]
+  warmup done - measurements use compiled models.
+
+NoPred          27,834,880 params
+batch=2  seq=8192  steps=5000  total_tokens=81.9M
+
+[ NoPred (ablation: без предиктивного кодирования) ]
+  warmup done - measurements use compiled models.
+
+MambaFair       28,100,608 params
+batch=2  seq=8192  steps=5000  total_tokens=81.9M
+
+[ MambaFair ]
+  Flat      step= 100  val_bpt=10.402  loss=7.1499  avg=4.11M  win=4.11M tok/s
+  Harmonic  step= 100  val_bpt=9.999  loss=6.9203  avg=3.39M  win=3.39M tok/s
+  Flat      step= 200  val_bpt=10.116  loss=6.8610  avg=5.58M  win=8.68M tok/s
+  NoPred    step= 100  val_bpt=10.035  loss=6.9469  avg=2.82M  win=2.82M tok/s
+  Harmonic  step= 200  val_bpt=9.623  loss=6.5115  avg=4.46M  win=6.53M tok/s
+  Flat      step= 300  val_bpt=9.846  loss=6.7568  avg=6.22M  win=8.08M tok/s
+  NoPred    step= 200  val_bpt=9.646  loss=6.5379  avg=3.78M  win=5.72M tok/s
+  Harmonic  step= 300  val_bpt=9.355  loss=6.3834  avg=5.01M  win=6.64M tok/s
+  Mamba     step= 100  val_bpt=10.157  loss=7.0803  avg=2.56M  win=2.56M tok/s
+  Flat      step= 400  val_bpt=9.587  loss=6.5303  avg=6.83M  win=9.69M tok/s
+  NoPred    step= 300  val_bpt=9.361  loss=6.3959  avg=4.36M  win=6.29M tok/s
+  Harmonic  step= 400  val_bpt=9.113  loss=6.1641  avg=5.30M  win=6.43M tok/s
+  Mamba     step= 200  val_bpt=9.674  loss=6.5879  avg=3.48M  win=5.43M tok/s
+  Flat      step= 500  val_bpt=9.488  loss=6.1661  avg=7.29M  win=9.97M tok/s
+  NoPred    step= 400  val_bpt=9.109  loss=6.1568  avg=4.45M  win=4.77M tok/s
+  Harmonic  step= 500  val_bpt=9.030  loss=5.7667  avg=5.54M  win=6.76M tok/s
+  Mamba     step= 300  val_bpt=9.364  loss=6.5371  avg=3.96M  win=5.48M tok/s
+  Flat      step= 600  val_bpt=9.414  loss=6.2135  avg=7.64M  win=10.09M tok/s
+  NoPred    step= 500  val_bpt=9.017  loss=5.8042  avg=4.73M  win=6.29M tok/s
+  Harmonic  step= 600  val_bpt=8.954  loss=5.8478  avg=5.69M  win=6.57M tok/s
+  Flat      step= 700  val_bpt=9.221  loss=6.2006  avg=7.88M  win=9.67M tok/s
+  NoPred    step= 600  val_bpt=8.953  loss=5.8416  avg=4.67M  win=4.41M tok/s
+  Mamba     step= 400  val_bpt=9.120  loss=6.2194  avg=4.24M  win=5.38M tok/s
+  Harmonic  step= 700  val_bpt=8.764  loss=5.8275  avg=5.81M  win=6.64M tok/s
+  Flat      step= 800  val_bpt=9.220  loss=6.2260  avg=8.08M  win=9.84M tok/s
+  NoPred    step= 700  val_bpt=8.765  loss=5.8211  avg=4.66M  win=4.57M tok/s
+  Harmonic  step= 800  val_bpt=8.754  loss=5.8634  avg=5.90M  win=6.59M tok/s
+  Mamba     step= 500  val_bpt=9.029  loss=6.0045  avg=4.44M  win=5.50M tok/s
+  Flat      step= 900  val_bpt=9.134  loss=6.0671  avg=8.25M  win=9.85M tok/s
+  NoPred    step= 800  val_bpt=8.745  loss=5.8782  avg=4.65M  win=4.60M tok/s
+  Harmonic  step= 900  val_bpt=8.740  loss=5.7262  avg=6.00M  win=6.93M tok/s
+  Flat      step=1000  val_bpt=9.056  loss=5.7782  avg=8.37M  win=9.72M tok/s
+  NoPred    step= 900  val_bpt=8.696  loss=5.7329  avg=4.76M  win=5.94M tok/s
+  Mamba     step= 600  val_bpt=8.966  loss=5.8638  avg=4.59M  win=5.46M tok/s
+  Harmonic  step=1000  val_bpt=8.615  loss=5.3968  avg=6.05M  win=6.61M tok/s
+  Flat      step=1100  val_bpt=8.997  loss=5.5956  avg=8.46M  win=9.39M tok/s
+  NoPred    step=1000  val_bpt=8.611  loss=5.4139  avg=4.85M  win=5.72M tok/s
+  Harmonic  step=1100  val_bpt=8.547  loss=5.2122  avg=6.12M  win=6.91M tok/s
+  Mamba     step= 700  val_bpt=8.799  loss=5.9238  avg=4.69M  win=5.45M tok/s
+  Flat      step=1200  val_bpt=8.968  loss=5.9419  avg=8.52M  win=9.32M tok/s
+  NoPred    step=1100  val_bpt=8.543  loss=5.2181  avg=4.91M  win=5.66M tok/s
+  Harmonic  step=1200  val_bpt=8.546  loss=5.6252  avg=6.17M  win=6.75M tok/s
+  Flat      step=1300  val_bpt=8.905  loss=5.9352  avg=8.61M  win=9.78M tok/s
+  NoPred    step=1200  val_bpt=8.518  loss=5.6560  avg=4.99M  win=6.02M tok/s
+  Mamba     step= 800  val_bpt=8.762  loss=5.9252  avg=4.77M  win=5.40M tok/s
+  Harmonic  step=1300  val_bpt=8.443  loss=5.5807  avg=6.21M  win=6.78M tok/s
+  Flat      step=1400  val_bpt=8.880  loss=5.4681  avg=8.53M  win=7.70M tok/s
+  NoPred    step=1300  val_bpt=8.454  loss=5.5906  avg=5.06M  win=6.13M tok/s
+  Harmonic  step=1400  val_bpt=8.406  loss=5.0809  avg=6.25M  win=6.86M tok/s
+  Mamba     step= 900  val_bpt=8.709  loss=5.7634  avg=4.86M  win=5.66M tok/s
+  Flat      step=1500  val_bpt=8.880  loss=5.9853  avg=8.60M  win=9.63M tok/s
+  NoPred    step=1400  val_bpt=8.430  loss=5.0995  avg=5.15M  win=6.78M tok/s
+  Harmonic  step=1500  val_bpt=8.421  loss=5.5645  avg=6.30M  win=6.97M tok/s
+  Flat      step=1600  val_bpt=8.901  loss=5.2129  avg=8.66M  win=9.71M tok/s
+  NoPred    step=1500  val_bpt=8.415  loss=5.5685  avg=5.21M  win=6.08M tok/s
+  Mamba     step=1000  val_bpt=8.637  loss=5.5011  avg=4.93M  win=5.77M tok/s
+  Harmonic  step=1600  val_bpt=8.447  loss=4.8827  avg=6.32M  win=6.69M tok/s
+  Flat      step=1700  val_bpt=8.840  loss=5.2291  avg=8.74M  win=10.25M tok/s
+  NoPred    step=1600  val_bpt=8.420  loss=4.8959  avg=5.28M  win=6.84M tok/s
+  Harmonic  step=1700  val_bpt=8.378  loss=4.8217  avg=6.34M  win=6.75M tok/s
+  Mamba     step=1100  val_bpt=8.559  loss=5.3686  avg=4.97M  win=5.41M tok/s
+  Flat      step=1800  val_bpt=8.863  loss=5.3056  avg=8.82M  win=10.40M tok/s
+  NoPred    step=1700  val_bpt=8.370  loss=4.8700  avg=5.33M  win=6.25M tok/s
+  Harmonic  step=1800  val_bpt=8.391  loss=4.9650  avg=6.36M  win=6.73M tok/s
+  Flat      step=1900  val_bpt=8.811  loss=5.2393  avg=8.83M  win=9.02M tok/s
+  NoPred    step=1800  val_bpt=8.387  loss=4.9743  avg=5.39M  win=6.72M tok/s
+  Mamba     step=1200  val_bpt=8.564  loss=5.7385  avg=5.01M  win=5.46M tok/s
+  Harmonic  step=1900  val_bpt=8.347  loss=4.8404  avg=6.38M  win=6.63M tok/s
+  Flat      step=2000  val_bpt=8.896  loss=4.8768  avg=8.74M  win=7.32M tok/s
+  NoPred    step=1900  val_bpt=8.353  loss=4.8873  avg=5.45M  win=6.70M tok/s
+  Harmonic  step=2000  val_bpt=8.431  loss=4.5021  avg=6.40M  win=6.86M tok/s
+  Mamba     step=1300  val_bpt=8.481  loss=5.7095  avg=5.04M  win=5.48M tok/s
+  Flat      step=2100  val_bpt=8.745  loss=5.3217  avg=8.46M  win=5.18M tok/s
+  NoPred    step=2000  val_bpt=8.419  loss=4.5258  avg=5.49M  win=6.38M tok/s
+  Harmonic  step=2100  val_bpt=8.269  loss=5.0110  avg=6.41M  win=6.72M tok/s
+  Flat      step=2200  val_bpt=8.750  loss=5.0454  avg=8.46M  win=8.46M tok/s
+  NoPred    step=2100  val_bpt=8.279  loss=5.0093  avg=5.52M  win=6.18M tok/s
+  Mamba     step=1400  val_bpt=8.459  loss=5.2466  avg=5.05M  win=5.17M tok/s
+  Harmonic  step=2200  val_bpt=8.282  loss=4.6830  avg=6.44M  win=7.00M tok/s
+  Flat      step=2300  val_bpt=8.802  loss=5.0986  avg=8.51M  win=9.59M tok/s
+  NoPred    step=2200  val_bpt=8.272  loss=4.7170  avg=5.55M  win=6.41M tok/s
+  Harmonic  step=2300  val_bpt=8.329  loss=4.7660  avg=6.46M  win=6.91M tok/s
+  Mamba     step=1500  val_bpt=8.462  loss=5.6480  avg=5.04M  win=4.93M tok/s
+  NoPred    step=2300  val_bpt=8.331  loss=4.8319  avg=5.59M  win=6.35M tok/s
+  Flat      step=2400  val_bpt=8.818  loss=5.1806  avg=8.56M  win=10.02M tok/s
+  Harmonic  step=2400  val_bpt=8.339  loss=4.8148  avg=6.47M  win=6.66M tok/s
+  NoPred    step=2400  val_bpt=8.349  loss=4.8746  avg=5.63M  win=6.82M tok/s
+  Flat      step=2500  val_bpt=8.758  loss=4.9623  avg=8.61M  win=10.16M tok/s
+  Mamba     step=1600  val_bpt=8.495  loss=5.0924  avg=5.08M  win=5.63M tok/s
+  Harmonic  step=2500  val_bpt=8.291  loss=4.6113  avg=6.48M  win=6.89M tok/s
+  NoPred    step=2500  val_bpt=8.290  loss=4.6231  avg=5.67M  win=6.81M tok/s
+  Flat      step=2600  val_bpt=8.732  loss=5.1149  avg=8.63M  win=9.15M tok/s
+  Harmonic  step=2600  val_bpt=8.238  loss=4.6769  avg=6.50M  win=6.87M tok/s
+  Mamba     step=1700  val_bpt=8.454  loss=5.0519  avg=5.09M  win=5.33M tok/s
+  NoPred    step=2600  val_bpt=8.224  loss=4.7445  avg=5.70M  win=6.78M tok/s
+  Flat      step=2700  val_bpt=8.758  loss=5.0920  avg=8.69M  win=10.53M tok/s
+  Harmonic  step=2700  val_bpt=8.262  loss=4.7395  avg=6.52M  win=7.12M tok/s
+  NoPred    step=2700  val_bpt=8.253  loss=4.7499  avg=5.72M  win=6.17M tok/s
+  Flat      step=2800  val_bpt=8.640  loss=4.9416  avg=8.74M  win=10.14M tok/s
+  Mamba     step=1800  val_bpt=8.446  loss=5.0970  avg=5.12M  win=5.70M tok/s
+  Harmonic  step=2800  val_bpt=8.158  loss=4.5682  avg=6.53M  win=6.86M tok/s
+  NoPred    step=2800  val_bpt=8.157  loss=4.6019  avg=5.74M  win=6.33M tok/s
+  Flat      step=2900  val_bpt=8.690  loss=5.2721  avg=8.78M  win=10.26M tok/s
+  Harmonic  step=2900  val_bpt=8.206  loss=4.8928  avg=6.53M  win=6.52M tok/s
+  Mamba     step=1900  val_bpt=8.404  loss=5.0689  avg=5.13M  win=5.29M tok/s
+  NoPred    step=2900  val_bpt=8.192  loss=4.9035  avg=5.76M  win=6.48M tok/s
+  Flat      step=3000  val_bpt=8.668  loss=4.9049  avg=8.82M  win=10.16M tok/s
+  Harmonic  step=3000  val_bpt=8.168  loss=4.5101  avg=6.53M  win=6.61M tok/s
+  NoPred    step=3000  val_bpt=8.171  loss=4.5559  avg=5.79M  win=6.72M tok/s
+  Flat      step=3100  val_bpt=8.682  loss=5.0434  avg=8.86M  win=10.04M tok/s
+  Mamba     step=2000  val_bpt=8.466  loss=4.7376  avg=5.14M  win=5.31M tok/s
+  Harmonic  step=3100  val_bpt=8.186  loss=4.7085  avg=6.52M  win=6.20M tok/s
+  NoPred    step=3100  val_bpt=8.189  loss=4.7288  avg=5.81M  win=6.64M tok/s
+  Flat      step=3200  val_bpt=8.674  loss=4.7395  avg=8.89M  win=10.27M tok/s
+  Harmonic  step=3200  val_bpt=8.192  loss=4.3340  avg=6.48M  win=5.49M tok/s
+  Mamba     step=2100  val_bpt=8.353  loss=5.2220  avg=5.15M  win=5.39M tok/s
+  NoPred    step=3200  val_bpt=8.178  loss=4.3549  avg=5.84M  win=6.67M tok/s
+  Flat      step=3300  val_bpt=8.611  loss=4.9795  avg=8.88M  win=8.54M tok/s
+  Harmonic  step=3300  val_bpt=8.117  loss=4.6049  avg=6.49M  win=6.62M tok/s
+  NoPred    step=3300  val_bpt=8.108  loss=4.5899  avg=5.87M  win=7.10M tok/s
+  Flat      step=3400  val_bpt=8.624  loss=4.9456  avg=8.89M  win=9.25M tok/s
+  Mamba     step=2200  val_bpt=8.343  loss=4.9384  avg=5.17M  win=5.52M tok/s
+  Harmonic  step=3400  val_bpt=8.106  loss=4.6303  avg=6.49M  win=6.60M tok/s
+  NoPred    step=3400  val_bpt=8.101  loss=4.6355  avg=5.89M  win=6.77M tok/s
+  Flat      step=3500  val_bpt=8.552  loss=4.7051  avg=8.77M  win=5.98M tok/s
+  Harmonic  step=3500  val_bpt=8.037  loss=4.3168  avg=6.49M  win=6.52M tok/s
+  Mamba     step=2300  val_bpt=8.394  loss=5.1543  avg=5.19M  win=5.65M tok/s
+  NoPred    step=3500  val_bpt=8.033  loss=4.3377  avg=5.91M  win=6.71M tok/s
+  Flat      step=3600  val_bpt=8.601  loss=4.6694  avg=8.63M  win=5.53M tok/s
+  Harmonic  step=3600  val_bpt=8.093  loss=4.3204  avg=6.49M  win=6.45M tok/s
+  NoPred    step=3600  val_bpt=8.104  loss=4.3531  avg=5.88M  win=5.07M tok/s
+  Flat      step=3700  val_bpt=8.720  loss=4.8553  avg=8.61M  win=8.02M tok/s
+  Mamba     step=2400  val_bpt=8.435  loss=5.1180  avg=5.20M  win=5.42M tok/s
+  Harmonic  step=3700  val_bpt=8.222  loss=4.4665  avg=6.49M  win=6.55M tok/s
+  NoPred    step=3700  val_bpt=8.228  loss=4.5045  avg=5.85M  win=4.81M tok/s
+  Flat      step=3800  val_bpt=8.683  loss=4.8777  avg=8.60M  win=8.00M tok/s
+  Harmonic  step=3800  val_bpt=8.191  loss=4.5396  avg=6.50M  win=6.84M tok/s
+  Mamba     step=2500  val_bpt=8.362  loss=4.8075  avg=5.21M  win=5.63M tok/s
+  NoPred    step=3800  val_bpt=8.183  loss=4.5555  avg=5.81M  win=4.73M tok/s
+  Flat      step=3900  val_bpt=8.667  loss=4.6022  avg=8.60M  win=8.67M tok/s
+Traceback (most recent call last):
+  File "/tmp/train_fast.py", line 691, in <module>
+    main()
+  File "/tmp/train_fast.py", line 640, in main
+    m_log, m_time = train_one(mamba, train_tokens, val_tokens, device, "Mamba", args)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/train_fast.py", line 480, in train_one
+    x, y = get_batch(train_tokens, args.batch, args.seq, device)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/train_fast.py", line 438, in get_batch
+    x    = torch.stack([tokens[i:i+seq_len]     for i in idxs]).to(device)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt
+  Harmonic  step=3900  val_bpt=8.180  loss=4.2097  avg=6.50M  win=6.61M tok/s
+  NoPred    step=3900  val_bpt=8.184  loss=4.2212  avg=5.77M  win=4.46M tok/s
+  Flat      step=4000  val_bpt=8.702  loss=4.4936  avg=8.59M  win=8.23M tok/s
+  Harmonic  step=4000  val_bpt=8.214  loss=4.1639  avg=6.51M  win=6.92M tok/s
+  NoPred    step=4000  val_bpt=8.208  loss=4.1831  avg=5.72M  win=4.39M tok/s
+  Flat      step=4100  val_bpt=8.653  loss=4.5745  avg=8.62M  win=10.06M tok/s
+  Harmonic  step=4100  val_bpt=8.158  loss=4.2281  avg=6.50M  win=6.20M tok/s
+  NoPred    step=4100  val_bpt=8.149  loss=4.2448  avg=5.67M  win=4.17M tok/s
+  Flat      step=4200  val_bpt=8.601  loss=4.9780  avg=8.61M  win=8.22M tok/s
+  Harmonic  step=4200  val_bpt=8.097  loss=4.6069  avg=6.48M  win=5.67M tok/s
+  NoPred    step=4200  val_bpt=8.097  loss=4.6318  avg=5.63M  win=4.26M tok/s
+  Flat      step=4300  val_bpt=8.686  loss=4.5674  avg=8.61M  win=8.85M tok/s
+  Harmonic  step=4300  val_bpt=8.198  loss=4.1949  avg=6.49M  win=7.04M tok/s
+  NoPred    step=4300  val_bpt=8.194  loss=4.1955  avg=5.60M  win=4.80M tok/s
+  Flat      step=4400  val_bpt=8.709  loss=4.5167  avg=8.64M  win=10.09M tok/s
+  Harmonic  step=4400  val_bpt=8.210  loss=4.1318  avg=6.50M  win=6.62M tok/s
+  NoPred    step=4400  val_bpt=8.218  loss=4.1709  avg=5.57M  win=4.46M tok/s
+  Flat      step=4500  val_bpt=8.669  loss=4.3678  avg=8.68M  win=10.60M tok/s
+  Harmonic  step=4500  val_bpt=8.165  loss=3.9902  avg=6.49M  win=6.36M tok/s
+  NoPred    step=4500  val_bpt=8.168  loss=4.0010  avg=5.51M  win=3.68M tok/s
+  Flat      step=4600  val_bpt=8.715  loss=4.5981  avg=8.71M  win=10.65M tok/s
+  Harmonic  step=4600  val_bpt=8.219  loss=4.2374  avg=6.50M  win=6.99M tok/s
+  NoPred    step=4600  val_bpt=8.213  loss=4.2374  avg=5.51M  win=5.38M tok/s
+  Flat      step=4700  val_bpt=8.636  loss=4.5268  avg=8.72M  win=8.97M tok/s
+  Harmonic  step=4700  val_bpt=8.133  loss=4.2338  avg=6.52M  win=7.12M tok/s
+  NoPred    step=4700  val_bpt=8.123  loss=4.2138  avg=5.48M  win=4.56M tok/s
+  Flat      step=4800  val_bpt=8.673  loss=4.4442  avg=8.75M  win=10.55M tok/s
+  Harmonic  step=4800  val_bpt=8.164  loss=4.1003  avg=6.53M  win=7.12M tok/s
+  NoPred    step=4800  val_bpt=8.168  loss=4.1242  avg=5.47M  win=5.03M tok/s
+  Flat      step=4900  val_bpt=8.605  loss=4.6255  avg=8.78M  win=10.19M tok/s
+  Harmonic  step=4900  val_bpt=8.117  loss=4.2463  avg=6.54M  win=7.31M tok/s
+  NoPred    step=4900  val_bpt=8.111  loss=4.2686  avg=5.44M  win=4.34M tok/s
+  Flat      done  9.3s  avg=8.80M tok/s  final val_bpt=8.679
+
+Optimizations:
+  Triton SSM scan: yes
+  torch.compile:   yes
+  Harmonic  done  12.5s  avg=6.54M tok/s  final val_bpt=8.178
+
+Optimizations:
+  Triton SSM scan: yes
+  torch.compile:   yes
+device: cuda
+GPU: NVIDIA H100 80GB HBM3  torch: 2.12.0+cu130
+
+Testing Triton SSM scan...
+  Triton SSM scan: OK - enabled
+  torch.compile: enabled
+
+Loading wikitext-2...
+--- nopred ---
+  NoPred    done  15.1s  avg=5.43M tok/s  final val_bpt=8.180
+
+Optimizations:
+  Triton SSM scan: yes
+  torch.compile:   yes
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+  train 2.4M  val 0.2M  tokens
+--- flat ---
+Compiling models...
+--- mamba ---
+  warmup Mamba...
+/usr/local/lib/python3.11/site-packages/torch/_inductor/compile_fx.py:320: UserWarning: TensorFloat32 tensor cores for float32 matrix multiplication available but not enabled. Consider setting `torch.set_float32_matmul_precision('high')` for better performance.
+  warnings.warn(
+  warmup done - measurements use compiled models.
+
+MambaFair       28,100,608 params
+batch=2  seq=8192  steps=5000  total_tokens=81.9M
+
+[ MambaFair ]
+  Mamba     step= 100  val_bpt=10.154  loss=7.0919  avg=4.23M  win=4.23M tok/s
+  Mamba     step= 200  val_bpt=9.669  loss=6.5864  avg=5.47M  win=7.77M tok/s
+  Mamba     step= 300  val_bpt=9.363  loss=6.5341  avg=6.25M  win=8.75M tok/s
+  Mamba     step= 400  val_bpt=9.118  loss=6.2377  avg=5.85M  win=4.89M tok/s
+  Mamba     step= 500  val_bpt=9.029  loss=6.0234  avg=6.21M  win=8.27M tok/s
+  Mamba     step= 600  val_bpt=8.961  loss=5.8690  avg=6.71M  win=11.15M tok/s
+  Mamba     step= 700  val_bpt=8.798  loss=5.9235  avg=7.11M  win=11.10M tok/s
+  Mamba     step= 800  val_bpt=8.765  loss=5.9240  avg=7.43M  win=10.96M tok/s
+  Mamba     step= 900  val_bpt=8.707  loss=5.7580  avg=7.70M  win=10.86M tok/s
+  Mamba     step=1000  val_bpt=8.635  loss=5.4947  avg=7.97M  win=11.46M tok/s
+  Mamba     step=1100  val_bpt=8.554  loss=5.3673  avg=8.20M  win=11.55M tok/s
+  Mamba     step=1200  val_bpt=8.560  loss=5.7499  avg=8.40M  win=11.57M tok/s
+  Mamba     step=1300  val_bpt=8.484  loss=5.7079  avg=8.50M  win=9.98M tok/s
+  Mamba     step=1400  val_bpt=8.461  loss=5.2537  avg=8.66M  win=11.47M tok/s
+  Mamba     step=1500  val_bpt=8.449  loss=5.6460  avg=8.79M  win=11.08M tok/s
+  Mamba     step=1600  val_bpt=8.498  loss=5.0890  avg=8.92M  win=11.44M tok/s
+  Mamba     step=1700  val_bpt=8.448  loss=5.0545  avg=8.99M  win=10.19M tok/s
+  Mamba     step=1800  val_bpt=8.428  loss=5.1091  avg=9.08M  win=11.05M tok/s
+  Mamba     step=1900  val_bpt=8.403  loss=5.0598  avg=9.12M  win=9.78M tok/s
+  Mamba     step=2000  val_bpt=8.451  loss=4.7464  avg=9.20M  win=11.12M tok/s
+  Mamba     step=2100  val_bpt=8.330  loss=5.1969  avg=9.29M  win=11.58M tok/s
+Traceback (most recent call last):
+  File "/tmp/train_fast.py", line 691, in <module>
+    main()
+  File "/tmp/train_fast.py", line 640, in main
+    m_log, m_time = train_one(mamba, train_tokens, val_tokens, device, "Mamba", args)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/train_fast.py", line 480, in train_one
+    x, y = get_batch(train_tokens, args.batch, args.seq, device)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/train_fast.py", line 438, in get_batch
+    x    = torch.stack([tokens[i:i+seq_len]     for i in idxs]).to(device)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous
+WARNING: Logs may not be continuous

@@ -1,0 +1,635 @@
+device: cuda
+GPU: NVIDIA H100 80GB HBM3  torch: 2.5.1+cu124
+
+Testing Triton SSM scan...
+device: cuda
+GPU: NVIDIA H100 80GB HBM3  torch: 2.5.1+cu124
+
+Testing Triton SSM scan...
+  Triton SSM scan: OK - enabled
+  torch.compile: enabled
+
+device: cuda
+GPU: NVIDIA H100 80GB HBM3  torch: 2.5.1+cu124
+
+Testing Triton SSM scan...
+  Triton SSM scan: OK - enabled
+  torch.compile: enabled
+
+Loading enwiki8...
+  downloading http://mattmahoney.net/dc/enwik8.zip...
+Loading enwiki8...
+  downloading http://mattmahoney.net/dc/enwik8.zip...
+  Triton SSM scan: OK - enabled
+  torch.compile: enabled
+
+device: cuda
+GPU: NVIDIA H100 80GB HBM3  torch: 2.5.1+cu124
+
+Testing Triton SSM scan...
+  Triton SSM scan: OK - enabled
+  torch.compile: enabled
+
+Loading enwiki8...
+  downloading http://mattmahoney.net/dc/enwik8.zip...
+Loading enwiki8...
+  downloading http://mattmahoney.net/dc/enwik8.zip...
+  train 26.1M  val 2.9M  tokens
+Compiling models...
+  train 26.1M  val 2.9M  tokens
+Compiling models...
+  warmup Harmonic...
+  warmup Harmonic...
+  train 26.1M  val 2.9M  tokens
+  train 26.1M  val 2.9M  tokens
+Compiling models...
+Compiling models...
+  warmup Harmonic...
+  warmup Harmonic...
+  warmup Transformer...
+  warmup Transformer...
+  warmup Transformer...
+  warmup Transformer...
+  warmup done - measurements use compiled models.
+
+HarmonicFair    13,425,920 params
+TransfFlash     13,656,832 params
+hidden=128  batch=16  seq=1024  steps=4000  total_tokens=65.5M
+
+[ HarmonicFair ]
+  warmup done - measurements use compiled models.
+
+HarmonicFair    60,388,352 params
+TransfFlash     64,064,512 params
+hidden=512  batch=16  seq=1024  steps=4000  total_tokens=65.5M
+
+[ HarmonicFair ]
+  warmup done - measurements use compiled models.
+
+HarmonicFair    13,425,920 params
+TransfFlash     13,656,832 params
+hidden=128  batch=2  seq=8192  steps=4000  total_tokens=65.5M
+
+[ HarmonicFair ]
+  warmup done - measurements use compiled models.
+
+HarmonicFair    60,388,352 params
+TransfFlash     64,064,512 params
+hidden=512  batch=2  seq=8192  steps=4000  total_tokens=65.5M
+
+[ HarmonicFair ]
+  Harmonic  step= 100  val_bpt=9.167  loss=6.8543  avg=3.60M  win=3.60M tok/s
+  Harmonic  step= 100  val_bpt=8.062  loss=6.2021  avg=4.49M  win=4.49M tok/s
+  Harmonic  step= 200  val_bpt=8.626  loss=6.0310  avg=4.76M  win=7.00M tok/s
+  Harmonic  step= 100  val_bpt=9.137  loss=6.3428  avg=3.42M  win=3.42M tok/s
+  Harmonic  step= 200  val_bpt=7.590  loss=5.2824  avg=5.83M  win=8.30M tok/s
+  Harmonic  step= 300  val_bpt=8.347  loss=5.6964  avg=5.34M  win=7.07M tok/s
+  Harmonic  step= 100  val_bpt=8.016  loss=5.5484  avg=3.27M  win=3.27M tok/s
+  Harmonic  step= 200  val_bpt=8.375  loss=6.1269  avg=4.57M  win=6.88M tok/s
+  Harmonic  step= 400  val_bpt=8.289  loss=5.1358  avg=5.70M  win=7.18M tok/s
+  Harmonic  step= 300  val_bpt=7.379  loss=4.8889  avg=6.49M  win=8.41M tok/s
+  Harmonic  step= 500  val_bpt=7.854  loss=5.9481  avg=5.92M  win=7.00M tok/s
+  Harmonic  step= 300  val_bpt=8.561  loss=5.5906  avg=5.13M  win=6.80M tok/s
+  Harmonic  step= 600  val_bpt=7.780  loss=5.3489  avg=6.08M  win=6.98M tok/s
+  Harmonic  step= 200  val_bpt=7.367  loss=5.4875  avg=4.23M  win=6.02M tok/s
+  Harmonic  step= 400  val_bpt=7.354  loss=4.4681  avg=6.86M  win=8.27M tok/s
+  Harmonic  step= 400  val_bpt=7.957  loss=5.6097  avg=5.47M  win=6.83M tok/s
+  Harmonic  step= 700  val_bpt=7.559  loss=5.3147  avg=6.20M  win=7.08M tok/s
+  Harmonic  step= 500  val_bpt=6.968  loss=5.2280  avg=7.12M  win=8.42M tok/s
+  Harmonic  step= 800  val_bpt=7.596  loss=5.4572  avg=6.30M  win=7.08M tok/s
+  Harmonic  step= 500  val_bpt=8.070  loss=5.2572  avg=5.69M  win=6.79M tok/s
+  Harmonic  step= 300  val_bpt=7.629  loss=4.8288  avg=4.70M  win=6.01M tok/s
+  Harmonic  step= 900  val_bpt=7.455  loss=5.1865  avg=6.39M  win=7.18M tok/s
+  Harmonic  step= 600  val_bpt=6.867  loss=4.6353  avg=7.31M  win=8.43M tok/s
+  Harmonic  step= 600  val_bpt=8.061  loss=5.3809  avg=5.85M  win=6.80M tok/s
+  Harmonic  step=1000  val_bpt=7.513  loss=4.9963  avg=6.46M  win=7.16M tok/s
+  Harmonic  step= 400  val_bpt=7.040  loss=4.9160  avg=4.94M  win=5.86M tok/s
+  Harmonic  step= 700  val_bpt=6.664  loss=4.6259  avg=7.45M  win=8.36M tok/s
+  Harmonic  step= 700  val_bpt=7.997  loss=3.6848  avg=5.96M  win=6.69M tok/s
+  Harmonic  step=1100  val_bpt=7.275  loss=5.5248  avg=6.38M  win=5.72M tok/s
+  Harmonic  step=1200  val_bpt=7.479  loss=4.7166  avg=6.44M  win=7.08M tok/s
+  Harmonic  step= 800  val_bpt=7.838  loss=5.3358  avg=6.06M  win=6.85M tok/s
+  Harmonic  step= 800  val_bpt=6.728  loss=4.7354  avg=7.55M  win=8.37M tok/s
+  Harmonic  step=1300  val_bpt=7.102  loss=5.9417  avg=6.48M  win=7.10M tok/s
+  Harmonic  step= 500  val_bpt=7.192  loss=4.6355  avg=5.10M  win=5.83M tok/s
+  Harmonic  step= 900  val_bpt=7.873  loss=5.3179  avg=6.13M  win=6.85M tok/s
+  Harmonic  step=1400  val_bpt=7.320  loss=5.7766  avg=6.52M  win=7.03M tok/s
+  Harmonic  step= 900  val_bpt=6.595  loss=4.4563  avg=7.63M  win=8.35M tok/s
+  Harmonic  step=1500  val_bpt=7.331  loss=4.9468  avg=6.55M  win=7.03M tok/s
+  Harmonic  step=1000  val_bpt=7.885  loss=5.7731  avg=6.19M  win=6.77M tok/s
+  Harmonic  step= 600  val_bpt=7.194  loss=4.6745  avg=5.23M  win=5.98M tok/s
+  Harmonic  step=1000  val_bpt=6.640  loss=4.2796  avg=7.68M  win=8.19M tok/s
+  Harmonic  step=1600  val_bpt=7.109  loss=4.9135  avg=6.59M  win=7.20M tok/s
+  Harmonic  step=1100  val_bpt=7.718  loss=4.2110  avg=6.24M  win=6.69M tok/s
+  Harmonic  step=1700  val_bpt=7.231  loss=4.7803  avg=6.61M  win=6.98M tok/s
+  Harmonic  step=1100  val_bpt=6.407  loss=4.8838  avg=7.75M  win=8.49M tok/s
+  Harmonic  step=1800  val_bpt=6.978  loss=4.9000  avg=6.61M  win=6.62M tok/s
+  Harmonic  step= 700  val_bpt=7.148  loss=2.9769  avg=5.31M  win=5.84M tok/s
+  Harmonic  step=1200  val_bpt=7.213  loss=5.3554  avg=6.26M  win=6.51M tok/s
+  Harmonic  step=1900  val_bpt=7.116  loss=4.4222  avg=6.60M  win=6.41M tok/s
+  Harmonic  step=1200  val_bpt=6.582  loss=3.9939  avg=7.79M  win=8.23M tok/s
+  Harmonic  step=1300  val_bpt=7.176  loss=5.4837  avg=6.26M  win=6.32M tok/s
+  Harmonic  step=2000  val_bpt=7.086  loss=5.0509  avg=6.62M  win=7.01M tok/s
+  Harmonic  step= 800  val_bpt=6.990  loss=4.7060  avg=5.34M  win=5.62M tok/s
+  Harmonic  step=1300  val_bpt=6.246  loss=5.2718  avg=7.83M  win=8.29M tok/s
+  Harmonic  step=2100  val_bpt=7.034  loss=4.8593  avg=6.64M  win=7.04M tok/s
+  Harmonic  step=1400  val_bpt=7.254  loss=5.1446  avg=6.28M  win=6.55M tok/s
+  Harmonic  step=2200  val_bpt=7.073  loss=5.1234  avg=6.66M  win=7.09M tok/s
+  Harmonic  step=1400  val_bpt=6.435  loss=4.9914  avg=7.86M  win=8.39M tok/s
+  Harmonic  step=1500  val_bpt=7.136  loss=5.4812  avg=6.30M  win=6.51M tok/s
+  Harmonic  step=2300  val_bpt=7.113  loss=5.2744  avg=6.67M  win=7.04M tok/s
+  Harmonic  step= 900  val_bpt=7.032  loss=4.7415  avg=5.41M  win=6.03M tok/s
+  Harmonic  step=2400  val_bpt=7.223  loss=4.4401  avg=6.67M  win=6.73M tok/s
+  Harmonic  step=1500  val_bpt=6.442  loss=4.2458  avg=7.90M  win=8.37M tok/s
+  Harmonic  step=1600  val_bpt=7.212  loss=5.2091  avg=6.31M  win=6.57M tok/s
+  Harmonic  step=2500  val_bpt=7.027  loss=4.9582  avg=6.68M  win=6.71M tok/s
+  Harmonic  step=1000  val_bpt=7.045  loss=5.1549  avg=5.43M  win=5.62M tok/s
+  Harmonic  step=1600  val_bpt=6.208  loss=4.1359  avg=7.92M  win=8.35M tok/s
+  Harmonic  step=1700  val_bpt=7.374  loss=4.9802  avg=6.33M  win=6.59M tok/s
+  Harmonic  step=2600  val_bpt=7.168  loss=4.6424  avg=6.68M  win=6.74M tok/s
+  Harmonic  step=2700  val_bpt=7.044  loss=5.5006  avg=6.67M  win=6.44M tok/s
+  Harmonic  step=1800  val_bpt=7.092  loss=4.9832  avg=6.34M  win=6.48M tok/s
+  Harmonic  step=1700  val_bpt=6.361  loss=4.0219  avg=7.94M  win=8.31M tok/s
+  Harmonic  step=1100  val_bpt=6.910  loss=3.7915  avg=5.45M  win=5.65M tok/s
+  Harmonic  step=2800  val_bpt=7.029  loss=4.9620  avg=6.67M  win=6.75M tok/s
+  Harmonic  step=1900  val_bpt=7.310  loss=4.8884  avg=6.34M  win=6.45M tok/s
+  Harmonic  step=1800  val_bpt=6.134  loss=4.1620  avg=7.97M  win=8.40M tok/s
+  Harmonic  step=2900  val_bpt=7.094  loss=4.7537  avg=6.67M  win=6.55M tok/s
+  Harmonic  step=3000  val_bpt=6.788  loss=4.8961  avg=6.66M  win=6.48M tok/s
+  Harmonic  step=2000  val_bpt=7.142  loss=5.2377  avg=6.36M  win=6.64M tok/s
+  Harmonic  step=1200  val_bpt=6.429  loss=4.6641  avg=5.47M  win=5.68M tok/s
+  Harmonic  step=1900  val_bpt=6.260  loss=3.6855  avg=7.99M  win=8.33M tok/s
+  Harmonic  step=3100  val_bpt=7.027  loss=4.6872  avg=6.65M  win=6.40M tok/s
+  Harmonic  step=2100  val_bpt=7.313  loss=5.4748  avg=6.37M  win=6.59M tok/s
+  Harmonic  step=3200  val_bpt=6.887  loss=4.8478  avg=6.65M  win=6.62M tok/s
+  Harmonic  step=2000  val_bpt=6.201  loss=4.2353  avg=7.99M  win=8.17M tok/s
+  Harmonic  step=1300  val_bpt=6.348  loss=4.8613  avg=5.49M  win=5.75M tok/s
+  Harmonic  step=3300  val_bpt=6.940  loss=4.9574  avg=6.65M  win=6.64M tok/s
+  Harmonic  step=2200  val_bpt=7.063  loss=5.0752  avg=6.38M  win=6.71M tok/s
+  Harmonic  step=2100  val_bpt=6.147  loss=4.1241  avg=8.01M  win=8.31M tok/s
+  Harmonic  step=3400  val_bpt=6.843  loss=4.5817  avg=6.66M  win=6.96M tok/s
+  Harmonic  step=2300  val_bpt=7.117  loss=4.9056  avg=6.39M  win=6.48M tok/s
+  Harmonic  step=3500  val_bpt=7.039  loss=4.8593  avg=6.68M  win=7.22M tok/s
+  Harmonic  step=1400  val_bpt=6.424  loss=4.5056  avg=5.50M  win=5.70M tok/s
+  Harmonic  step=2200  val_bpt=6.215  loss=4.3999  avg=8.03M  win=8.40M tok/s
+  Harmonic  step=3600  val_bpt=7.049  loss=4.6136  avg=6.68M  win=6.79M tok/s
+  Harmonic  step=2400  val_bpt=7.228  loss=5.5776  avg=6.37M  win=6.07M tok/s
+  Harmonic  step=3700  val_bpt=6.880  loss=4.9685  avg=6.69M  win=7.18M tok/s
+  Harmonic  step=2300  val_bpt=6.216  loss=4.4717  avg=8.04M  win=8.37M tok/s
+  Harmonic  step=2500  val_bpt=6.956  loss=5.1814  avg=6.37M  win=6.30M tok/s
+  Harmonic  step=1500  val_bpt=6.317  loss=4.7664  avg=5.52M  win=5.72M tok/s
+  Harmonic  step=3800  val_bpt=6.700  loss=4.5921  avg=6.71M  win=7.41M tok/s
+  Harmonic  step=2400  val_bpt=6.322  loss=3.7206  avg=8.05M  win=8.36M tok/s
+  Harmonic  step=2600  val_bpt=7.144  loss=4.5853  avg=6.37M  win=6.28M tok/s
+  Harmonic  step=3900  val_bpt=6.965  loss=4.6711  avg=6.72M  win=7.41M tok/s
+  Harmonic  done  9.7s  avg=6.74M tok/s  final val_bpt=7.048
+
+[ TransformerFlash ]
+  Harmonic  step=1600  val_bpt=6.376  loss=4.3669  avg=5.53M  win=5.68M tok/s
+  Harmonic  step=2500  val_bpt=6.104  loss=4.2120  avg=8.07M  win=8.42M tok/s
+  Harmonic  step=2700  val_bpt=7.113  loss=5.2015  avg=6.36M  win=6.32M tok/s
+  Harmonic  step=2800  val_bpt=7.169  loss=4.2832  avg=6.35M  win=5.91M tok/s
+  Harmonic  step=2600  val_bpt=6.259  loss=3.8248  avg=8.08M  win=8.43M tok/s
+  Harmonic  step=1700  val_bpt=6.496  loss=4.3230  avg=5.52M  win=5.38M tok/s
+  Transf    step= 100  val_bpt=10.072  loss=7.2882  avg=5.15M  win=5.15M tok/s
+  Harmonic  step=2900  val_bpt=7.231  loss=4.2605  avg=6.32M  win=5.63M tok/s
+  Harmonic  step=2700  val_bpt=6.133  loss=4.7354  avg=8.09M  win=8.41M tok/s
+  Transf    step= 200  val_bpt=9.044  loss=6.2940  avg=5.74M  win=6.47M tok/s
+  Harmonic  step=3000  val_bpt=7.121  loss=5.2340  avg=6.29M  win=5.57M tok/s
+  Harmonic  step=1800  val_bpt=6.310  loss=4.3325  avg=5.53M  win=5.75M tok/s
+  Transf    step= 300  val_bpt=8.665  loss=5.9843  avg=5.86M  win=6.12M tok/s
+  Harmonic  step=2800  val_bpt=6.120  loss=4.2180  avg=8.10M  win=8.39M tok/s
+  Transf    step= 400  val_bpt=8.585  loss=5.4199  avg=5.95M  win=6.22M tok/s
+  Harmonic  step=3100  val_bpt=6.867  loss=4.7628  avg=6.25M  win=5.19M tok/s
+  Harmonic  step=2900  val_bpt=6.171  loss=3.9834  avg=8.12M  win=8.48M tok/s
+  Transf    step= 500  val_bpt=8.141  loss=6.1061  avg=6.09M  win=6.71M tok/s
+  Harmonic  step=1900  val_bpt=6.470  loss=4.2052  avg=5.54M  win=5.64M tok/s
+  Harmonic  step=3200  val_bpt=7.013  loss=4.7996  avg=6.26M  win=6.53M tok/s
+  Transf    step= 600  val_bpt=8.093  loss=5.5693  avg=6.16M  win=6.60M tok/s
+  Harmonic  step=3000  val_bpt=5.865  loss=4.1566  avg=8.12M  win=8.36M tok/s
+  Harmonic  step=3300  val_bpt=6.951  loss=5.2288  avg=6.26M  win=6.49M tok/s
+  Transf    step= 700  val_bpt=7.870  loss=5.5261  avg=6.18M  win=6.27M tok/s
+  Harmonic  step=2000  val_bpt=6.335  loss=4.5799  avg=5.55M  win=5.82M tok/s
+  Harmonic  step=3100  val_bpt=6.114  loss=3.7426  avg=8.13M  win=8.36M tok/s
+  Transf    step= 800  val_bpt=7.919  loss=5.6207  avg=6.20M  win=6.36M tok/s
+  Harmonic  step=3400  val_bpt=6.897  loss=5.1257  avg=6.27M  win=6.48M tok/s
+  Transf    step= 900  val_bpt=7.780  loss=5.4016  avg=6.25M  win=6.66M tok/s
+  Harmonic  step=3200  val_bpt=5.975  loss=4.1171  avg=8.14M  win=8.31M tok/s
+  Harmonic  step=3500  val_bpt=7.062  loss=4.9892  avg=6.24M  win=5.44M tok/s
+  Harmonic  step=2100  val_bpt=6.469  loss=4.7119  avg=5.56M  win=5.83M tok/s
+  Transf    step=1000  val_bpt=7.830  loss=5.2410  avg=6.27M  win=6.47M tok/s
+  Harmonic  step=3300  val_bpt=6.044  loss=4.0437  avg=8.14M  win=8.29M tok/s
+  Transf    step=1100  val_bpt=7.605  loss=5.6870  avg=6.27M  win=6.23M tok/s
+  Harmonic  step=3600  val_bpt=7.110  loss=5.1562  avg=6.26M  win=6.83M tok/s
+  Transf    step=1200  val_bpt=7.791  loss=4.9929  avg=6.24M  win=5.98M tok/s
+  Harmonic  step=2200  val_bpt=6.245  loss=4.3318  avg=5.57M  win=5.64M tok/s
+  Harmonic  step=3400  val_bpt=5.940  loss=3.6941  avg=8.15M  win=8.37M tok/s
+  Harmonic  step=3700  val_bpt=6.983  loss=4.6943  avg=6.28M  win=7.13M tok/s
+  Transf    step=1300  val_bpt=7.436  loss=6.0430  avg=6.25M  win=6.31M tok/s
+  Harmonic  step=3800  val_bpt=6.775  loss=2.8391  avg=6.30M  win=7.00M tok/s
+  Harmonic  step=3500  val_bpt=6.112  loss=4.0530  avg=8.15M  win=8.44M tok/s
+  Transf    step=1400  val_bpt=7.634  loss=5.9571  avg=6.25M  win=6.28M tok/s
+  Harmonic  step=2300  val_bpt=6.279  loss=4.1836  avg=5.57M  win=5.72M tok/s
+  Transf    step=1500  val_bpt=7.634  loss=5.1966  avg=6.27M  win=6.48M tok/s
+  Harmonic  step=3900  val_bpt=6.973  loss=5.6515  avg=6.32M  win=7.27M tok/s
+  Harmonic  step=3600  val_bpt=6.139  loss=3.8783  avg=8.16M  win=8.31M tok/s
+  Transf    step=1600  val_bpt=7.410  loss=5.1430  avg=6.26M  win=6.18M tok/s
+  Harmonic  done  10.3s  avg=6.34M tok/s  final val_bpt=6.773
+
+[ TransformerFlash ]
+  Harmonic  step=2400  val_bpt=6.360  loss=4.7977  avg=5.58M  win=5.88M tok/s
+  Harmonic  step=3700  val_bpt=5.970  loss=4.1451  avg=8.16M  win=8.26M tok/s
+  Transf    step=1700  val_bpt=7.526  loss=5.0368  avg=6.25M  win=6.07M tok/s
+  Transf    step=1800  val_bpt=7.268  loss=5.1614  avg=6.25M  win=6.26M tok/s
+  Harmonic  step=3800  val_bpt=5.807  loss=3.7413  avg=8.17M  win=8.43M tok/s
+  Transf    step=1900  val_bpt=7.401  loss=4.7014  avg=6.26M  win=6.36M tok/s
+  Harmonic  step=2500  val_bpt=6.061  loss=4.4400  avg=5.58M  win=5.52M tok/s
+  Transf    step=2000  val_bpt=7.375  loss=5.2211  avg=6.26M  win=6.45M tok/s
+  Harmonic  step=3900  val_bpt=6.014  loss=3.9017  avg=8.18M  win=8.45M tok/s
+  Transf    step= 100  val_bpt=10.302  loss=7.1341  avg=5.77M  win=5.77M tok/s
+  Transf    step=2100  val_bpt=7.311  loss=5.0768  avg=6.27M  win=6.36M tok/s
+  Harmonic  step=2600  val_bpt=6.249  loss=3.7690  avg=5.59M  win=5.81M tok/s
+  Harmonic  done  8.0s  avg=8.19M tok/s  final val_bpt=6.109
+
+[ TransformerFlash ]
+  Transf    step= 200  val_bpt=9.023  loss=6.5741  avg=5.70M  win=5.63M tok/s
+  Transf    step=2200  val_bpt=7.348  loss=5.3020  avg=6.26M  win=6.15M tok/s
+  Transf    step=2300  val_bpt=7.395  loss=5.4292  avg=6.26M  win=6.20M tok/s
+  Transf    step= 300  val_bpt=9.016  loss=5.9876  avg=5.87M  win=6.23M tok/s
+  Harmonic  step=2700  val_bpt=6.259  loss=4.4347  avg=5.59M  win=5.62M tok/s
+  Transf    step=2400  val_bpt=7.495  loss=4.6413  avg=6.26M  win=6.19M tok/s
+  Transf    step= 100  val_bpt=8.255  loss=6.2734  avg=7.02M  win=7.02M tok/s
+  Transf    step=2500  val_bpt=7.300  loss=5.1218  avg=6.26M  win=6.31M tok/s
+  Transf    step= 400  val_bpt=8.415  loss=5.8759  avg=5.98M  win=6.34M tok/s
+  Transf    step=2600  val_bpt=7.427  loss=4.8663  avg=6.27M  win=6.43M tok/s
+  Harmonic  step=2800  val_bpt=6.259  loss=3.6157  avg=5.60M  win=5.72M tok/s
+  Transf    step= 200  val_bpt=7.812  loss=5.4114  avg=6.63M  win=6.27M tok/s
+  Transf    step= 500  val_bpt=8.494  loss=5.6573  avg=6.02M  win=6.22M tok/s
+  Transf    step=2700  val_bpt=7.303  loss=5.6288  avg=6.27M  win=6.42M tok/s
+  Transf    step=2800  val_bpt=7.287  loss=5.0989  avg=6.28M  win=6.38M tok/s
+  Harmonic  step=2900  val_bpt=6.340  loss=3.5617  avg=5.60M  win=5.61M tok/s
+  Transf    step= 300  val_bpt=7.607  loss=5.0854  avg=6.81M  win=7.22M tok/s
+  Transf    step= 600  val_bpt=8.497  loss=5.7030  avg=6.10M  win=6.50M tok/s
+  Transf    step=2900  val_bpt=7.355  loss=4.9234  avg=6.28M  win=6.35M tok/s
+  Transf    step=3000  val_bpt=7.072  loss=5.1057  avg=6.28M  win=6.34M tok/s
+  Transf    step= 700  val_bpt=8.493  loss=4.0741  avg=6.15M  win=6.47M tok/s
+  Transf    step= 400  val_bpt=7.562  loss=4.6560  avg=6.85M  win=6.96M tok/s
+  Harmonic  step=3000  val_bpt=6.219  loss=4.5643  avg=5.60M  win=5.70M tok/s
+  Transf    step=3100  val_bpt=7.275  loss=4.8773  avg=6.28M  win=6.41M tok/s
+  Transf    step= 800  val_bpt=8.341  loss=5.7080  avg=6.19M  win=6.45M tok/s
+  Transf    step=3200  val_bpt=7.130  loss=5.0286  avg=6.29M  win=6.48M tok/s
+  Transf    step= 500  val_bpt=7.170  loss=5.3101  avg=6.93M  win=7.25M tok/s
+  Transf    step=3300  val_bpt=7.194  loss=5.1348  avg=6.29M  win=6.23M tok/s
+  Harmonic  step=3100  val_bpt=5.996  loss=4.0961  avg=5.60M  win=5.73M tok/s
+  Transf    step= 900  val_bpt=8.355  loss=5.7168  avg=6.20M  win=6.35M tok/s
+  Transf    step=3400  val_bpt=7.110  loss=4.8008  avg=6.29M  win=6.24M tok/s
+  Transf    step= 600  val_bpt=7.072  loss=4.7597  avg=7.00M  win=7.40M tok/s
+  Transf    step=3500  val_bpt=7.293  loss=5.0638  avg=6.29M  win=6.37M tok/s
+  Transf    step=1000  val_bpt=8.391  loss=6.0692  avg=6.22M  win=6.36M tok/s
+  Harmonic  step=3200  val_bpt=6.109  loss=4.0923  avg=5.61M  win=5.82M tok/s
+  Transf    step= 700  val_bpt=6.864  loss=4.7891  avg=7.04M  win=7.28M tok/s
+  Transf    step=3600  val_bpt=7.297  loss=4.7893  avg=6.29M  win=6.22M tok/s
+  Transf    step=1100  val_bpt=8.227  loss=4.5471  avg=6.24M  win=6.43M tok/s
+  Transf    step=3700  val_bpt=7.132  loss=5.1148  avg=6.28M  win=6.15M tok/s
+  Harmonic  step=3300  val_bpt=5.997  loss=4.4540  avg=5.61M  win=5.66M tok/s
+  Transf    step= 800  val_bpt=6.880  loss=4.8098  avg=7.06M  win=7.26M tok/s
+  Transf    step=3800  val_bpt=6.959  loss=4.7842  avg=6.28M  win=6.20M tok/s
+  Transf    step=1200  val_bpt=7.743  loss=5.7269  avg=6.25M  win=6.42M tok/s
+  Transf    step=3900  val_bpt=7.216  loss=4.8552  avg=6.28M  win=6.24M tok/s
+  Transf    step= 900  val_bpt=6.741  loss=4.5745  avg=7.08M  win=7.20M tok/s
+  Transf    done  10.4s  avg=6.28M tok/s  final val_bpt=7.288
+
+[  ]
+-------------------------------------------
+| step   | H bpt    | TF bpt   | tokens M |
+-------------------------------------------
+|      0 |   16.580 |   15.887 |      0.0 |
+|    100 |    9.167 |   10.072 |      1.6 |
+|    200 |    8.626 |    9.044 |      3.3 |
+|    300 |    8.347 |    8.665 |      4.9 |
+|    400 |    8.289 |    8.585 |      6.6 |
+|    500 |    7.854 |    8.141 |      8.2 |
+|    600 |    7.780 |    8.093 |      9.8 |
+|    700 |    7.559 |    7.870 |     11.5 |
+|    800 |    7.596 |    7.919 |     13.1 |
+|    900 |    7.455 |    7.780 |     14.7 |
+|   1000 |    7.513 |    7.830 |     16.4 |
+|   1100 |    7.275 |    7.605 |     18.0 |
+|   1200 |    7.479 |    7.791 |     19.7 |
+|   1300 |    7.102 |    7.436 |     21.3 |
+|   1400 |    7.320 |    7.634 |     22.9 |
+|   1500 |    7.331 |    7.634 |     24.6 |
+|   1600 |    7.109 |    7.410 |     26.2 |
+|   1700 |    7.231 |    7.526 |     27.9 |
+|   1800 |    6.978 |    7.268 |     29.5 |
+|   1900 |    7.116 |    7.401 |     31.1 |
+|   2000 |    7.086 |    7.375 |     32.8 |
+|   2100 |    7.034 |    7.311 |     34.4 |
+|   2200 |    7.073 |    7.348 |     36.0 |
+|   2300 |    7.113 |    7.395 |     37.7 |
+|   2400 |    7.223 |    7.495 |     39.3 |
+|   2500 |    7.027 |    7.300 |     41.0 |
+|   2600 |    7.168 |    7.427 |     42.6 |
+|   2700 |    7.044 |    7.303 |     44.2 |
+|   2800 |    7.029 |    7.287 |     45.9 |
+|   2900 |    7.094 |    7.355 |     47.5 |
+|   3000 |    6.788 |    7.072 |     49.2 |
+|   3100 |    7.027 |    7.275 |     50.8 |
+|   3200 |    6.887 |    7.130 |     52.4 |
+|   3300 |    6.940 |    7.194 |     54.1 |
+|   3400 |    6.843 |    7.110 |     55.7 |
+|   3500 |    7.039 |    7.293 |     57.3 |
+|   3600 |    7.049 |    7.297 |     59.0 |
+|   3700 |    6.880 |    7.132 |     60.6 |
+|   3800 |    6.700 |    6.959 |     62.3 |
+|   3900 |    6.965 |    7.216 |     63.9 |
+|   4000 |    7.048 |    7.288 |     65.5 |
+-------------------------------------------
+
+Model          final bpt     vs H         tok/s
+--------------------------------------------------
+H              7.048               —      6.74M
+TF             7.288      +3.4% worse      6.28M
+
+Optimizations:
+  Triton SSM scan: yes
+  torch.compile:   yes
+  Harmonic  step=3400  val_bpt=6.024  loss=4.3434  avg=5.62M  win=5.91M tok/s
+  Transf    step=1300  val_bpt=7.752  loss=5.8337  avg=6.28M  win=6.57M tok/s
+  Transf    step=1000  val_bpt=6.758  loss=4.3693  avg=7.09M  win=7.14M tok/s
+  Transf    step=1400  val_bpt=7.847  loss=5.6397  avg=6.28M  win=6.37M tok/s
+  Harmonic  step=3500  val_bpt=6.169  loss=4.1636  avg=5.62M  win=5.75M tok/s
+  Transf    step=1100  val_bpt=6.523  loss=4.9457  avg=7.10M  win=7.22M tok/s
+  Transf    step=1500  val_bpt=7.684  loss=5.8118  avg=6.28M  win=6.33M tok/s
+  Harmonic  step=3600  val_bpt=6.221  loss=4.5122  avg=5.63M  win=5.73M tok/s
+  Transf    step=1200  val_bpt=6.671  loss=4.1084  avg=7.12M  win=7.34M tok/s
+  Transf    step=1600  val_bpt=7.753  loss=5.4671  avg=6.29M  win=6.40M tok/s
+  Transf    step=1700  val_bpt=7.943  loss=5.3860  avg=6.28M  win=6.15M tok/s
+  Harmonic  step=3700  val_bpt=6.081  loss=3.7884  avg=5.63M  win=5.68M tok/s
+  Transf    step=1300  val_bpt=6.347  loss=5.2900  avg=7.14M  win=7.36M tok/s
+  Transf    step=1800  val_bpt=7.626  loss=5.4628  avg=6.29M  win=6.45M tok/s
+  Transf    step=1400  val_bpt=6.527  loss=5.0347  avg=7.07M  win=6.32M tok/s
+  Harmonic  step=3800  val_bpt=5.872  loss=2.2754  avg=5.63M  win=5.58M tok/s
+  Transf    step=1900  val_bpt=7.893  loss=5.3269  avg=6.30M  win=6.48M tok/s
+  Transf    step=1500  val_bpt=6.499  loss=4.2930  avg=7.03M  win=6.57M tok/s
+  Harmonic  step=3900  val_bpt=6.110  loss=4.8975  avg=5.63M  win=5.86M tok/s
+  Transf    step=2000  val_bpt=7.643  loss=5.6011  avg=6.31M  win=6.51M tok/s
+  Transf    step=1600  val_bpt=6.260  loss=4.2290  avg=7.03M  win=6.89M tok/s
+  Transf    step=2100  val_bpt=7.858  loss=5.8262  avg=6.32M  win=6.49M tok/s
+  Harmonic  done  11.6s  avg=5.64M tok/s  final val_bpt=5.893
+
+[ TransformerFlash ]
+  Transf    step=1700  val_bpt=6.399  loss=4.1075  avg=7.02M  win=6.96M tok/s
+  Transf    step=2200  val_bpt=7.601  loss=5.3747  avg=6.32M  win=6.37M tok/s
+  Transf    step=1800  val_bpt=6.167  loss=4.1966  avg=7.03M  win=7.17M tok/s
+  Transf    step=2300  val_bpt=7.690  loss=5.3006  avg=6.32M  win=6.17M tok/s
+  Transf    step=1900  val_bpt=6.263  loss=3.7667  avg=7.05M  win=7.49M tok/s
+  Transf    step=2400  val_bpt=7.784  loss=5.7973  avg=6.32M  win=6.53M tok/s
+  Transf    step= 100  val_bpt=8.386  loss=5.8257  avg=4.65M  win=4.65M tok/s
+  Transf    step=2000  val_bpt=6.196  loss=4.2783  avg=7.06M  win=7.22M tok/s
+  Transf    step=2500  val_bpt=7.542  loss=5.5136  avg=6.32M  win=6.24M tok/s
+  Transf    step=2100  val_bpt=6.172  loss=4.1179  avg=7.08M  win=7.46M tok/s
+  Transf    step=2600  val_bpt=7.676  loss=5.0398  avg=6.32M  win=6.31M tok/s
+  Transf    step= 200  val_bpt=7.815  loss=5.8208  avg=4.90M  win=5.17M tok/s
+  Transf    step=2700  val_bpt=7.666  loss=5.5294  avg=6.33M  win=6.45M tok/s
+  Transf    step=2200  val_bpt=6.184  loss=4.4041  avg=7.07M  win=6.93M tok/s
+  Transf    step=2800  val_bpt=7.714  loss=4.7783  avg=6.32M  win=6.32M tok/s
+  Transf    step=2300  val_bpt=6.199  loss=4.4902  avg=7.08M  win=7.22M tok/s
+  Transf    step=2900  val_bpt=7.772  loss=4.7133  avg=6.33M  win=6.44M tok/s
+  Transf    step=2400  val_bpt=6.294  loss=3.7436  avg=7.09M  win=7.39M tok/s
+  Transf    step= 300  val_bpt=8.049  loss=5.2402  avg=4.99M  win=5.18M tok/s
+  Transf    step=3000  val_bpt=7.656  loss=5.5707  avg=6.33M  win=6.48M tok/s
+  Transf    step=2500  val_bpt=6.090  loss=4.2346  avg=7.10M  win=7.38M tok/s
+  Transf    step=3100  val_bpt=7.456  loss=5.2200  avg=6.33M  win=6.30M tok/s
+  Transf    step=2600  val_bpt=6.222  loss=3.8762  avg=7.11M  win=7.44M tok/s
+  Transf    step= 400  val_bpt=7.535  loss=5.2848  avg=5.01M  win=5.08M tok/s
+  Transf    step=3200  val_bpt=7.550  loss=5.2214  avg=6.34M  win=6.58M tok/s
+  Transf    step=2700  val_bpt=6.090  loss=4.7394  avg=7.13M  win=7.53M tok/s
+  Transf    step=3300  val_bpt=7.504  loss=5.5705  avg=6.32M  win=5.85M tok/s
+  Transf    step=2800  val_bpt=6.086  loss=4.1874  avg=7.14M  win=7.36M tok/s
+  Transf    step=3400  val_bpt=7.490  loss=5.5280  avg=6.29M  win=5.26M tok/s
+  Transf    step= 500  val_bpt=7.680  loss=5.0455  avg=5.03M  win=5.10M tok/s
+  Transf    step=2900  val_bpt=6.121  loss=3.9581  avg=7.14M  win=7.37M tok/s
+  Transf    step=3500  val_bpt=7.635  loss=5.3817  avg=6.26M  win=5.38M tok/s
+  Transf    step=3000  val_bpt=5.805  loss=4.1699  avg=7.15M  win=7.38M tok/s
+  Transf    step=3600  val_bpt=7.679  loss=5.5721  avg=6.25M  win=6.16M tok/s
+  Transf    step= 600  val_bpt=7.660  loss=4.9845  avg=5.04M  win=5.11M tok/s
+  Transf    step=3700  val_bpt=7.543  loss=5.1625  avg=6.26M  win=6.54M tok/s
+  Transf    step=3100  val_bpt=6.058  loss=3.7561  avg=7.16M  win=7.38M tok/s
+  Transf    step=3800  val_bpt=7.385  loss=3.4225  avg=6.23M  win=5.16M tok/s
+  Transf    step=3200  val_bpt=5.908  loss=4.1235  avg=7.17M  win=7.36M tok/s
+  Transf    step= 700  val_bpt=7.662  loss=3.4071  avg=5.04M  win=5.07M tok/s
+  Transf    step=3900  val_bpt=7.540  loss=5.8816  avg=6.22M  win=5.99M tok/s
+  Transf    step=3300  val_bpt=5.974  loss=4.0548  avg=7.17M  win=7.26M tok/s
+  Transf    done  10.5s  avg=6.23M tok/s  final val_bpt=7.313
+
+[  ]
+-------------------------------------------
+| step   | H bpt    | TF bpt   | tokens M |
+-------------------------------------------
+|      0 |   16.408 |   15.869 |      0.0 |
+|    100 |    9.137 |   10.302 |      1.6 |
+|    200 |    8.375 |    9.023 |      3.3 |
+|    300 |    8.561 |    9.016 |      4.9 |
+|    400 |    7.957 |    8.415 |      6.6 |
+|    500 |    8.070 |    8.494 |      8.2 |
+|    600 |    8.061 |    8.497 |      9.8 |
+|    700 |    7.997 |    8.493 |     11.5 |
+|    800 |    7.838 |    8.341 |     13.1 |
+|    900 |    7.873 |    8.355 |     14.7 |
+|   1000 |    7.885 |    8.391 |     16.4 |
+|   1100 |    7.718 |    8.227 |     18.0 |
+|   1200 |    7.213 |    7.743 |     19.7 |
+|   1300 |    7.176 |    7.752 |     21.3 |
+|   1400 |    7.254 |    7.847 |     22.9 |
+|   1500 |    7.136 |    7.684 |     24.6 |
+|   1600 |    7.212 |    7.753 |     26.2 |
+|   1700 |    7.374 |    7.943 |     27.9 |
+|   1800 |    7.092 |    7.626 |     29.5 |
+|   1900 |    7.310 |    7.893 |     31.1 |
+|   2000 |    7.142 |    7.643 |     32.8 |
+|   2100 |    7.313 |    7.858 |     34.4 |
+|   2200 |    7.063 |    7.601 |     36.0 |
+|   2300 |    7.117 |    7.690 |     37.7 |
+|   2400 |    7.228 |    7.784 |     39.3 |
+|   2500 |    6.956 |    7.542 |     41.0 |
+|   2600 |    7.144 |    7.676 |     42.6 |
+|   2700 |    7.113 |    7.666 |     44.2 |
+|   2800 |    7.169 |    7.714 |     45.9 |
+|   2900 |    7.231 |    7.772 |     47.5 |
+|   3000 |    7.121 |    7.656 |     49.2 |
+|   3100 |    6.867 |    7.456 |     50.8 |
+|   3200 |    7.013 |    7.550 |     52.4 |
+|   3300 |    6.951 |    7.504 |     54.1 |
+|   3400 |    6.897 |    7.490 |     55.7 |
+|   3500 |    7.062 |    7.635 |     57.3 |
+|   3600 |    7.110 |    7.679 |     59.0 |
+|   3700 |    6.983 |    7.543 |     60.6 |
+|   3800 |    6.775 |    7.385 |     62.3 |
+|   3900 |    6.973 |    7.540 |     63.9 |
+|   4000 |    6.773 |    7.313 |     65.5 |
+-------------------------------------------
+
+Model          final bpt     vs H         tok/s
+--------------------------------------------------
+H              6.773               —      6.34M
+TF             7.313      +8.0% worse      6.23M
+
+Optimizations:
+  Triton SSM scan: yes
+  torch.compile:   yes
+  Transf    step=3400  val_bpt=5.869  loss=3.7089  avg=7.17M  win=7.26M tok/s
+  Transf    step= 800  val_bpt=7.503  loss=5.1003  avg=5.05M  win=5.12M tok/s
+  Transf    step=3500  val_bpt=6.046  loss=4.0402  avg=7.18M  win=7.40M tok/s
+  Transf    step=3600  val_bpt=6.051  loss=3.8694  avg=7.18M  win=7.32M tok/s
+  Transf    step= 900  val_bpt=7.542  loss=5.1639  avg=5.04M  win=4.92M tok/s
+  Transf    step=3700  val_bpt=5.896  loss=4.1525  avg=7.19M  win=7.38M tok/s
+  Transf    step=3800  val_bpt=5.734  loss=3.7315  avg=7.19M  win=7.37M tok/s
+  Transf    step=1000  val_bpt=7.535  loss=5.4629  avg=5.06M  win=5.29M tok/s
+  Transf    step=3900  val_bpt=5.938  loss=3.8912  avg=7.20M  win=7.36M tok/s
+  Transf    done  9.1s  avg=7.20M tok/s  final val_bpt=6.019
+
+[  ]
+-------------------------------------------
+| step   | H bpt    | TF bpt   | tokens M |
+-------------------------------------------
+|      0 |   16.266 |   15.892 |      0.0 |
+|    100 |    8.062 |    8.255 |      1.6 |
+|    200 |    7.590 |    7.812 |      3.3 |
+|    300 |    7.379 |    7.607 |      4.9 |
+|    400 |    7.354 |    7.562 |      6.6 |
+|    500 |    6.968 |    7.170 |      8.2 |
+|    600 |    6.867 |    7.072 |      9.8 |
+|    700 |    6.664 |    6.864 |     11.5 |
+|    800 |    6.728 |    6.880 |     13.1 |
+|    900 |    6.595 |    6.741 |     14.7 |
+|   1000 |    6.640 |    6.758 |     16.4 |
+|   1100 |    6.407 |    6.523 |     18.0 |
+|   1200 |    6.582 |    6.671 |     19.7 |
+|   1300 |    6.246 |    6.347 |     21.3 |
+|   1400 |    6.435 |    6.527 |     22.9 |
+|   1500 |    6.442 |    6.499 |     24.6 |
+|   1600 |    6.208 |    6.260 |     26.2 |
+|   1700 |    6.361 |    6.399 |     27.9 |
+|   1800 |    6.134 |    6.167 |     29.5 |
+|   1900 |    6.260 |    6.263 |     31.1 |
+|   2000 |    6.201 |    6.196 |     32.8 |
+|   2100 |    6.147 |    6.172 |     34.4 |
+|   2200 |    6.215 |    6.184 |     36.0 |
+|   2300 |    6.216 |    6.199 |     37.7 |
+|   2400 |    6.322 |    6.294 |     39.3 |
+|   2500 |    6.104 |    6.090 |     41.0 |
+|   2600 |    6.259 |    6.222 |     42.6 |
+|   2700 |    6.133 |    6.090 |     44.2 |
+|   2800 |    6.120 |    6.086 |     45.9 |
+|   2900 |    6.171 |    6.121 |     47.5 |
+|   3000 |    5.865 |    5.805 |     49.2 |
+|   3100 |    6.114 |    6.058 |     50.8 |
+|   3200 |    5.975 |    5.908 |     52.4 |
+|   3300 |    6.044 |    5.974 |     54.1 |
+|   3400 |    5.940 |    5.869 |     55.7 |
+|   3500 |    6.112 |    6.046 |     57.3 |
+|   3600 |    6.139 |    6.051 |     59.0 |
+|   3700 |    5.970 |    5.896 |     60.6 |
+|   3800 |    5.807 |    5.734 |     62.3 |
+|   3900 |    6.014 |    5.938 |     63.9 |
+|   4000 |    6.109 |    6.019 |     65.5 |
+-------------------------------------------
+
+Model          final bpt     vs H         tok/s
+--------------------------------------------------
+H              6.109               —      8.19M
+TF             6.019     -1.5% better      7.20M
+
+Optimizations:
+  Triton SSM scan: yes
+  torch.compile:   yes
+  Transf    step=1100  val_bpt=7.418  loss=4.1484  avg=5.07M  win=5.16M tok/s
+  Transf    step=1200  val_bpt=6.971  loss=5.0875  avg=5.09M  win=5.30M tok/s
+  Transf    step=1300  val_bpt=6.912  loss=5.2554  avg=5.08M  win=4.96M tok/s
+  Transf    step=1400  val_bpt=7.014  loss=5.0439  avg=5.10M  win=5.31M tok/s
+  Transf    step=1500  val_bpt=6.879  loss=5.1381  avg=5.12M  win=5.44M tok/s
+  Transf    step=1600  val_bpt=6.918  loss=4.6620  avg=5.11M  win=5.00M tok/s
+  Transf    step=1700  val_bpt=7.061  loss=4.7196  avg=5.11M  win=5.16M tok/s
+  Transf    step=1800  val_bpt=6.862  loss=4.6956  avg=5.13M  win=5.38M tok/s
+  Transf    step=1900  val_bpt=7.018  loss=4.6725  avg=5.13M  win=5.26M tok/s
+  Transf    step=2000  val_bpt=6.826  loss=4.9481  avg=5.15M  win=5.37M tok/s
+  Transf    step=2100  val_bpt=6.955  loss=5.0774  avg=5.15M  win=5.35M tok/s
+  Transf    step=2200  val_bpt=6.727  loss=4.5988  avg=5.16M  win=5.34M tok/s
+  Transf    step=2300  val_bpt=6.804  loss=4.5718  avg=5.17M  win=5.27M tok/s
+  Transf    step=2400  val_bpt=6.837  loss=5.1883  avg=5.17M  win=5.31M tok/s
+  Transf    step=2500  val_bpt=6.587  loss=4.7842  avg=5.18M  win=5.36M tok/s
+  Transf    step=2600  val_bpt=6.710  loss=4.2287  avg=5.19M  win=5.36M tok/s
+  Transf    step=2700  val_bpt=6.720  loss=4.7783  avg=5.19M  win=5.35M tok/s
+  Transf    step=2800  val_bpt=6.735  loss=4.0457  avg=5.20M  win=5.36M tok/s
+  Transf    step=2900  val_bpt=6.799  loss=3.9270  avg=5.20M  win=5.39M tok/s
+  Transf    step=3000  val_bpt=6.669  loss=4.8181  avg=5.21M  win=5.31M tok/s
+  Transf    step=3100  val_bpt=6.466  loss=4.4296  avg=5.21M  win=5.40M tok/s
+  Transf    step=3200  val_bpt=6.558  loss=4.4767  avg=5.22M  win=5.42M tok/s
+  Transf    step=3300  val_bpt=6.473  loss=4.7800  avg=5.22M  win=5.31M tok/s
+  Transf    step=3400  val_bpt=6.455  loss=4.6916  avg=5.23M  win=5.34M tok/s
+  Transf    step=3500  val_bpt=6.615  loss=4.4509  avg=5.23M  win=5.27M tok/s
+  Transf    step=3600  val_bpt=6.662  loss=4.8140  avg=5.23M  win=5.37M tok/s
+  Transf    step=3700  val_bpt=6.510  loss=4.1904  avg=5.24M  win=5.37M tok/s
+  Transf    step=3800  val_bpt=6.321  loss=2.7677  avg=5.24M  win=5.29M tok/s
+  Transf    step=3900  val_bpt=6.532  loss=5.1812  avg=5.24M  win=5.24M tok/s
+  Transf    done  12.5s  avg=5.24M tok/s  final val_bpt=6.306
+
+[  ]
+-------------------------------------------
+| step   | H bpt    | TF bpt   | tokens M |
+-------------------------------------------
+|      0 |   16.332 |   15.822 |      0.0 |
+|    100 |    8.016 |    8.386 |      1.6 |
+|    200 |    7.367 |    7.815 |      3.3 |
+|    300 |    7.629 |    8.049 |      4.9 |
+|    400 |    7.040 |    7.535 |      6.6 |
+|    500 |    7.192 |    7.680 |      8.2 |
+|    600 |    7.194 |    7.660 |      9.8 |
+|    700 |    7.148 |    7.662 |     11.5 |
+|    800 |    6.990 |    7.503 |     13.1 |
+|    900 |    7.032 |    7.542 |     14.7 |
+|   1000 |    7.045 |    7.535 |     16.4 |
+|   1100 |    6.910 |    7.418 |     18.0 |
+|   1200 |    6.429 |    6.971 |     19.7 |
+|   1300 |    6.348 |    6.912 |     21.3 |
+|   1400 |    6.424 |    7.014 |     22.9 |
+|   1500 |    6.317 |    6.879 |     24.6 |
+|   1600 |    6.376 |    6.918 |     26.2 |
+|   1700 |    6.496 |    7.061 |     27.9 |
+|   1800 |    6.310 |    6.862 |     29.5 |
+|   1900 |    6.470 |    7.018 |     31.1 |
+|   2000 |    6.335 |    6.826 |     32.8 |
+|   2100 |    6.469 |    6.955 |     34.4 |
+|   2200 |    6.245 |    6.727 |     36.0 |
+|   2300 |    6.279 |    6.804 |     37.7 |
+|   2400 |    6.360 |    6.837 |     39.3 |
+|   2500 |    6.061 |    6.587 |     41.0 |
+|   2600 |    6.249 |    6.710 |     42.6 |
+|   2700 |    6.259 |    6.720 |     44.2 |
+|   2800 |    6.259 |    6.735 |     45.9 |
+|   2900 |    6.340 |    6.799 |     47.5 |
+|   3000 |    6.219 |    6.669 |     49.2 |
+|   3100 |    5.996 |    6.466 |     50.8 |
+|   3200 |    6.109 |    6.558 |     52.4 |
+|   3300 |    5.997 |    6.473 |     54.1 |
+|   3400 |    6.024 |    6.455 |     55.7 |
+|   3500 |    6.169 |    6.615 |     57.3 |
+|   3600 |    6.221 |    6.662 |     59.0 |
+|   3700 |    6.081 |    6.510 |     60.6 |
+|   3800 |    5.872 |    6.321 |     62.3 |
+|   3900 |    6.110 |    6.532 |     63.9 |
+|   4000 |    5.893 |    6.306 |     65.5 |
+-------------------------------------------
+
+Model          final bpt     vs H         tok/s
+--------------------------------------------------
+H              5.893               —      5.64M
+TF             6.306      +7.0% worse      5.24M
+
+Optimizations:
+  Triton SSM scan: yes
+  torch.compile:   yes
+All 4 runs completed.
+Stopping app - local entrypoint completed.
+https://modal.com/apps/harmonic002/main/ap-SUINnL82Bcg5Znv1n3eenm
