@@ -1,8 +1,15 @@
+✓ Initialized. View run at 
+https://modal.com/apps/kirilkmo/main/ap-fT8OBT1W0UrFg2zS6j7NBb
+✓ Created objects.
+├── 🔨 Created mount 
+│   /home/suicore/harmonic/architecture/train_fast_longctx_modal.py
+├── 🔨 Created mount /home/suicore/harmonic/architecture/train_fast.py
+└── 🔨 Created function run.
 device: cuda
 GPU: NVIDIA H100 80GB HBM3  torch: 2.12.0+cu130
 
 Testing Triton SSM scan...
-  Triton SSM scan: OK - enabled
+  Triton SSM scan: OK — using
   torch.compile: enabled
 
 Loading wikitext-2...
@@ -20,14 +27,14 @@ Compiling models...
   warnings.warn(
   warmup Transformer...
   warmup Mamba...
-  warmup done - measurements use compiled models.
+  warmup done — benchmarks will use compiled models.
 
 HarmonicFair    27,965,952 params
 TransfFlash     28,886,528 params
 MambaFair       28,100,608 params
 batch=2  seq=8192  steps=5000  total_tokens=81.9M
 
-[ HarmonicFair ]
+=== HarmonicFair ===
   Harmonic  step= 100  val_bpt=10.024  loss=6.9165  avg=3.13M  win=3.13M tok/s
   Harmonic  step= 200  val_bpt=9.640  loss=6.5192  avg=4.25M  win=6.64M tok/s
   Harmonic  step= 300  val_bpt=9.348  loss=6.4150  avg=4.17M  win=4.01M tok/s
@@ -79,7 +86,7 @@ batch=2  seq=8192  steps=5000  total_tokens=81.9M
   Harmonic  step=4900  val_bpt=8.117  loss=4.2439  avg=5.29M  win=7.08M tok/s
   Harmonic  done  15.4s  avg=5.32M tok/s  final val_bpt=8.182
 
-[ TransformerFlash ]
+=== TransformerFlash ===
   Transf    step= 100  val_bpt=10.021  loss=6.9864  avg=4.33M  win=4.33M tok/s
   Transf    step= 200  val_bpt=9.639  loss=6.5552  avg=4.71M  win=5.16M tok/s
   Transf    step= 300  val_bpt=9.389  loss=6.4978  avg=4.97M  win=5.60M tok/s
@@ -131,7 +138,7 @@ batch=2  seq=8192  steps=5000  total_tokens=81.9M
   Transf    step=4900  val_bpt=8.368  loss=4.9215  avg=5.04M  win=5.08M tok/s
   Transf    done  16.3s  avg=5.04M tok/s  final val_bpt=8.418
 
-[ MambaFair ]
+=== MambaFair ===
   Mamba     step= 100  val_bpt=10.157  loss=7.0929  avg=5.15M  win=5.15M tok/s
   Mamba     step= 200  val_bpt=9.665  loss=6.5833  avg=6.13M  win=7.58M tok/s
   Mamba     step= 300  val_bpt=9.366  loss=6.5471  avg=6.55M  win=7.59M tok/s
@@ -183,10 +190,9 @@ batch=2  seq=8192  steps=5000  total_tokens=81.9M
   Mamba     step=4900  val_bpt=8.213  loss=4.6752  avg=6.05M  win=6.01M tok/s
   Mamba     done  13.6s  avg=6.03M tok/s  final val_bpt=8.290
 
-[  ]
-------------------------------------------------------
++--------+----------+----------+----------+----------+
 | step   | H bpt    | TF bpt   | MB bpt   | tokens M |
-------------------------------------------------------
++--------+----------+----------+----------+----------+
 |      0 |   16.212 |   15.817 |   15.803 |      0.0 |
 |    100 |   10.024 |   10.021 |   10.157 |      1.6 |
 |    200 |    9.640 |    9.639 |    9.665 |      3.3 |
@@ -238,9 +244,9 @@ batch=2  seq=8192  steps=5000  total_tokens=81.9M
 |   4800 |    8.171 |    8.406 |    8.275 |     78.6 |
 |   4900 |    8.117 |    8.368 |    8.213 |     80.3 |
 |   5000 |    8.182 |    8.418 |    8.290 |     81.9 |
-------------------------------------------------------
++--------+----------+----------+----------+----------+
 
-Model          final bpt     vs H         tok/s
+Model       final bpt       vs H       tok/s
 --------------------------------------------------
 H              8.182               —      5.32M
 TF             8.418      +2.9% worse      5.04M
@@ -248,6 +254,7 @@ MB             8.290      +1.3% worse      6.03M
 
 Optimizations:
   Triton SSM scan: yes
-  torch.compile:   yes
+  torch.compile: yes
 Stopping app - local entrypoint completed.
+✓ App completed. View run at 
 https://modal.com/apps/kirilkmo/main/ap-fT8OBT1W0UrFg2zS6j7NBb

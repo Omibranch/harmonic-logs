@@ -1,3 +1,250 @@
+✓ Initialized. View run at 
+https://modal.com/apps/harmonic002/main/ap-SUINnL82Bcg5Znv1n3eenm
+Building image im-67kvrPwLCL37uBE3U8IPY0
+
+=> Step 0: FROM base
+
+=> Step 1: RUN python -m pip install datasets numpy tiktoken torch==2.5.1 triton
+Looking in indexes: http://pypi-mirror.modal.local:5555/simple
+Collecting datasets
+  Downloading http://pypi-mirror.modal.local:5555/simple/datasets/datasets-4.8.5-py3-none-any.whl.metadata (19 kB)
+Collecting numpy
+  Downloading http://pypi-mirror.modal.local:5555/simple/numpy/numpy-2.4.6-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (6.6 kB)
+Collecting tiktoken
+  Downloading http://pypi-mirror.modal.local:5555/simple/tiktoken/tiktoken-0.13.0-cp311-cp311-manylinux_2_28_x86_64.whl.metadata (6.7 kB)
+Collecting torch==2.5.1
+  Downloading http://pypi-mirror.modal.local:5555/simple/torch/torch-2.5.1-cp311-cp311-manylinux1_x86_64.whl.metadata (28 kB)
+Collecting triton
+  Downloading http://pypi-mirror.modal.local:5555/simple/triton/triton-3.7.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (1.7 kB)
+Collecting filelock (from torch==2.5.1)
+  Downloading http://pypi-mirror.modal.local:5555/simple/filelock/filelock-3.29.0-py3-none-any.whl.metadata (2.0 kB)
+Collecting typing-extensions>=4.8.0 (from torch==2.5.1)
+  Downloading http://pypi-mirror.modal.local:5555/simple/typing-extensions/typing_extensions-4.15.0-py3-none-any.whl.metadata (3.3 kB)
+Collecting networkx (from torch==2.5.1)
+  Downloading http://pypi-mirror.modal.local:5555/simple/networkx/networkx-3.6.1-py3-none-any.whl.metadata (6.8 kB)
+Collecting jinja2 (from torch==2.5.1)
+  Downloading http://pypi-mirror.modal.local:5555/simple/jinja2/jinja2-3.1.6-py3-none-any.whl.metadata (2.9 kB)
+Collecting fsspec (from torch==2.5.1)
+  Downloading http://pypi-mirror.modal.local:5555/simple/fsspec/fsspec-2026.4.0-py3-none-any.whl.metadata (10 kB)
+Collecting nvidia-cuda-nvrtc-cu12==12.4.127 (from torch==2.5.1)
+  Downloading http://pypi-mirror.modal.local:5555/simple/nvidia-cuda-nvrtc-cu12/nvidia_cuda_nvrtc_cu12-12.4.127-py3-none-manylinux2014_x86_64.whl.metadata (1.5 kB)
+Collecting nvidia-cuda-runtime-cu12==12.4.127 (from torch==2.5.1)
+  Downloading http://pypi-mirror.modal.local:5555/simple/nvidia-cuda-runtime-cu12/nvidia_cuda_runtime_cu12-12.4.127-py3-none-manylinux2014_x86_64.whl.metadata (1.5 kB)
+Collecting nvidia-cuda-cupti-cu12==12.4.127 (from torch==2.5.1)
+  Downloading http://pypi-mirror.modal.local:5555/simple/nvidia-cuda-cupti-cu12/nvidia_cuda_cupti_cu12-12.4.127-py3-none-manylinux2014_x86_64.whl.metadata (1.6 kB)
+Collecting nvidia-cudnn-cu12==9.1.0.70 (from torch==2.5.1)
+  Downloading http://pypi-mirror.modal.local:5555/simple/nvidia-cudnn-cu12/nvidia_cudnn_cu12-9.1.0.70-py3-none-manylinux2014_x86_64.whl.metadata (1.6 kB)
+Collecting nvidia-cublas-cu12==12.4.5.8 (from torch==2.5.1)
+  Downloading http://pypi-mirror.modal.local:5555/simple/nvidia-cublas-cu12/nvidia_cublas_cu12-12.4.5.8-py3-none-manylinux2014_x86_64.whl.metadata (1.5 kB)
+Collecting nvidia-cufft-cu12==11.2.1.3 (from torch==2.5.1)
+  Downloading http://pypi-mirror.modal.local:5555/simple/nvidia-cufft-cu12/nvidia_cufft_cu12-11.2.1.3-py3-none-manylinux2014_x86_64.whl.metadata (1.5 kB)
+Collecting nvidia-curand-cu12==10.3.5.147 (from torch==2.5.1)
+  Downloading http://pypi-mirror.modal.local:5555/simple/nvidia-curand-cu12/nvidia_curand_cu12-10.3.5.147-py3-none-manylinux2014_x86_64.whl.metadata (1.5 kB)
+Collecting nvidia-cusolver-cu12==11.6.1.9 (from torch==2.5.1)
+  Downloading http://pypi-mirror.modal.local:5555/simple/nvidia-cusolver-cu12/nvidia_cusolver_cu12-11.6.1.9-py3-none-manylinux2014_x86_64.whl.metadata (1.6 kB)
+Collecting nvidia-cusparse-cu12==12.3.1.170 (from torch==2.5.1)
+  Downloading http://pypi-mirror.modal.local:5555/simple/nvidia-cusparse-cu12/nvidia_cusparse_cu12-12.3.1.170-py3-none-manylinux2014_x86_64.whl.metadata (1.6 kB)
+Collecting nvidia-nccl-cu12==2.21.5 (from torch==2.5.1)
+  Downloading http://pypi-mirror.modal.local:5555/simple/nvidia-nccl-cu12/nvidia_nccl_cu12-2.21.5-py3-none-manylinux2014_x86_64.whl.metadata (1.8 kB)
+Collecting nvidia-nvtx-cu12==12.4.127 (from torch==2.5.1)
+  Downloading http://pypi-mirror.modal.local:5555/simple/nvidia-nvtx-cu12/nvidia_nvtx_cu12-12.4.127-py3-none-manylinux2014_x86_64.whl.metadata (1.7 kB)
+Collecting nvidia-nvjitlink-cu12==12.4.127 (from torch==2.5.1)
+  Downloading http://pypi-mirror.modal.local:5555/simple/nvidia-nvjitlink-cu12/nvidia_nvjitlink_cu12-12.4.127-py3-none-manylinux2014_x86_64.whl.metadata (1.5 kB)
+Collecting triton
+  Downloading http://pypi-mirror.modal.local:5555/simple/triton/triton-3.1.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (1.3 kB)
+Collecting sympy==1.13.1 (from torch==2.5.1)
+  Downloading http://pypi-mirror.modal.local:5555/simple/sympy/sympy-1.13.1-py3-none-any.whl.metadata (12 kB)
+Collecting mpmath<1.4,>=1.1.0 (from sympy==1.13.1->torch==2.5.1)
+  Downloading http://pypi-mirror.modal.local:5555/simple/mpmath/mpmath-1.3.0-py3-none-any.whl.metadata (8.6 kB)
+Collecting pyarrow>=21.0.0 (from datasets)
+  Downloading http://pypi-mirror.modal.local:5555/simple/pyarrow/pyarrow-24.0.0-cp311-cp311-manylinux_2_28_x86_64.whl.metadata (3.0 kB)
+Collecting dill<0.4.2,>=0.3.0 (from datasets)
+  Downloading http://pypi-mirror.modal.local:5555/simple/dill/dill-0.4.1-py3-none-any.whl.metadata (10 kB)
+Collecting pandas (from datasets)
+  Downloading http://pypi-mirror.modal.local:5555/simple/pandas/pandas-3.0.3-cp311-cp311-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl.metadata (79 kB)
+Collecting requests>=2.32.2 (from datasets)
+  Downloading http://pypi-mirror.modal.local:5555/simple/requests/requests-2.34.2-py3-none-any.whl.metadata (4.8 kB)
+Collecting httpx<1.0.0 (from datasets)
+  Downloading http://pypi-mirror.modal.local:5555/simple/httpx/httpx-0.28.1-py3-none-any.whl.metadata (7.1 kB)
+Collecting tqdm>=4.66.3 (from datasets)
+  Downloading http://pypi-mirror.modal.local:5555/simple/tqdm/tqdm-4.67.3-py3-none-any.whl.metadata (57 kB)
+Collecting xxhash (from datasets)
+  Downloading http://pypi-mirror.modal.local:5555/simple/xxhash/xxhash-3.7.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (13 kB)
+Collecting multiprocess<0.70.20 (from datasets)
+  Downloading http://pypi-mirror.modal.local:5555/simple/multiprocess/multiprocess-0.70.19-py311-none-any.whl.metadata (7.5 kB)
+Collecting fsspec (from torch==2.5.1)
+  Downloading http://pypi-mirror.modal.local:5555/simple/fsspec/fsspec-2026.2.0-py3-none-any.whl.metadata (10 kB)
+Collecting huggingface-hub<2.0,>=0.25.0 (from datasets)
+  Downloading http://pypi-mirror.modal.local:5555/simple/huggingface-hub/huggingface_hub-1.16.1-py3-none-any.whl.metadata (14 kB)
+Collecting packaging (from datasets)
+  Downloading http://pypi-mirror.modal.local:5555/simple/packaging/packaging-26.2-py3-none-any.whl.metadata (3.5 kB)
+Collecting pyyaml>=5.1 (from datasets)
+  Downloading http://pypi-mirror.modal.local:5555/simple/pyyaml/pyyaml-6.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.4 kB)
+Collecting aiohttp!=4.0.0a0,!=4.0.0a1 (from fsspec[http]<=2026.2.0,>=2023.1.0->datasets)
+  Downloading http://pypi-mirror.modal.local:5555/simple/aiohttp/aiohttp-3.13.5-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (8.1 kB)
+Collecting anyio (from httpx<1.0.0->datasets)
+  Downloading http://pypi-mirror.modal.local:5555/simple/anyio/anyio-4.13.0-py3-none-any.whl.metadata (4.5 kB)
+Collecting certifi (from httpx<1.0.0->datasets)
+  Downloading http://pypi-mirror.modal.local:5555/simple/certifi/certifi-2026.5.20-py3-none-any.whl.metadata (2.5 kB)
+Collecting httpcore==1.* (from httpx<1.0.0->datasets)
+  Downloading http://pypi-mirror.modal.local:5555/simple/httpcore/httpcore-1.0.9-py3-none-any.whl.metadata (21 kB)
+Collecting idna (from httpx<1.0.0->datasets)
+  Downloading http://pypi-mirror.modal.local:5555/simple/idna/idna-3.16-py3-none-any.whl.metadata (6.4 kB)
+Collecting h11>=0.16 (from httpcore==1.*->httpx<1.0.0->datasets)
+  Downloading http://pypi-mirror.modal.local:5555/simple/h11/h11-0.16.0-py3-none-any.whl.metadata (8.3 kB)
+Collecting hf-xet<2.0.0,>=1.4.3 (from huggingface-hub<2.0,>=0.25.0->datasets)
+  Downloading http://pypi-mirror.modal.local:5555/simple/hf-xet/hf_xet-1.5.0-cp37-abi3-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (4.9 kB)
+Collecting typer>=0.20.0 (from huggingface-hub<2.0,>=0.25.0->datasets)
+  Downloading http://pypi-mirror.modal.local:5555/simple/typer/typer-0.25.1-py3-none-any.whl.metadata (15 kB)
+Collecting regex (from tiktoken)
+  Downloading http://pypi-mirror.modal.local:5555/simple/regex/regex-2026.5.9-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (40 kB)
+Collecting aiohappyeyeballs>=2.5.0 (from aiohttp!=4.0.0a0,!=4.0.0a1->fsspec[http]<=2026.2.0,>=2023.1.0->datasets)
+  Downloading http://pypi-mirror.modal.local:5555/simple/aiohappyeyeballs/aiohappyeyeballs-2.6.2-py3-none-any.whl.metadata (5.9 kB)
+Collecting aiosignal>=1.4.0 (from aiohttp!=4.0.0a0,!=4.0.0a1->fsspec[http]<=2026.2.0,>=2023.1.0->datasets)
+  Downloading http://pypi-mirror.modal.local:5555/simple/aiosignal/aiosignal-1.4.0-py3-none-any.whl.metadata (3.7 kB)
+Collecting attrs>=17.3.0 (from aiohttp!=4.0.0a0,!=4.0.0a1->fsspec[http]<=2026.2.0,>=2023.1.0->datasets)
+  Downloading http://pypi-mirror.modal.local:5555/simple/attrs/attrs-26.1.0-py3-none-any.whl.metadata (8.8 kB)
+Collecting frozenlist>=1.1.1 (from aiohttp!=4.0.0a0,!=4.0.0a1->fsspec[http]<=2026.2.0,>=2023.1.0->datasets)
+  Downloading http://pypi-mirror.modal.local:5555/simple/frozenlist/frozenlist-1.8.0-cp311-cp311-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl.metadata (20 kB)
+Collecting multidict<7.0,>=4.5 (from aiohttp!=4.0.0a0,!=4.0.0a1->fsspec[http]<=2026.2.0,>=2023.1.0->datasets)
+  Downloading http://pypi-mirror.modal.local:5555/simple/multidict/multidict-6.7.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (5.3 kB)
+Collecting propcache>=0.2.0 (from aiohttp!=4.0.0a0,!=4.0.0a1->fsspec[http]<=2026.2.0,>=2023.1.0->datasets)
+  Downloading http://pypi-mirror.modal.local:5555/simple/propcache/propcache-0.5.2-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (16 kB)
+Collecting yarl<2.0,>=1.17.0 (from aiohttp!=4.0.0a0,!=4.0.0a1->fsspec[http]<=2026.2.0,>=2023.1.0->datasets)
+  Downloading http://pypi-mirror.modal.local:5555/simple/yarl/yarl-1.24.2-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (94 kB)
+Collecting charset_normalizer<4,>=2 (from requests>=2.32.2->datasets)
+  Downloading http://pypi-mirror.modal.local:5555/simple/charset-normalizer/charset_normalizer-3.4.7-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (40 kB)
+Collecting urllib3<3,>=1.26 (from requests>=2.32.2->datasets)
+  Downloading http://pypi-mirror.modal.local:5555/simple/urllib3/urllib3-2.7.0-py3-none-any.whl.metadata (6.9 kB)
+Collecting click>=8.2.1 (from typer>=0.20.0->huggingface-hub<2.0,>=0.25.0->datasets)
+  Downloading http://pypi-mirror.modal.local:5555/simple/click/click-8.4.1-py3-none-any.whl.metadata (2.6 kB)
+Collecting shellingham>=1.3.0 (from typer>=0.20.0->huggingface-hub<2.0,>=0.25.0->datasets)
+  Downloading http://pypi-mirror.modal.local:5555/simple/shellingham/shellingham-1.5.4-py2.py3-none-any.whl.metadata (3.5 kB)
+Collecting rich>=13.8.0 (from typer>=0.20.0->huggingface-hub<2.0,>=0.25.0->datasets)
+  Downloading http://pypi-mirror.modal.local:5555/simple/rich/rich-15.0.0-py3-none-any.whl.metadata (18 kB)
+Collecting annotated-doc>=0.0.2 (from typer>=0.20.0->huggingface-hub<2.0,>=0.25.0->datasets)
+  Downloading http://pypi-mirror.modal.local:5555/simple/annotated-doc/annotated_doc-0.0.4-py3-none-any.whl.metadata (6.6 kB)
+Collecting markdown-it-py>=2.2.0 (from rich>=13.8.0->typer>=0.20.0->huggingface-hub<2.0,>=0.25.0->datasets)
+  Downloading http://pypi-mirror.modal.local:5555/simple/markdown-it-py/markdown_it_py-4.2.0-py3-none-any.whl.metadata (7.4 kB)
+Collecting pygments<3.0.0,>=2.13.0 (from rich>=13.8.0->typer>=0.20.0->huggingface-hub<2.0,>=0.25.0->datasets)
+  Downloading http://pypi-mirror.modal.local:5555/simple/pygments/pygments-2.20.0-py3-none-any.whl.metadata (2.5 kB)
+Collecting mdurl~=0.1 (from markdown-it-py>=2.2.0->rich>=13.8.0->typer>=0.20.0->huggingface-hub<2.0,>=0.25.0->datasets)
+  Downloading http://pypi-mirror.modal.local:5555/simple/mdurl/mdurl-0.1.2-py3-none-any.whl.metadata (1.6 kB)
+Collecting MarkupSafe>=2.0 (from jinja2->torch==2.5.1)
+  Downloading http://pypi-mirror.modal.local:5555/simple/markupsafe/markupsafe-3.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.7 kB)
+Collecting python-dateutil>=2.8.2 (from pandas->datasets)
+  Downloading http://pypi-mirror.modal.local:5555/simple/python-dateutil/python_dateutil-2.9.0.post0-py2.py3-none-any.whl.metadata (8.4 kB)
+Collecting six>=1.5 (from python-dateutil>=2.8.2->pandas->datasets)
+  Downloading http://pypi-mirror.modal.local:5555/simple/six/six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+Downloading http://pypi-mirror.modal.local:5555/simple/torch/torch-2.5.1-cp311-cp311-manylinux1_x86_64.whl (906.5 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 906.5/906.5 MB 205.3 MB/s  0:00:04
+Downloading http://pypi-mirror.modal.local:5555/simple/triton/triton-3.1.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (209.5 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 209.5/209.5 MB 174.0 MB/s  0:00:01
+Downloading http://pypi-mirror.modal.local:5555/simple/nvidia-cublas-cu12/nvidia_cublas_cu12-12.4.5.8-py3-none-manylinux2014_x86_64.whl (363.4 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 363.4/363.4 MB 304.4 MB/s  0:00:01
+Downloading http://pypi-mirror.modal.local:5555/simple/nvidia-cuda-cupti-cu12/nvidia_cuda_cupti_cu12-12.4.127-py3-none-manylinux2014_x86_64.whl (13.8 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 13.8/13.8 MB 280.0 MB/s  0:00:00
+Downloading http://pypi-mirror.modal.local:5555/simple/nvidia-cuda-nvrtc-cu12/nvidia_cuda_nvrtc_cu12-12.4.127-py3-none-manylinux2014_x86_64.whl (24.6 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 24.6/24.6 MB 263.9 MB/s  0:00:00
+Downloading http://pypi-mirror.modal.local:5555/simple/nvidia-cuda-runtime-cu12/nvidia_cuda_runtime_cu12-12.4.127-py3-none-manylinux2014_x86_64.whl (883 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 883.7/883.7 kB 244.8 MB/s  0:00:00
+Downloading http://pypi-mirror.modal.local:5555/simple/nvidia-cudnn-cu12/nvidia_cudnn_cu12-9.1.0.70-py3-none-manylinux2014_x86_64.whl (664.8 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 664.8/664.8 MB 269.5 MB/s  0:00:02
+Downloading http://pypi-mirror.modal.local:5555/simple/nvidia-cufft-cu12/nvidia_cufft_cu12-11.2.1.3-py3-none-manylinux2014_x86_64.whl (211.5 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 211.5/211.5 MB 281.9 MB/s  0:00:00
+Downloading http://pypi-mirror.modal.local:5555/simple/nvidia-curand-cu12/nvidia_curand_cu12-10.3.5.147-py3-none-manylinux2014_x86_64.whl (56.3 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 56.3/56.3 MB 294.0 MB/s  0:00:00
+Downloading http://pypi-mirror.modal.local:5555/simple/nvidia-cusolver-cu12/nvidia_cusolver_cu12-11.6.1.9-py3-none-manylinux2014_x86_64.whl (127.9 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 127.9/127.9 MB 283.9 MB/s  0:00:00
+Downloading http://pypi-mirror.modal.local:5555/simple/nvidia-cusparse-cu12/nvidia_cusparse_cu12-12.3.1.170-py3-none-manylinux2014_x86_64.whl (207.5 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 207.5/207.5 MB 258.0 MB/s  0:00:00
+Downloading http://pypi-mirror.modal.local:5555/simple/nvidia-nccl-cu12/nvidia_nccl_cu12-2.21.5-py3-none-manylinux2014_x86_64.whl (188.7 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 188.7/188.7 MB 237.4 MB/s  0:00:00
+Downloading http://pypi-mirror.modal.local:5555/simple/nvidia-nvjitlink-cu12/nvidia_nvjitlink_cu12-12.4.127-py3-none-manylinux2014_x86_64.whl (21.1 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 21.1/21.1 MB 270.7 MB/s  0:00:00
+Downloading http://pypi-mirror.modal.local:5555/simple/nvidia-nvtx-cu12/nvidia_nvtx_cu12-12.4.127-py3-none-manylinux2014_x86_64.whl (99 kB)
+Downloading http://pypi-mirror.modal.local:5555/simple/sympy/sympy-1.13.1-py3-none-any.whl (6.2 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 6.2/6.2 MB 267.8 MB/s  0:00:00
+Downloading http://pypi-mirror.modal.local:5555/simple/mpmath/mpmath-1.3.0-py3-none-any.whl (536 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 536.2/536.2 kB 782.8 MB/s  0:00:00
+Downloading http://pypi-mirror.modal.local:5555/simple/datasets/datasets-4.8.5-py3-none-any.whl (528 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 529.0/529.0 kB 165.0 MB/s  0:00:00
+Downloading http://pypi-mirror.modal.local:5555/simple/dill/dill-0.4.1-py3-none-any.whl (120 kB)
+Downloading http://pypi-mirror.modal.local:5555/simple/fsspec/fsspec-2026.2.0-py3-none-any.whl (202 kB)
+Downloading http://pypi-mirror.modal.local:5555/simple/httpx/httpx-0.28.1-py3-none-any.whl (73 kB)
+Downloading http://pypi-mirror.modal.local:5555/simple/httpcore/httpcore-1.0.9-py3-none-any.whl (78 kB)
+Downloading http://pypi-mirror.modal.local:5555/simple/huggingface-hub/huggingface_hub-1.16.1-py3-none-any.whl (668 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 668.2/668.2 kB 433.4 MB/s  0:00:00
+Downloading http://pypi-mirror.modal.local:5555/simple/hf-xet/hf_xet-1.5.0-cp37-abi3-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (4.5 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.5/4.5 MB 173.0 MB/s  0:00:00
+Downloading http://pypi-mirror.modal.local:5555/simple/multiprocess/multiprocess-0.70.19-py311-none-any.whl (144 kB)
+Downloading http://pypi-mirror.modal.local:5555/simple/numpy/numpy-2.4.6-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (16.9 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.9/16.9 MB 259.8 MB/s  0:00:00
+Downloading http://pypi-mirror.modal.local:5555/simple/tiktoken/tiktoken-0.13.0-cp311-cp311-manylinux_2_28_x86_64.whl (1.1 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.1/1.1 MB 326.3 MB/s  0:00:00
+Downloading http://pypi-mirror.modal.local:5555/simple/aiohttp/aiohttp-3.13.5-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (1.8 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.8/1.8 MB 239.4 MB/s  0:00:00
+Downloading http://pypi-mirror.modal.local:5555/simple/multidict/multidict-6.7.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (246 kB)
+Downloading http://pypi-mirror.modal.local:5555/simple/yarl/yarl-1.24.2-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (106 kB)
+Downloading http://pypi-mirror.modal.local:5555/simple/aiohappyeyeballs/aiohappyeyeballs-2.6.2-py3-none-any.whl (15 kB)
+Downloading http://pypi-mirror.modal.local:5555/simple/aiosignal/aiosignal-1.4.0-py3-none-any.whl (7.5 kB)
+Downloading http://pypi-mirror.modal.local:5555/simple/attrs/attrs-26.1.0-py3-none-any.whl (67 kB)
+Downloading http://pypi-mirror.modal.local:5555/simple/filelock/filelock-3.29.0-py3-none-any.whl (39 kB)
+Downloading http://pypi-mirror.modal.local:5555/simple/frozenlist/frozenlist-1.8.0-cp311-cp311-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl (231 kB)
+Downloading http://pypi-mirror.modal.local:5555/simple/h11/h11-0.16.0-py3-none-any.whl (37 kB)
+Downloading http://pypi-mirror.modal.local:5555/simple/idna/idna-3.16-py3-none-any.whl (74 kB)
+Downloading http://pypi-mirror.modal.local:5555/simple/packaging/packaging-26.2-py3-none-any.whl (100 kB)
+Downloading http://pypi-mirror.modal.local:5555/simple/propcache/propcache-0.5.2-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (58 kB)
+Downloading http://pypi-mirror.modal.local:5555/simple/pyarrow/pyarrow-24.0.0-cp311-cp311-manylinux_2_28_x86_64.whl (48.8 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 48.8/48.8 MB 275.1 MB/s  0:00:00
+Downloading http://pypi-mirror.modal.local:5555/simple/pyyaml/pyyaml-6.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (806 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 806.6/806.6 kB 409.9 MB/s  0:00:00
+Downloading http://pypi-mirror.modal.local:5555/simple/requests/requests-2.34.2-py3-none-any.whl (73 kB)
+Downloading http://pypi-mirror.modal.local:5555/simple/charset-normalizer/charset_normalizer-3.4.7-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (214 kB)
+Downloading http://pypi-mirror.modal.local:5555/simple/urllib3/urllib3-2.7.0-py3-none-any.whl (131 kB)
+Downloading http://pypi-mirror.modal.local:5555/simple/certifi/certifi-2026.5.20-py3-none-any.whl (134 kB)
+Downloading http://pypi-mirror.modal.local:5555/simple/tqdm/tqdm-4.67.3-py3-none-any.whl (78 kB)
+Downloading http://pypi-mirror.modal.local:5555/simple/typer/typer-0.25.1-py3-none-any.whl (58 kB)
+Downloading http://pypi-mirror.modal.local:5555/simple/annotated-doc/annotated_doc-0.0.4-py3-none-any.whl (5.3 kB)
+Downloading http://pypi-mirror.modal.local:5555/simple/click/click-8.4.1-py3-none-any.whl (116 kB)
+Downloading http://pypi-mirror.modal.local:5555/simple/rich/rich-15.0.0-py3-none-any.whl (310 kB)
+Downloading http://pypi-mirror.modal.local:5555/simple/pygments/pygments-2.20.0-py3-none-any.whl (1.2 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.2/1.2 MB 308.2 MB/s  0:00:00
+Downloading http://pypi-mirror.modal.local:5555/simple/markdown-it-py/markdown_it_py-4.2.0-py3-none-any.whl (91 kB)
+Downloading http://pypi-mirror.modal.local:5555/simple/mdurl/mdurl-0.1.2-py3-none-any.whl (10.0 kB)
+Downloading http://pypi-mirror.modal.local:5555/simple/shellingham/shellingham-1.5.4-py2.py3-none-any.whl (9.8 kB)
+Downloading http://pypi-mirror.modal.local:5555/simple/typing-extensions/typing_extensions-4.15.0-py3-none-any.whl (44 kB)
+Downloading http://pypi-mirror.modal.local:5555/simple/anyio/anyio-4.13.0-py3-none-any.whl (114 kB)
+Downloading http://pypi-mirror.modal.local:5555/simple/jinja2/jinja2-3.1.6-py3-none-any.whl (134 kB)
+Downloading http://pypi-mirror.modal.local:5555/simple/markupsafe/markupsafe-3.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (22 kB)
+Downloading http://pypi-mirror.modal.local:5555/simple/networkx/networkx-3.6.1-py3-none-any.whl (2.1 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.1/2.1 MB 392.2 MB/s  0:00:00
+Downloading http://pypi-mirror.modal.local:5555/simple/pandas/pandas-3.0.3-cp311-cp311-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl (11.3 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 11.3/11.3 MB 277.9 MB/s  0:00:00
+Downloading http://pypi-mirror.modal.local:5555/simple/python-dateutil/python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+Downloading http://pypi-mirror.modal.local:5555/simple/six/six-1.17.0-py2.py3-none-any.whl (11 kB)
+Downloading http://pypi-mirror.modal.local:5555/simple/regex/regex-2026.5.9-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (799 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 799.8/799.8 kB 319.8 MB/s  0:00:00
+Downloading http://pypi-mirror.modal.local:5555/simple/xxhash/xxhash-3.7.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (193 kB)
+Installing collected packages: mpmath, xxhash, urllib3, typing-extensions, tqdm, sympy, six, shellingham, regex, pyyaml, pygments, pyarrow, propcache, packaging, nvidia-nvtx-cu12, nvidia-nvjitlink-cu12, nvidia-nccl-cu12, nvidia-curand-cu12, nvidia-cufft-cu12, nvidia-cuda-runtime-cu12, nvidia-cuda-nvrtc-cu12, nvidia-cuda-cupti-cu12, nvidia-cublas-cu12, numpy, networkx, multidict, mdurl, MarkupSafe, idna, hf-xet, h11, fsspec, frozenlist, filelock, dill, click, charset_normalizer, certifi, attrs, annotated-doc, aiohappyeyeballs, yarl, triton, requests, python-dateutil, nvidia-cusparse-cu12, nvidia-cudnn-cu12, multiprocess, markdown-it-py, jinja2, httpcore, anyio, aiosignal, tiktoken, rich, pandas, nvidia-cusolver-cu12, httpx, aiohttp, typer, torch, huggingface-hub, datasets
+
+Successfully installed MarkupSafe-3.0.3 aiohappyeyeballs-2.6.2 aiohttp-3.13.5 aiosignal-1.4.0 annotated-doc-0.0.4 anyio-4.13.0 attrs-26.1.0 certifi-2026.5.20 charset_normalizer-3.4.7 click-8.4.1 datasets-4.8.5 dill-0.4.1 filelock-3.29.0 frozenlist-1.8.0 fsspec-2026.2.0 h11-0.16.0 hf-xet-1.5.0 httpcore-1.0.9 httpx-0.28.1 huggingface-hub-1.16.1 idna-3.16 jinja2-3.1.6 markdown-it-py-4.2.0 mdurl-0.1.2 mpmath-1.3.0 multidict-6.7.1 multiprocess-0.70.19 networkx-3.6.1 numpy-2.4.6 nvidia-cublas-cu12-12.4.5.8 nvidia-cuda-cupti-cu12-12.4.127 nvidia-cuda-nvrtc-cu12-12.4.127 nvidia-cuda-runtime-cu12-12.4.127 nvidia-cudnn-cu12-9.1.0.70 nvidia-cufft-cu12-11.2.1.3 nvidia-curand-cu12-10.3.5.147 nvidia-cusolver-cu12-11.6.1.9 nvidia-cusparse-cu12-12.3.1.170 nvidia-nccl-cu12-2.21.5 nvidia-nvjitlink-cu12-12.4.127 nvidia-nvtx-cu12-12.4.127 packaging-26.2 pandas-3.0.3 propcache-0.5.2 pyarrow-24.0.0 pygments-2.20.0 python-dateutil-2.9.0.post0 pyyaml-6.0.3 regex-2026.5.9 requests-2.34.2 rich-15.0.0 shellingham-1.5.4 six-1.17.0 sympy-1.13.1 tiktoken-0.13.0 torch-2.5.1 tqdm-4.67.3 triton-3.1.0 typer-0.25.1 typing-extensions-4.15.0 urllib3-2.7.0 xxhash-3.7.0 yarl-1.24.2
+
+[notice] A new release of pip is available: 25.2 -> 26.1.1
+[notice] To update, run: pip install --upgrade pip
+Saving image...
+Image saved, took 6.75s
+
+Built image im-67kvrPwLCL37uBE3U8IPY0 in 86.34s
+
+
+✓ Created objects.
+├── 🔨 Created mount /home/suicore/harmonic/architecture/scaling_modal.py
+├── 🔨 Created mount /home/suicore/harmonic/architecture/train_fast.py
+└── 🔨 Created function run_one.
+Scaling: hidden=[128,512]  seq=[1024,8192]  steps=4000  dataset=enwiki8
+Token budget: 65.5M tokens per run
+
 device: cuda
 GPU: NVIDIA H100 80GB HBM3  torch: 2.5.1+cu124
 
@@ -6,28 +253,28 @@ device: cuda
 GPU: NVIDIA H100 80GB HBM3  torch: 2.5.1+cu124
 
 Testing Triton SSM scan...
-  Triton SSM scan: OK - enabled
+  Triton SSM scan: OK — using
   torch.compile: enabled
 
 device: cuda
 GPU: NVIDIA H100 80GB HBM3  torch: 2.5.1+cu124
 
 Testing Triton SSM scan...
-  Triton SSM scan: OK - enabled
+  Triton SSM scan: OK — using
   torch.compile: enabled
 
 Loading enwiki8...
   downloading http://mattmahoney.net/dc/enwik8.zip...
 Loading enwiki8...
   downloading http://mattmahoney.net/dc/enwik8.zip...
-  Triton SSM scan: OK - enabled
+  Triton SSM scan: OK — using
   torch.compile: enabled
 
 device: cuda
 GPU: NVIDIA H100 80GB HBM3  torch: 2.5.1+cu124
 
 Testing Triton SSM scan...
-  Triton SSM scan: OK - enabled
+  Triton SSM scan: OK — using
   torch.compile: enabled
 
 Loading enwiki8...
@@ -50,34 +297,34 @@ Compiling models...
   warmup Transformer...
   warmup Transformer...
   warmup Transformer...
-  warmup done - measurements use compiled models.
+  warmup done — benchmarks will use compiled models.
 
 HarmonicFair    13,425,920 params
 TransfFlash     13,656,832 params
 hidden=128  batch=16  seq=1024  steps=4000  total_tokens=65.5M
 
-[ HarmonicFair ]
-  warmup done - measurements use compiled models.
+=== HarmonicFair ===
+  warmup done — benchmarks will use compiled models.
 
 HarmonicFair    60,388,352 params
 TransfFlash     64,064,512 params
 hidden=512  batch=16  seq=1024  steps=4000  total_tokens=65.5M
 
-[ HarmonicFair ]
-  warmup done - measurements use compiled models.
+=== HarmonicFair ===
+  warmup done — benchmarks will use compiled models.
 
 HarmonicFair    13,425,920 params
 TransfFlash     13,656,832 params
 hidden=128  batch=2  seq=8192  steps=4000  total_tokens=65.5M
 
-[ HarmonicFair ]
-  warmup done - measurements use compiled models.
+=== HarmonicFair ===
+  warmup done — benchmarks will use compiled models.
 
 HarmonicFair    60,388,352 params
 TransfFlash     64,064,512 params
 hidden=512  batch=2  seq=8192  steps=4000  total_tokens=65.5M
 
-[ HarmonicFair ]
+=== HarmonicFair ===
   Harmonic  step= 100  val_bpt=9.167  loss=6.8543  avg=3.60M  win=3.60M tok/s
   Harmonic  step= 100  val_bpt=8.062  loss=6.2021  avg=4.49M  win=4.49M tok/s
   Harmonic  step= 200  val_bpt=8.626  loss=6.0310  avg=4.76M  win=7.00M tok/s
@@ -184,7 +431,7 @@ hidden=512  batch=2  seq=8192  steps=4000  total_tokens=65.5M
   Harmonic  step=3900  val_bpt=6.965  loss=4.6711  avg=6.72M  win=7.41M tok/s
   Harmonic  done  9.7s  avg=6.74M tok/s  final val_bpt=7.048
 
-[ TransformerFlash ]
+=== TransformerFlash ===
   Harmonic  step=1600  val_bpt=6.376  loss=4.3669  avg=5.53M  win=5.68M tok/s
   Harmonic  step=2500  val_bpt=6.104  loss=4.2120  avg=8.07M  win=8.42M tok/s
   Harmonic  step=2700  val_bpt=7.113  loss=5.2015  avg=6.36M  win=6.32M tok/s
@@ -236,7 +483,7 @@ hidden=512  batch=2  seq=8192  steps=4000  total_tokens=65.5M
   Transf    step=1600  val_bpt=7.410  loss=5.1430  avg=6.26M  win=6.18M tok/s
   Harmonic  done  10.3s  avg=6.34M tok/s  final val_bpt=6.773
 
-[ TransformerFlash ]
+=== TransformerFlash ===
   Harmonic  step=2400  val_bpt=6.360  loss=4.7977  avg=5.58M  win=5.88M tok/s
   Harmonic  step=3700  val_bpt=5.970  loss=4.1451  avg=8.16M  win=8.26M tok/s
   Transf    step=1700  val_bpt=7.526  loss=5.0368  avg=6.25M  win=6.07M tok/s
@@ -251,7 +498,7 @@ hidden=512  batch=2  seq=8192  steps=4000  total_tokens=65.5M
   Harmonic  step=2600  val_bpt=6.249  loss=3.7690  avg=5.59M  win=5.81M tok/s
   Harmonic  done  8.0s  avg=8.19M tok/s  final val_bpt=6.109
 
-[ TransformerFlash ]
+=== TransformerFlash ===
   Transf    step= 200  val_bpt=9.023  loss=6.5741  avg=5.70M  win=5.63M tok/s
   Transf    step=2200  val_bpt=7.348  loss=5.3020  avg=6.26M  win=6.15M tok/s
   Transf    step=2300  val_bpt=7.395  loss=5.4292  avg=6.26M  win=6.20M tok/s
@@ -299,10 +546,9 @@ hidden=512  batch=2  seq=8192  steps=4000  total_tokens=65.5M
   Transf    step= 900  val_bpt=6.741  loss=4.5745  avg=7.08M  win=7.20M tok/s
   Transf    done  10.4s  avg=6.28M tok/s  final val_bpt=7.288
 
-[  ]
--------------------------------------------
++--------+----------+----------+----------+
 | step   | H bpt    | TF bpt   | tokens M |
--------------------------------------------
++--------+----------+----------+----------+
 |      0 |   16.580 |   15.887 |      0.0 |
 |    100 |    9.167 |   10.072 |      1.6 |
 |    200 |    8.626 |    9.044 |      3.3 |
@@ -344,16 +590,16 @@ hidden=512  batch=2  seq=8192  steps=4000  total_tokens=65.5M
 |   3800 |    6.700 |    6.959 |     62.3 |
 |   3900 |    6.965 |    7.216 |     63.9 |
 |   4000 |    7.048 |    7.288 |     65.5 |
--------------------------------------------
++--------+----------+----------+----------+
 
-Model          final bpt     vs H         tok/s
+Model       final bpt       vs H       tok/s
 --------------------------------------------------
 H              7.048               —      6.74M
 TF             7.288      +3.4% worse      6.28M
 
 Optimizations:
   Triton SSM scan: yes
-  torch.compile:   yes
+  torch.compile: yes
   Harmonic  step=3400  val_bpt=6.024  loss=4.3434  avg=5.62M  win=5.91M tok/s
   Transf    step=1300  val_bpt=7.752  loss=5.8337  avg=6.28M  win=6.57M tok/s
   Transf    step=1000  val_bpt=6.758  loss=4.3693  avg=7.09M  win=7.14M tok/s
@@ -378,7 +624,7 @@ Optimizations:
   Transf    step=2100  val_bpt=7.858  loss=5.8262  avg=6.32M  win=6.49M tok/s
   Harmonic  done  11.6s  avg=5.64M tok/s  final val_bpt=5.893
 
-[ TransformerFlash ]
+=== TransformerFlash ===
   Transf    step=1700  val_bpt=6.399  loss=4.1075  avg=7.02M  win=6.96M tok/s
   Transf    step=2200  val_bpt=7.601  loss=5.3747  avg=6.32M  win=6.37M tok/s
   Transf    step=1800  val_bpt=6.167  loss=4.1966  avg=7.03M  win=7.17M tok/s
@@ -423,10 +669,9 @@ Optimizations:
   Transf    step=3300  val_bpt=5.974  loss=4.0548  avg=7.17M  win=7.26M tok/s
   Transf    done  10.5s  avg=6.23M tok/s  final val_bpt=7.313
 
-[  ]
--------------------------------------------
++--------+----------+----------+----------+
 | step   | H bpt    | TF bpt   | tokens M |
--------------------------------------------
++--------+----------+----------+----------+
 |      0 |   16.408 |   15.869 |      0.0 |
 |    100 |    9.137 |   10.302 |      1.6 |
 |    200 |    8.375 |    9.023 |      3.3 |
@@ -468,16 +713,16 @@ Optimizations:
 |   3800 |    6.775 |    7.385 |     62.3 |
 |   3900 |    6.973 |    7.540 |     63.9 |
 |   4000 |    6.773 |    7.313 |     65.5 |
--------------------------------------------
++--------+----------+----------+----------+
 
-Model          final bpt     vs H         tok/s
+Model       final bpt       vs H       tok/s
 --------------------------------------------------
 H              6.773               —      6.34M
 TF             7.313      +8.0% worse      6.23M
 
 Optimizations:
   Triton SSM scan: yes
-  torch.compile:   yes
+  torch.compile: yes
   Transf    step=3400  val_bpt=5.869  loss=3.7089  avg=7.17M  win=7.26M tok/s
   Transf    step= 800  val_bpt=7.503  loss=5.1003  avg=5.05M  win=5.12M tok/s
   Transf    step=3500  val_bpt=6.046  loss=4.0402  avg=7.18M  win=7.40M tok/s
@@ -489,10 +734,9 @@ Optimizations:
   Transf    step=3900  val_bpt=5.938  loss=3.8912  avg=7.20M  win=7.36M tok/s
   Transf    done  9.1s  avg=7.20M tok/s  final val_bpt=6.019
 
-[  ]
--------------------------------------------
++--------+----------+----------+----------+
 | step   | H bpt    | TF bpt   | tokens M |
--------------------------------------------
++--------+----------+----------+----------+
 |      0 |   16.266 |   15.892 |      0.0 |
 |    100 |    8.062 |    8.255 |      1.6 |
 |    200 |    7.590 |    7.812 |      3.3 |
@@ -534,16 +778,16 @@ Optimizations:
 |   3800 |    5.807 |    5.734 |     62.3 |
 |   3900 |    6.014 |    5.938 |     63.9 |
 |   4000 |    6.109 |    6.019 |     65.5 |
--------------------------------------------
++--------+----------+----------+----------+
 
-Model          final bpt     vs H         tok/s
+Model       final bpt       vs H       tok/s
 --------------------------------------------------
 H              6.109               —      8.19M
-TF             6.019     -1.5% better      7.20M
+TF             6.019     +1.5% better      7.20M
 
 Optimizations:
   Triton SSM scan: yes
-  torch.compile:   yes
+  torch.compile: yes
   Transf    step=1100  val_bpt=7.418  loss=4.1484  avg=5.07M  win=5.16M tok/s
   Transf    step=1200  val_bpt=6.971  loss=5.0875  avg=5.09M  win=5.30M tok/s
   Transf    step=1300  val_bpt=6.912  loss=5.2554  avg=5.08M  win=4.96M tok/s
@@ -575,10 +819,9 @@ Optimizations:
   Transf    step=3900  val_bpt=6.532  loss=5.1812  avg=5.24M  win=5.24M tok/s
   Transf    done  12.5s  avg=5.24M tok/s  final val_bpt=6.306
 
-[  ]
--------------------------------------------
++--------+----------+----------+----------+
 | step   | H bpt    | TF bpt   | tokens M |
--------------------------------------------
++--------+----------+----------+----------+
 |      0 |   16.332 |   15.822 |      0.0 |
 |    100 |    8.016 |    8.386 |      1.6 |
 |    200 |    7.367 |    7.815 |      3.3 |
@@ -620,16 +863,17 @@ Optimizations:
 |   3800 |    5.872 |    6.321 |     62.3 |
 |   3900 |    6.110 |    6.532 |     63.9 |
 |   4000 |    5.893 |    6.306 |     65.5 |
--------------------------------------------
++--------+----------+----------+----------+
 
-Model          final bpt     vs H         tok/s
+Model       final bpt       vs H       tok/s
 --------------------------------------------------
 H              5.893               —      5.64M
 TF             6.306      +7.0% worse      5.24M
 
 Optimizations:
   Triton SSM scan: yes
-  torch.compile:   yes
+  torch.compile: yes
 All 4 runs completed.
 Stopping app - local entrypoint completed.
+✓ App completed. View run at 
 https://modal.com/apps/harmonic002/main/ap-SUINnL82Bcg5Znv1n3eenm

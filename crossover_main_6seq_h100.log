@@ -1,3 +1,250 @@
+✓ Initialized. View run at 
+https://modal.com/apps/profidash/main/ap-vOkOwBL7RLCGu0EiBMf90k
+Building image im-TfQN8SQsyYf8T6y007CIl7
+
+=> Step 0: FROM base
+
+=> Step 1: RUN python -m pip install datasets numpy tiktoken torch==2.5.1 triton
+Looking in indexes: http://pypi-mirror.modal.local:5555/simple
+Collecting datasets
+  Downloading http://pypi-mirror.modal.local:5555/simple/datasets/datasets-4.8.5-py3-none-any.whl.metadata (19 kB)
+Collecting numpy
+  Downloading http://pypi-mirror.modal.local:5555/simple/numpy/numpy-2.4.6-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (6.6 kB)
+Collecting tiktoken
+  Downloading http://pypi-mirror.modal.local:5555/simple/tiktoken/tiktoken-0.13.0-cp311-cp311-manylinux_2_28_x86_64.whl.metadata (6.7 kB)
+Collecting torch==2.5.1
+  Downloading http://pypi-mirror.modal.local:5555/simple/torch/torch-2.5.1-cp311-cp311-manylinux1_x86_64.whl.metadata (28 kB)
+Collecting triton
+  Downloading http://pypi-mirror.modal.local:5555/simple/triton/triton-3.7.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (1.7 kB)
+Collecting filelock (from torch==2.5.1)
+  Downloading http://pypi-mirror.modal.local:5555/simple/filelock/filelock-3.29.0-py3-none-any.whl.metadata (2.0 kB)
+Collecting typing-extensions>=4.8.0 (from torch==2.5.1)
+  Downloading http://pypi-mirror.modal.local:5555/simple/typing-extensions/typing_extensions-4.15.0-py3-none-any.whl.metadata (3.3 kB)
+Collecting networkx (from torch==2.5.1)
+  Downloading http://pypi-mirror.modal.local:5555/simple/networkx/networkx-3.6.1-py3-none-any.whl.metadata (6.8 kB)
+Collecting jinja2 (from torch==2.5.1)
+  Downloading http://pypi-mirror.modal.local:5555/simple/jinja2/jinja2-3.1.6-py3-none-any.whl.metadata (2.9 kB)
+Collecting fsspec (from torch==2.5.1)
+  Downloading http://pypi-mirror.modal.local:5555/simple/fsspec/fsspec-2026.4.0-py3-none-any.whl.metadata (10 kB)
+Collecting nvidia-cuda-nvrtc-cu12==12.4.127 (from torch==2.5.1)
+  Downloading http://pypi-mirror.modal.local:5555/simple/nvidia-cuda-nvrtc-cu12/nvidia_cuda_nvrtc_cu12-12.4.127-py3-none-manylinux2014_x86_64.whl.metadata (1.5 kB)
+Collecting nvidia-cuda-runtime-cu12==12.4.127 (from torch==2.5.1)
+  Downloading http://pypi-mirror.modal.local:5555/simple/nvidia-cuda-runtime-cu12/nvidia_cuda_runtime_cu12-12.4.127-py3-none-manylinux2014_x86_64.whl.metadata (1.5 kB)
+Collecting nvidia-cuda-cupti-cu12==12.4.127 (from torch==2.5.1)
+  Downloading http://pypi-mirror.modal.local:5555/simple/nvidia-cuda-cupti-cu12/nvidia_cuda_cupti_cu12-12.4.127-py3-none-manylinux2014_x86_64.whl.metadata (1.6 kB)
+Collecting nvidia-cudnn-cu12==9.1.0.70 (from torch==2.5.1)
+  Downloading http://pypi-mirror.modal.local:5555/simple/nvidia-cudnn-cu12/nvidia_cudnn_cu12-9.1.0.70-py3-none-manylinux2014_x86_64.whl.metadata (1.6 kB)
+Collecting nvidia-cublas-cu12==12.4.5.8 (from torch==2.5.1)
+  Downloading http://pypi-mirror.modal.local:5555/simple/nvidia-cublas-cu12/nvidia_cublas_cu12-12.4.5.8-py3-none-manylinux2014_x86_64.whl.metadata (1.5 kB)
+Collecting nvidia-cufft-cu12==11.2.1.3 (from torch==2.5.1)
+  Downloading http://pypi-mirror.modal.local:5555/simple/nvidia-cufft-cu12/nvidia_cufft_cu12-11.2.1.3-py3-none-manylinux2014_x86_64.whl.metadata (1.5 kB)
+Collecting nvidia-curand-cu12==10.3.5.147 (from torch==2.5.1)
+  Downloading http://pypi-mirror.modal.local:5555/simple/nvidia-curand-cu12/nvidia_curand_cu12-10.3.5.147-py3-none-manylinux2014_x86_64.whl.metadata (1.5 kB)
+Collecting nvidia-cusolver-cu12==11.6.1.9 (from torch==2.5.1)
+  Downloading http://pypi-mirror.modal.local:5555/simple/nvidia-cusolver-cu12/nvidia_cusolver_cu12-11.6.1.9-py3-none-manylinux2014_x86_64.whl.metadata (1.6 kB)
+Collecting nvidia-cusparse-cu12==12.3.1.170 (from torch==2.5.1)
+  Downloading http://pypi-mirror.modal.local:5555/simple/nvidia-cusparse-cu12/nvidia_cusparse_cu12-12.3.1.170-py3-none-manylinux2014_x86_64.whl.metadata (1.6 kB)
+Collecting nvidia-nccl-cu12==2.21.5 (from torch==2.5.1)
+  Downloading http://pypi-mirror.modal.local:5555/simple/nvidia-nccl-cu12/nvidia_nccl_cu12-2.21.5-py3-none-manylinux2014_x86_64.whl.metadata (1.8 kB)
+Collecting nvidia-nvtx-cu12==12.4.127 (from torch==2.5.1)
+  Downloading http://pypi-mirror.modal.local:5555/simple/nvidia-nvtx-cu12/nvidia_nvtx_cu12-12.4.127-py3-none-manylinux2014_x86_64.whl.metadata (1.7 kB)
+Collecting nvidia-nvjitlink-cu12==12.4.127 (from torch==2.5.1)
+  Downloading http://pypi-mirror.modal.local:5555/simple/nvidia-nvjitlink-cu12/nvidia_nvjitlink_cu12-12.4.127-py3-none-manylinux2014_x86_64.whl.metadata (1.5 kB)
+Collecting triton
+  Downloading http://pypi-mirror.modal.local:5555/simple/triton/triton-3.1.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (1.3 kB)
+Collecting sympy==1.13.1 (from torch==2.5.1)
+  Downloading http://pypi-mirror.modal.local:5555/simple/sympy/sympy-1.13.1-py3-none-any.whl.metadata (12 kB)
+Collecting mpmath<1.4,>=1.1.0 (from sympy==1.13.1->torch==2.5.1)
+  Downloading http://pypi-mirror.modal.local:5555/simple/mpmath/mpmath-1.3.0-py3-none-any.whl.metadata (8.6 kB)
+Collecting pyarrow>=21.0.0 (from datasets)
+  Downloading http://pypi-mirror.modal.local:5555/simple/pyarrow/pyarrow-24.0.0-cp311-cp311-manylinux_2_28_x86_64.whl.metadata (3.0 kB)
+Collecting dill<0.4.2,>=0.3.0 (from datasets)
+  Downloading http://pypi-mirror.modal.local:5555/simple/dill/dill-0.4.1-py3-none-any.whl.metadata (10 kB)
+Collecting pandas (from datasets)
+  Downloading http://pypi-mirror.modal.local:5555/simple/pandas/pandas-3.0.3-cp311-cp311-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl.metadata (79 kB)
+Collecting requests>=2.32.2 (from datasets)
+  Downloading http://pypi-mirror.modal.local:5555/simple/requests/requests-2.34.2-py3-none-any.whl.metadata (4.8 kB)
+Collecting httpx<1.0.0 (from datasets)
+  Downloading http://pypi-mirror.modal.local:5555/simple/httpx/httpx-0.28.1-py3-none-any.whl.metadata (7.1 kB)
+Collecting tqdm>=4.66.3 (from datasets)
+  Downloading http://pypi-mirror.modal.local:5555/simple/tqdm/tqdm-4.67.3-py3-none-any.whl.metadata (57 kB)
+Collecting xxhash (from datasets)
+  Downloading http://pypi-mirror.modal.local:5555/simple/xxhash/xxhash-3.7.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (13 kB)
+Collecting multiprocess<0.70.20 (from datasets)
+  Downloading http://pypi-mirror.modal.local:5555/simple/multiprocess/multiprocess-0.70.19-py311-none-any.whl.metadata (7.5 kB)
+Collecting fsspec (from torch==2.5.1)
+  Downloading http://pypi-mirror.modal.local:5555/simple/fsspec/fsspec-2026.2.0-py3-none-any.whl.metadata (10 kB)
+Collecting huggingface-hub<2.0,>=0.25.0 (from datasets)
+  Downloading http://pypi-mirror.modal.local:5555/simple/huggingface-hub/huggingface_hub-1.16.1-py3-none-any.whl.metadata (14 kB)
+Collecting packaging (from datasets)
+  Downloading http://pypi-mirror.modal.local:5555/simple/packaging/packaging-26.2-py3-none-any.whl.metadata (3.5 kB)
+Collecting pyyaml>=5.1 (from datasets)
+  Downloading http://pypi-mirror.modal.local:5555/simple/pyyaml/pyyaml-6.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.4 kB)
+Collecting aiohttp!=4.0.0a0,!=4.0.0a1 (from fsspec[http]<=2026.2.0,>=2023.1.0->datasets)
+  Downloading http://pypi-mirror.modal.local:5555/simple/aiohttp/aiohttp-3.13.5-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (8.1 kB)
+Collecting anyio (from httpx<1.0.0->datasets)
+  Downloading http://pypi-mirror.modal.local:5555/simple/anyio/anyio-4.13.0-py3-none-any.whl.metadata (4.5 kB)
+Collecting certifi (from httpx<1.0.0->datasets)
+  Downloading http://pypi-mirror.modal.local:5555/simple/certifi/certifi-2026.5.20-py3-none-any.whl.metadata (2.5 kB)
+Collecting httpcore==1.* (from httpx<1.0.0->datasets)
+  Downloading http://pypi-mirror.modal.local:5555/simple/httpcore/httpcore-1.0.9-py3-none-any.whl.metadata (21 kB)
+Collecting idna (from httpx<1.0.0->datasets)
+  Downloading http://pypi-mirror.modal.local:5555/simple/idna/idna-3.16-py3-none-any.whl.metadata (6.4 kB)
+Collecting h11>=0.16 (from httpcore==1.*->httpx<1.0.0->datasets)
+  Downloading http://pypi-mirror.modal.local:5555/simple/h11/h11-0.16.0-py3-none-any.whl.metadata (8.3 kB)
+Collecting hf-xet<2.0.0,>=1.4.3 (from huggingface-hub<2.0,>=0.25.0->datasets)
+  Downloading http://pypi-mirror.modal.local:5555/simple/hf-xet/hf_xet-1.5.0-cp37-abi3-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (4.9 kB)
+Collecting typer>=0.20.0 (from huggingface-hub<2.0,>=0.25.0->datasets)
+  Downloading http://pypi-mirror.modal.local:5555/simple/typer/typer-0.25.1-py3-none-any.whl.metadata (15 kB)
+Collecting regex (from tiktoken)
+  Downloading http://pypi-mirror.modal.local:5555/simple/regex/regex-2026.5.9-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (40 kB)
+Collecting aiohappyeyeballs>=2.5.0 (from aiohttp!=4.0.0a0,!=4.0.0a1->fsspec[http]<=2026.2.0,>=2023.1.0->datasets)
+  Downloading http://pypi-mirror.modal.local:5555/simple/aiohappyeyeballs/aiohappyeyeballs-2.6.2-py3-none-any.whl.metadata (5.9 kB)
+Collecting aiosignal>=1.4.0 (from aiohttp!=4.0.0a0,!=4.0.0a1->fsspec[http]<=2026.2.0,>=2023.1.0->datasets)
+  Downloading http://pypi-mirror.modal.local:5555/simple/aiosignal/aiosignal-1.4.0-py3-none-any.whl.metadata (3.7 kB)
+Collecting attrs>=17.3.0 (from aiohttp!=4.0.0a0,!=4.0.0a1->fsspec[http]<=2026.2.0,>=2023.1.0->datasets)
+  Downloading http://pypi-mirror.modal.local:5555/simple/attrs/attrs-26.1.0-py3-none-any.whl.metadata (8.8 kB)
+Collecting frozenlist>=1.1.1 (from aiohttp!=4.0.0a0,!=4.0.0a1->fsspec[http]<=2026.2.0,>=2023.1.0->datasets)
+  Downloading http://pypi-mirror.modal.local:5555/simple/frozenlist/frozenlist-1.8.0-cp311-cp311-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl.metadata (20 kB)
+Collecting multidict<7.0,>=4.5 (from aiohttp!=4.0.0a0,!=4.0.0a1->fsspec[http]<=2026.2.0,>=2023.1.0->datasets)
+  Downloading http://pypi-mirror.modal.local:5555/simple/multidict/multidict-6.7.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (5.3 kB)
+Collecting propcache>=0.2.0 (from aiohttp!=4.0.0a0,!=4.0.0a1->fsspec[http]<=2026.2.0,>=2023.1.0->datasets)
+  Downloading http://pypi-mirror.modal.local:5555/simple/propcache/propcache-0.5.2-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (16 kB)
+Collecting yarl<2.0,>=1.17.0 (from aiohttp!=4.0.0a0,!=4.0.0a1->fsspec[http]<=2026.2.0,>=2023.1.0->datasets)
+  Downloading http://pypi-mirror.modal.local:5555/simple/yarl/yarl-1.24.2-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (94 kB)
+Collecting charset_normalizer<4,>=2 (from requests>=2.32.2->datasets)
+  Downloading http://pypi-mirror.modal.local:5555/simple/charset-normalizer/charset_normalizer-3.4.7-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (40 kB)
+Collecting urllib3<3,>=1.26 (from requests>=2.32.2->datasets)
+  Downloading http://pypi-mirror.modal.local:5555/simple/urllib3/urllib3-2.7.0-py3-none-any.whl.metadata (6.9 kB)
+Collecting click>=8.2.1 (from typer>=0.20.0->huggingface-hub<2.0,>=0.25.0->datasets)
+  Downloading http://pypi-mirror.modal.local:5555/simple/click/click-8.4.1-py3-none-any.whl.metadata (2.6 kB)
+Collecting shellingham>=1.3.0 (from typer>=0.20.0->huggingface-hub<2.0,>=0.25.0->datasets)
+  Downloading http://pypi-mirror.modal.local:5555/simple/shellingham/shellingham-1.5.4-py2.py3-none-any.whl.metadata (3.5 kB)
+Collecting rich>=13.8.0 (from typer>=0.20.0->huggingface-hub<2.0,>=0.25.0->datasets)
+  Downloading http://pypi-mirror.modal.local:5555/simple/rich/rich-15.0.0-py3-none-any.whl.metadata (18 kB)
+Collecting annotated-doc>=0.0.2 (from typer>=0.20.0->huggingface-hub<2.0,>=0.25.0->datasets)
+  Downloading http://pypi-mirror.modal.local:5555/simple/annotated-doc/annotated_doc-0.0.4-py3-none-any.whl.metadata (6.6 kB)
+Collecting markdown-it-py>=2.2.0 (from rich>=13.8.0->typer>=0.20.0->huggingface-hub<2.0,>=0.25.0->datasets)
+  Downloading http://pypi-mirror.modal.local:5555/simple/markdown-it-py/markdown_it_py-4.2.0-py3-none-any.whl.metadata (7.4 kB)
+Collecting pygments<3.0.0,>=2.13.0 (from rich>=13.8.0->typer>=0.20.0->huggingface-hub<2.0,>=0.25.0->datasets)
+  Downloading http://pypi-mirror.modal.local:5555/simple/pygments/pygments-2.20.0-py3-none-any.whl.metadata (2.5 kB)
+Collecting mdurl~=0.1 (from markdown-it-py>=2.2.0->rich>=13.8.0->typer>=0.20.0->huggingface-hub<2.0,>=0.25.0->datasets)
+  Downloading http://pypi-mirror.modal.local:5555/simple/mdurl/mdurl-0.1.2-py3-none-any.whl.metadata (1.6 kB)
+Collecting MarkupSafe>=2.0 (from jinja2->torch==2.5.1)
+  Downloading http://pypi-mirror.modal.local:5555/simple/markupsafe/markupsafe-3.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.7 kB)
+Collecting python-dateutil>=2.8.2 (from pandas->datasets)
+  Downloading http://pypi-mirror.modal.local:5555/simple/python-dateutil/python_dateutil-2.9.0.post0-py2.py3-none-any.whl.metadata (8.4 kB)
+Collecting six>=1.5 (from python-dateutil>=2.8.2->pandas->datasets)
+  Downloading http://pypi-mirror.modal.local:5555/simple/six/six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+Downloading http://pypi-mirror.modal.local:5555/simple/torch/torch-2.5.1-cp311-cp311-manylinux1_x86_64.whl (906.5 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 906.5/906.5 MB 561.4 MB/s  0:00:01
+Downloading http://pypi-mirror.modal.local:5555/simple/triton/triton-3.1.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (209.5 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 209.5/209.5 MB 586.1 MB/s  0:00:00
+Downloading http://pypi-mirror.modal.local:5555/simple/nvidia-cublas-cu12/nvidia_cublas_cu12-12.4.5.8-py3-none-manylinux2014_x86_64.whl (363.4 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 363.4/363.4 MB 556.1 MB/s  0:00:00
+Downloading http://pypi-mirror.modal.local:5555/simple/nvidia-cuda-cupti-cu12/nvidia_cuda_cupti_cu12-12.4.127-py3-none-manylinux2014_x86_64.whl (13.8 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 13.8/13.8 MB 539.1 MB/s  0:00:00
+Downloading http://pypi-mirror.modal.local:5555/simple/nvidia-cuda-nvrtc-cu12/nvidia_cuda_nvrtc_cu12-12.4.127-py3-none-manylinux2014_x86_64.whl (24.6 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 24.6/24.6 MB 568.3 MB/s  0:00:00
+Downloading http://pypi-mirror.modal.local:5555/simple/nvidia-cuda-runtime-cu12/nvidia_cuda_runtime_cu12-12.4.127-py3-none-manylinux2014_x86_64.whl (883 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 883.7/883.7 kB 802.1 MB/s  0:00:00
+Downloading http://pypi-mirror.modal.local:5555/simple/nvidia-cudnn-cu12/nvidia_cudnn_cu12-9.1.0.70-py3-none-manylinux2014_x86_64.whl (664.8 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 664.8/664.8 MB 559.1 MB/s  0:00:01
+Downloading http://pypi-mirror.modal.local:5555/simple/nvidia-cufft-cu12/nvidia_cufft_cu12-11.2.1.3-py3-none-manylinux2014_x86_64.whl (211.5 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 211.5/211.5 MB 573.0 MB/s  0:00:00
+Downloading http://pypi-mirror.modal.local:5555/simple/nvidia-curand-cu12/nvidia_curand_cu12-10.3.5.147-py3-none-manylinux2014_x86_64.whl (56.3 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 56.3/56.3 MB 571.2 MB/s  0:00:00
+Downloading http://pypi-mirror.modal.local:5555/simple/nvidia-cusolver-cu12/nvidia_cusolver_cu12-11.6.1.9-py3-none-manylinux2014_x86_64.whl (127.9 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 127.9/127.9 MB 592.4 MB/s  0:00:00
+Downloading http://pypi-mirror.modal.local:5555/simple/nvidia-cusparse-cu12/nvidia_cusparse_cu12-12.3.1.170-py3-none-manylinux2014_x86_64.whl (207.5 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 207.5/207.5 MB 597.3 MB/s  0:00:00
+Downloading http://pypi-mirror.modal.local:5555/simple/nvidia-nccl-cu12/nvidia_nccl_cu12-2.21.5-py3-none-manylinux2014_x86_64.whl (188.7 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 188.7/188.7 MB 599.7 MB/s  0:00:00
+Downloading http://pypi-mirror.modal.local:5555/simple/nvidia-nvjitlink-cu12/nvidia_nvjitlink_cu12-12.4.127-py3-none-manylinux2014_x86_64.whl (21.1 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 21.1/21.1 MB 516.6 MB/s  0:00:00
+Downloading http://pypi-mirror.modal.local:5555/simple/nvidia-nvtx-cu12/nvidia_nvtx_cu12-12.4.127-py3-none-manylinux2014_x86_64.whl (99 kB)
+Downloading http://pypi-mirror.modal.local:5555/simple/sympy/sympy-1.13.1-py3-none-any.whl (6.2 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 6.2/6.2 MB 632.8 MB/s  0:00:00
+Downloading http://pypi-mirror.modal.local:5555/simple/mpmath/mpmath-1.3.0-py3-none-any.whl (536 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 536.2/536.2 kB 894.7 MB/s  0:00:00
+Downloading http://pypi-mirror.modal.local:5555/simple/datasets/datasets-4.8.5-py3-none-any.whl (528 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 529.0/529.0 kB 892.8 MB/s  0:00:00
+Downloading http://pypi-mirror.modal.local:5555/simple/dill/dill-0.4.1-py3-none-any.whl (120 kB)
+Downloading http://pypi-mirror.modal.local:5555/simple/fsspec/fsspec-2026.2.0-py3-none-any.whl (202 kB)
+Downloading http://pypi-mirror.modal.local:5555/simple/httpx/httpx-0.28.1-py3-none-any.whl (73 kB)
+Downloading http://pypi-mirror.modal.local:5555/simple/httpcore/httpcore-1.0.9-py3-none-any.whl (78 kB)
+Downloading http://pypi-mirror.modal.local:5555/simple/huggingface-hub/huggingface_hub-1.16.1-py3-none-any.whl (668 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 668.2/668.2 kB 851.4 MB/s  0:00:00
+Downloading http://pypi-mirror.modal.local:5555/simple/hf-xet/hf_xet-1.5.0-cp37-abi3-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (4.5 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.5/4.5 MB 572.0 MB/s  0:00:00
+Downloading http://pypi-mirror.modal.local:5555/simple/multiprocess/multiprocess-0.70.19-py311-none-any.whl (144 kB)
+Downloading http://pypi-mirror.modal.local:5555/simple/numpy/numpy-2.4.6-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (16.9 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.9/16.9 MB 670.6 MB/s  0:00:00
+Downloading http://pypi-mirror.modal.local:5555/simple/tiktoken/tiktoken-0.13.0-cp311-cp311-manylinux_2_28_x86_64.whl (1.1 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.1/1.1 MB 326.9 MB/s  0:00:00
+Downloading http://pypi-mirror.modal.local:5555/simple/aiohttp/aiohttp-3.13.5-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (1.8 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.8/1.8 MB 790.0 MB/s  0:00:00
+Downloading http://pypi-mirror.modal.local:5555/simple/multidict/multidict-6.7.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (246 kB)
+Downloading http://pypi-mirror.modal.local:5555/simple/yarl/yarl-1.24.2-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (106 kB)
+Downloading http://pypi-mirror.modal.local:5555/simple/aiohappyeyeballs/aiohappyeyeballs-2.6.2-py3-none-any.whl (15 kB)
+Downloading http://pypi-mirror.modal.local:5555/simple/aiosignal/aiosignal-1.4.0-py3-none-any.whl (7.5 kB)
+Downloading http://pypi-mirror.modal.local:5555/simple/attrs/attrs-26.1.0-py3-none-any.whl (67 kB)
+Downloading http://pypi-mirror.modal.local:5555/simple/filelock/filelock-3.29.0-py3-none-any.whl (39 kB)
+Downloading http://pypi-mirror.modal.local:5555/simple/frozenlist/frozenlist-1.8.0-cp311-cp311-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl (231 kB)
+Downloading http://pypi-mirror.modal.local:5555/simple/h11/h11-0.16.0-py3-none-any.whl (37 kB)
+Downloading http://pypi-mirror.modal.local:5555/simple/idna/idna-3.16-py3-none-any.whl (74 kB)
+Downloading http://pypi-mirror.modal.local:5555/simple/packaging/packaging-26.2-py3-none-any.whl (100 kB)
+Downloading http://pypi-mirror.modal.local:5555/simple/propcache/propcache-0.5.2-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (58 kB)
+Downloading http://pypi-mirror.modal.local:5555/simple/pyarrow/pyarrow-24.0.0-cp311-cp311-manylinux_2_28_x86_64.whl (48.8 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 48.8/48.8 MB 584.8 MB/s  0:00:00
+Downloading http://pypi-mirror.modal.local:5555/simple/pyyaml/pyyaml-6.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (806 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 806.6/806.6 kB 950.6 MB/s  0:00:00
+Downloading http://pypi-mirror.modal.local:5555/simple/requests/requests-2.34.2-py3-none-any.whl (73 kB)
+Downloading http://pypi-mirror.modal.local:5555/simple/charset-normalizer/charset_normalizer-3.4.7-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (214 kB)
+Downloading http://pypi-mirror.modal.local:5555/simple/urllib3/urllib3-2.7.0-py3-none-any.whl (131 kB)
+Downloading http://pypi-mirror.modal.local:5555/simple/certifi/certifi-2026.5.20-py3-none-any.whl (134 kB)
+Downloading http://pypi-mirror.modal.local:5555/simple/tqdm/tqdm-4.67.3-py3-none-any.whl (78 kB)
+Downloading http://pypi-mirror.modal.local:5555/simple/typer/typer-0.25.1-py3-none-any.whl (58 kB)
+Downloading http://pypi-mirror.modal.local:5555/simple/annotated-doc/annotated_doc-0.0.4-py3-none-any.whl (5.3 kB)
+Downloading http://pypi-mirror.modal.local:5555/simple/click/click-8.4.1-py3-none-any.whl (116 kB)
+Downloading http://pypi-mirror.modal.local:5555/simple/rich/rich-15.0.0-py3-none-any.whl (310 kB)
+Downloading http://pypi-mirror.modal.local:5555/simple/pygments/pygments-2.20.0-py3-none-any.whl (1.2 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.2/1.2 MB 757.3 MB/s  0:00:00
+Downloading http://pypi-mirror.modal.local:5555/simple/markdown-it-py/markdown_it_py-4.2.0-py3-none-any.whl (91 kB)
+Downloading http://pypi-mirror.modal.local:5555/simple/mdurl/mdurl-0.1.2-py3-none-any.whl (10.0 kB)
+Downloading http://pypi-mirror.modal.local:5555/simple/shellingham/shellingham-1.5.4-py2.py3-none-any.whl (9.8 kB)
+Downloading http://pypi-mirror.modal.local:5555/simple/typing-extensions/typing_extensions-4.15.0-py3-none-any.whl (44 kB)
+Downloading http://pypi-mirror.modal.local:5555/simple/anyio/anyio-4.13.0-py3-none-any.whl (114 kB)
+Downloading http://pypi-mirror.modal.local:5555/simple/jinja2/jinja2-3.1.6-py3-none-any.whl (134 kB)
+Downloading http://pypi-mirror.modal.local:5555/simple/markupsafe/markupsafe-3.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (22 kB)
+Downloading http://pypi-mirror.modal.local:5555/simple/networkx/networkx-3.6.1-py3-none-any.whl (2.1 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.1/2.1 MB 597.2 MB/s  0:00:00
+Downloading http://pypi-mirror.modal.local:5555/simple/pandas/pandas-3.0.3-cp311-cp311-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl (11.3 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 11.3/11.3 MB 569.7 MB/s  0:00:00
+Downloading http://pypi-mirror.modal.local:5555/simple/python-dateutil/python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+Downloading http://pypi-mirror.modal.local:5555/simple/six/six-1.17.0-py2.py3-none-any.whl (11 kB)
+Downloading http://pypi-mirror.modal.local:5555/simple/regex/regex-2026.5.9-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (799 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 799.8/799.8 kB 608.5 MB/s  0:00:00
+Downloading http://pypi-mirror.modal.local:5555/simple/xxhash/xxhash-3.7.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (193 kB)
+Installing collected packages: mpmath, xxhash, urllib3, typing-extensions, tqdm, sympy, six, shellingham, regex, pyyaml, pygments, pyarrow, propcache, packaging, nvidia-nvtx-cu12, nvidia-nvjitlink-cu12, nvidia-nccl-cu12, nvidia-curand-cu12, nvidia-cufft-cu12, nvidia-cuda-runtime-cu12, nvidia-cuda-nvrtc-cu12, nvidia-cuda-cupti-cu12, nvidia-cublas-cu12, numpy, networkx, multidict, mdurl, MarkupSafe, idna, hf-xet, h11, fsspec, frozenlist, filelock, dill, click, charset_normalizer, certifi, attrs, annotated-doc, aiohappyeyeballs, yarl, triton, requests, python-dateutil, nvidia-cusparse-cu12, nvidia-cudnn-cu12, multiprocess, markdown-it-py, jinja2, httpcore, anyio, aiosignal, tiktoken, rich, pandas, nvidia-cusolver-cu12, httpx, aiohttp, typer, torch, huggingface-hub, datasets
+
+Successfully installed MarkupSafe-3.0.3 aiohappyeyeballs-2.6.2 aiohttp-3.13.5 aiosignal-1.4.0 annotated-doc-0.0.4 anyio-4.13.0 attrs-26.1.0 certifi-2026.5.20 charset_normalizer-3.4.7 click-8.4.1 datasets-4.8.5 dill-0.4.1 filelock-3.29.0 frozenlist-1.8.0 fsspec-2026.2.0 h11-0.16.0 hf-xet-1.5.0 httpcore-1.0.9 httpx-0.28.1 huggingface-hub-1.16.1 idna-3.16 jinja2-3.1.6 markdown-it-py-4.2.0 mdurl-0.1.2 mpmath-1.3.0 multidict-6.7.1 multiprocess-0.70.19 networkx-3.6.1 numpy-2.4.6 nvidia-cublas-cu12-12.4.5.8 nvidia-cuda-cupti-cu12-12.4.127 nvidia-cuda-nvrtc-cu12-12.4.127 nvidia-cuda-runtime-cu12-12.4.127 nvidia-cudnn-cu12-9.1.0.70 nvidia-cufft-cu12-11.2.1.3 nvidia-curand-cu12-10.3.5.147 nvidia-cusolver-cu12-11.6.1.9 nvidia-cusparse-cu12-12.3.1.170 nvidia-nccl-cu12-2.21.5 nvidia-nvjitlink-cu12-12.4.127 nvidia-nvtx-cu12-12.4.127 packaging-26.2 pandas-3.0.3 propcache-0.5.2 pyarrow-24.0.0 pygments-2.20.0 python-dateutil-2.9.0.post0 pyyaml-6.0.3 regex-2026.5.9 requests-2.34.2 rich-15.0.0 shellingham-1.5.4 six-1.17.0 sympy-1.13.1 tiktoken-0.13.0 torch-2.5.1 tqdm-4.67.3 triton-3.1.0 typer-0.25.1 typing-extensions-4.15.0 urllib3-2.7.0 xxhash-3.7.0 yarl-1.24.2
+
+[notice] A new release of pip is available: 25.2 -> 26.1.1
+[notice] To update, run: pip install --upgrade pip
+Saving image...
+Image saved, took 3.64s
+
+Built image im-TfQN8SQsyYf8T6y007CIl7 in 72.13s
+
+
+✓ Created objects.
+├── 🔨 Created mount /home/suicore/harmonic/architecture/crossover_modal.py
+├── 🔨 Created mount /home/suicore/harmonic/architecture/train_fast.py
+└── 🔨 Created function run_one.
+Crossover: [1024, 2048, 4096, 8192, 16384, 32768]  steps=4000  dataset=enwiki8
+Base token budget: 65.5M tokens (seq=1024)
+
 device: cuda
 GPU: NVIDIA H100 80GB HBM3  torch: 2.5.1+cu124
 
@@ -10,19 +257,19 @@ device: cuda
 GPU: NVIDIA H100 80GB HBM3  torch: 2.5.1+cu124
 
 Testing Triton SSM scan...
-  Triton SSM scan: OK - enabled
+  Triton SSM scan: OK — using
   torch.compile: enabled
 
 device: cuda
 GPU: NVIDIA H100 80GB HBM3  torch: 2.5.1+cu124
 
 Testing Triton SSM scan...
-  Triton SSM scan: OK - enabled
+  Triton SSM scan: OK — using
   torch.compile: enabled
 
 Loading enwiki8...
   downloading http://mattmahoney.net/dc/enwik8.zip...
-  Triton SSM scan: OK - enabled
+  Triton SSM scan: OK — using
   torch.compile: enabled
 
 Loading enwiki8...
@@ -33,7 +280,7 @@ GPU: NVIDIA H100 80GB HBM3  torch: 2.5.1+cu124
 Testing Triton SSM scan...
 Loading enwiki8...
   downloading http://mattmahoney.net/dc/enwik8.zip...
-  Triton SSM scan: OK - enabled
+  Triton SSM scan: OK — using
   torch.compile: enabled
 
 device: cuda
@@ -42,10 +289,10 @@ GPU: NVIDIA H100 80GB HBM3  torch: 2.5.1+cu124
 Testing Triton SSM scan...
 Loading enwiki8...
   downloading http://mattmahoney.net/dc/enwik8.zip...
-  Triton SSM scan: OK - enabled
+  Triton SSM scan: OK — using
   torch.compile: enabled
 
-  Triton SSM scan: OK - enabled
+  Triton SSM scan: OK — using
   torch.compile: enabled
 
 Loading enwiki8...
@@ -76,7 +323,7 @@ Compiling models...
   warmup Transformer...
   warmup Transformer...
   warmup Transformer...
-  warmup done - measurements use compiled models.
+  warmup done — benchmarks will use compiled models.
 
 HarmonicFair    27,965,952 params
 TransfFlash     28,886,528 params
@@ -84,8 +331,8 @@ H-Stateful      27,965,952 params  (sequential batching)
 NPS-Stateful    27,834,880 params  (nopred + sequential batching)
 hidden=256  batch=4  seq=4096  steps=4000  total_tokens=65.5M
 
-[ HarmonicFair ]
-  warmup done - measurements use compiled models.
+=== HarmonicFair ===
+  warmup done — benchmarks will use compiled models.
 
 HarmonicFair    27,965,952 params
 TransfFlash     28,886,528 params
@@ -93,8 +340,8 @@ H-Stateful      27,965,952 params  (sequential batching)
 NPS-Stateful    27,834,880 params  (nopred + sequential batching)
 hidden=256  batch=16  seq=1024  steps=4000  total_tokens=65.5M
 
-[ HarmonicFair ]
-  warmup done - measurements use compiled models.
+=== HarmonicFair ===
+  warmup done — benchmarks will use compiled models.
 
 HarmonicFair    27,965,952 params
 TransfFlash     28,886,528 params
@@ -102,8 +349,8 @@ H-Stateful      27,965,952 params  (sequential batching)
 NPS-Stateful    27,834,880 params  (nopred + sequential batching)
 hidden=256  batch=1  seq=16384  steps=4000  total_tokens=65.5M
 
-[ HarmonicFair ]
-  warmup done - measurements use compiled models.
+=== HarmonicFair ===
+  warmup done — benchmarks will use compiled models.
 
 HarmonicFair    27,965,952 params
 TransfFlash     28,886,528 params
@@ -111,10 +358,10 @@ H-Stateful      27,965,952 params  (sequential batching)
 NPS-Stateful    27,834,880 params  (nopred + sequential batching)
 hidden=256  batch=1  seq=32768  steps=4000  total_tokens=131.1M
 
-[ HarmonicFair ]
-  warmup done - measurements use compiled models.
+=== HarmonicFair ===
+  warmup done — benchmarks will use compiled models.
 
-  warmup done - measurements use compiled models.
+  warmup done — benchmarks will use compiled models.
 
 HarmonicFair    27,965,952 params
 TransfFlash     28,886,528 params
@@ -122,9 +369,9 @@ H-Stateful      27,965,952 params  (sequential batching)
 NPS-Stateful    27,834,880 params  (nopred + sequential batching)
 hidden=256  batch=8  seq=2048  steps=4000  total_tokens=65.5M
 
-[ HarmonicFair ]
+=== HarmonicFair ===
   Harmonic  step= 100  val_bpt=8.541  loss=6.4991  avg=3.08M  win=3.08M tok/s
-  warmup done - measurements use compiled models.
+  warmup done — benchmarks will use compiled models.
 
 HarmonicFair    27,965,952 params
 TransfFlash     28,886,528 params
@@ -132,7 +379,7 @@ H-Stateful      27,965,952 params  (sequential batching)
 NPS-Stateful    27,834,880 params  (nopred + sequential batching)
 hidden=256  batch=2  seq=8192  steps=4000  total_tokens=65.5M
 
-[ HarmonicFair ]
+=== HarmonicFair ===
   Harmonic  step= 100  val_bpt=8.673  loss=5.8201  avg=3.77M  win=3.77M tok/s
   Harmonic  step= 200  val_bpt=8.042  loss=5.6260  avg=4.20M  win=6.58M tok/s
   Harmonic  step= 200  val_bpt=8.384  loss=4.8716  avg=4.92M  win=7.11M tok/s
@@ -289,7 +536,7 @@ hidden=256  batch=2  seq=8192  steps=4000  total_tokens=65.5M
   Harmonic  step=3200  val_bpt=6.569  loss=4.9500  avg=6.86M  win=7.39M tok/s
   Harmonic  done  10.2s  avg=6.45M tok/s  final val_bpt=6.568
 
-[ TransformerFlash ]
+=== TransformerFlash ===
   Harmonic  step=3600  val_bpt=6.437  loss=4.4747  avg=6.49M  win=8.92M tok/s
   Harmonic  step=2400  val_bpt=6.776  loss=5.2074  avg=6.23M  win=6.37M tok/s
   Harmonic  step=3300  val_bpt=6.438  loss=4.3663  avg=6.87M  win=7.16M tok/s
@@ -307,7 +554,7 @@ hidden=256  batch=2  seq=8192  steps=4000  total_tokens=65.5M
   Harmonic  step=2600  val_bpt=6.673  loss=4.1534  avg=6.25M  win=6.50M tok/s
   Harmonic  done  10.1s  avg=6.50M tok/s  final val_bpt=6.422
 
-[ TransformerFlash ]
+=== TransformerFlash ===
   Transf    step= 300  val_bpt=8.099  loss=5.5444  avg=5.91M  win=6.07M tok/s
   Harmonic  step=3600  val_bpt=6.391  loss=4.5898  avg=6.89M  win=7.04M tok/s
   Harmonic  step=2700  val_bpt=6.674  loss=4.8305  avg=6.26M  win=6.65M tok/s
@@ -328,7 +575,7 @@ hidden=256  batch=2  seq=8192  steps=4000  total_tokens=65.5M
   Transf    step= 300  val_bpt=8.182  loss=5.9389  avg=4.85M  win=5.16M tok/s
   Harmonic  done  9.5s  avg=6.89M tok/s  final val_bpt=6.685
 
-[ TransformerFlash ]
+=== TransformerFlash ===
   Harmonic  step=3000  val_bpt=6.656  loss=4.8943  avg=6.28M  win=6.44M tok/s
   Transf    step= 800  val_bpt=7.403  loss=5.2169  avg=5.95M  win=5.93M tok/s
   Harmonic  step=2200  val_bpt=6.848  loss=5.0418  avg=5.48M  win=5.28M tok/s
@@ -390,7 +637,7 @@ hidden=256  batch=2  seq=8192  steps=4000  total_tokens=65.5M
   Transf    step=1600  val_bpt=7.428  loss=4.8395  avg=5.06M  win=4.96M tok/s
   Harmonic  done  10.4s  avg=6.33M tok/s  final val_bpt=6.325
 
-[ TransformerFlash ]
+=== TransformerFlash ===
   Harmonic  step=2900  val_bpt=6.309  loss=4.2589  avg=5.44M  win=5.68M tok/s
   Transf    step=2300  val_bpt=6.813  loss=4.9786  avg=6.01M  win=6.09M tok/s
   Transf    step=1000  val_bpt=7.451  loss=5.0797  avg=5.45M  win=5.81M tok/s
@@ -461,7 +708,7 @@ hidden=256  batch=2  seq=8192  steps=4000  total_tokens=65.5M
   Transf    step=3200  val_bpt=6.862  loss=4.8193  avg=5.09M  win=5.14M tok/s
   Transf    done  10.9s  avg=6.03M tok/s  final val_bpt=6.668
 
-[ HarmonicStateful (sequential batching + state carry) ]
+=== HarmonicStateful (sequential batching + state carry) ===
   Transf    step= 900  val_bpt=7.927  loss=5.4337  avg=5.73M  win=5.81M tok/s
   Transf    step=2300  val_bpt=7.222  loss=4.2689  avg=5.74M  win=6.23M tok/s
   Harmonic  step=3800  val_bpt=6.814  loss=5.2380  avg=5.63M  win=6.26M tok/s
@@ -483,7 +730,7 @@ hidden=256  batch=2  seq=8192  steps=4000  total_tokens=65.5M
   Transf    step=2600  val_bpt=7.093  loss=4.7747  avg=5.78M  win=6.24M tok/s
   Harmonic  done  11.6s  avg=5.63M tok/s  final val_bpt=6.198
 
-[ TransformerFlash ]
+=== TransformerFlash ===
   Harmonic  step=2000  val_bpt=6.687  loss=4.8229  avg=10.95M  win=9.80M tok/s
   H-State   step= 600  val_bpt=7.082  loss=4.8806  avg=2.80M  win=2.92M tok/s
   Transf    step=3700  val_bpt=6.829  loss=4.6966  avg=5.08M  win=5.08M tok/s
@@ -501,7 +748,7 @@ hidden=256  batch=2  seq=8192  steps=4000  total_tokens=65.5M
   H-State   step=1000  val_bpt=6.770  loss=5.1740  avg=2.85M  win=2.93M tok/s
   Transf    step= 100  val_bpt=9.229  loss=6.1341  avg=4.50M  win=4.50M tok/s
 
-[ HarmonicStateful (sequential batching + state carry) ]
+=== HarmonicStateful (sequential batching + state carry) ===
   Harmonic  step=2100  val_bpt=6.464  loss=4.5816  avg=10.92M  win=10.34M tok/s
   Transf    step=1400  val_bpt=7.416  loss=5.3372  avg=5.72M  win=5.81M tok/s
   H-State   step=1100  val_bpt=6.764  loss=4.9744  avg=2.85M  win=2.92M tok/s
@@ -563,7 +810,7 @@ hidden=256  batch=2  seq=8192  steps=4000  total_tokens=65.5M
   H-State   step=2700  val_bpt=6.341  loss=3.8381  avg=2.91M  win=2.94M tok/s
   Transf    done  11.3s  avg=5.78M tok/s  final val_bpt=7.075
 
-[ HarmonicStateful (sequential batching + state carry) ]
+=== HarmonicStateful (sequential batching + state carry) ===
   Transf    step=2200  val_bpt=7.189  loss=4.9959  avg=5.76M  win=5.76M tok/s
   H-State   step=1600  val_bpt=6.930  loss=4.4136  avg=2.82M  win=2.98M tok/s
   H-State   step=2800  val_bpt=6.320  loss=4.1237  avg=2.91M  win=2.95M tok/s
@@ -614,7 +861,7 @@ hidden=256  batch=2  seq=8192  steps=4000  total_tokens=65.5M
   Transf    step=2800  val_bpt=7.244  loss=4.4684  avg=5.76M  win=5.80M tok/s
   H-State   done  22.4s  avg=2.92M tok/s  final val_bpt=6.218
 
-[ NoPredStateful (no pred coding + state carry) ]
+=== NoPredStateful (no pred coding + state carry) ===
   H-State   step=2800  val_bpt=6.692  loss=4.6423  avg=3.06M  win=3.56M tok/s
   Transf    step=1100  val_bpt=7.972  loss=5.7244  avg=5.27M  win=5.14M tok/s
   NPS-St    step= 100  val_bpt=8.340  loss=5.7885  avg=3.10M  win=3.10M tok/s
@@ -666,7 +913,7 @@ hidden=256  batch=2  seq=8192  steps=4000  total_tokens=65.5M
   Transf    step=1500  val_bpt=7.597  loss=5.1089  avg=5.31M  win=6.16M tok/s
   H-State   done  20.5s  avg=3.19M tok/s  final val_bpt=6.609
 
-[ NoPredStateful (no pred coding + state carry) ]
+=== NoPredStateful (no pred coding + state carry) ===
   H-State   step=2100  val_bpt=6.738  loss=4.8775  avg=2.95M  win=3.03M tok/s
   NPS-St    step=1400  val_bpt=6.623  loss=4.7669  avg=3.14M  win=3.18M tok/s
   Transf    step=3500  val_bpt=7.161  loss=4.9298  avg=5.78M  win=5.77M tok/s
@@ -710,7 +957,7 @@ hidden=256  batch=2  seq=8192  steps=4000  total_tokens=65.5M
   NPS-St    step=2500  val_bpt=6.357  loss=4.7362  avg=3.14M  win=3.18M tok/s
   Transf    done  11.3s  avg=5.79M tok/s  final val_bpt=6.829
 
-[ HarmonicStateful (sequential batching + state carry) ]
+=== HarmonicStateful (sequential batching + state carry) ===
   H-State   step=3000  val_bpt=6.555  loss=4.9639  avg=2.98M  win=3.06M tok/s
   NPS-St    step=1100  val_bpt=7.178  loss=4.6305  avg=3.06M  win=3.00M tok/s
   Transf    step=1900  val_bpt=7.570  loss=5.6549  avg=5.45M  win=5.95M tok/s
@@ -761,7 +1008,7 @@ hidden=256  batch=2  seq=8192  steps=4000  total_tokens=65.5M
   NPS-St    step=2200  val_bpt=6.820  loss=4.2543  avg=3.20M  win=3.66M tok/s
   H-State   done  21.9s  avg=3.00M tok/s  final val_bpt=6.503
 
-[ NoPredStateful (no pred coding + state carry) ]
+=== NoPredStateful (no pred coding + state carry) ===
   NPS-St    step=3800  val_bpt=6.249  loss=4.6089  avg=3.20M  win=3.58M tok/s
   Transf    step=2300  val_bpt=7.231  loss=4.8777  avg=5.54M  win=6.25M tok/s
   H-State   step= 800  val_bpt=7.593  loss=4.5956  avg=2.72M  win=2.69M tok/s
@@ -773,10 +1020,9 @@ hidden=256  batch=2  seq=8192  steps=4000  total_tokens=65.5M
   H-State   step= 900  val_bpt=7.541  loss=5.6778  avg=2.74M  win=2.87M tok/s
   NPS-St    done  20.3s  avg=3.22M tok/s  final val_bpt=6.235
 
-[  ]
------------------------------------------------------------------
++--------+----------+----------+----------+----------+----------+
 | step   | H bpt    | TF bpt   | H-State bpt| NPS-St bpt| tokens M |
------------------------------------------------------------------
++--------+----------+----------+----------+----------+----------+
 |      0 |   16.159 |   15.849 |   16.306 |   16.411 |      0.0 |
 |    100 |    8.541 |    8.866 |    8.324 |    8.340 |      1.6 |
 |    200 |    8.042 |    8.309 |    7.851 |    7.829 |      3.3 |
@@ -818,18 +1064,18 @@ hidden=256  batch=2  seq=8192  steps=4000  total_tokens=65.5M
 |   3800 |    6.237 |    6.362 |    6.234 |    6.249 |     62.3 |
 |   3900 |    6.475 |    6.592 |    6.221 |    6.240 |     63.9 |
 |   4000 |    6.568 |    6.668 |    6.218 |    6.235 |     65.5 |
------------------------------------------------------------------
++--------+----------+----------+----------+----------+----------+
 
-Model          final bpt     vs H         tok/s
+Model       final bpt       vs H       tok/s
 --------------------------------------------------
 H              6.568               —      6.45M
 TF             6.668      +1.5% worse      6.03M
-H-State        6.218     -5.3% better      2.92M
-NPS-St         6.235     -5.1% better      3.22M
+H-State        6.218     +5.3% better      2.92M
+NPS-St         6.235     +5.1% better      3.22M
 
 Optimizations:
   Triton SSM scan: yes
-  torch.compile:   yes
+  torch.compile: yes
   NPS-St    step= 200  val_bpt=8.175  loss=5.4068  avg=3.16M  win=3.24M tok/s
   NPS-St    step=2500  val_bpt=6.764  loss=4.8495  avg=3.25M  win=3.68M tok/s
   Transf    step=2400  val_bpt=7.562  loss=5.1900  avg=5.56M  win=5.96M tok/s
@@ -879,10 +1125,9 @@ Optimizations:
   Transf    step=2900  val_bpt=7.019  loss=4.8218  avg=5.59M  win=6.00M tok/s
   NPS-St    done  19.3s  avg=3.39M tok/s  final val_bpt=6.633
 
-[  ]
------------------------------------------------------------------
++--------+----------+----------+----------+----------+----------+
 | step   | H bpt    | TF bpt   | H-State bpt| NPS-St bpt| tokens M |
------------------------------------------------------------------
++--------+----------+----------+----------+----------+----------+
 |      0 |   16.244 |   15.781 |   16.313 |   16.446 |      0.0 |
 |    100 |    8.547 |    8.967 |    8.804 |    8.805 |      1.6 |
 |    200 |    8.417 |    8.719 |    8.261 |    8.269 |      3.3 |
@@ -924,9 +1169,9 @@ Optimizations:
 |   3800 |    6.252 |    6.518 |    6.629 |    6.647 |     62.3 |
 |   3900 |    6.533 |    6.767 |    6.615 |    6.637 |     63.9 |
 |   4000 |    6.422 |    6.668 |    6.609 |    6.633 |     65.5 |
------------------------------------------------------------------
++--------+----------+----------+----------+----------+----------+
 
-Model          final bpt     vs H         tok/s
+Model       final bpt       vs H       tok/s
 --------------------------------------------------
 H              6.422               —      6.50M
 TF             6.668      +3.8% worse      5.08M
@@ -935,13 +1180,13 @@ NPS-St         6.633      +3.3% worse      3.39M
 
 Optimizations:
   Triton SSM scan: yes
-  torch.compile:   yes
+  torch.compile: yes
   NPS-St    step=1500  val_bpt=6.862  loss=4.6287  avg=3.24M  win=3.27M tok/s
   H-State   step=2000  val_bpt=7.075  loss=4.9913  avg=2.78M  win=2.63M tok/s
   NPS-St    step=1600  val_bpt=6.849  loss=4.1613  avg=3.24M  win=3.28M tok/s
   Harmonic  done  11.8s  avg=11.07M tok/s  final val_bpt=6.428
 
-[ TransformerFlash ]
+=== TransformerFlash ===
   H-State   step=2100  val_bpt=7.043  loss=5.2170  avg=2.78M  win=2.84M tok/s
   NPS-St    step=1700  val_bpt=6.827  loss=4.5045  avg=3.24M  win=3.33M tok/s
   Transf    step=3000  val_bpt=7.506  loss=5.0038  avg=5.61M  win=6.01M tok/s
@@ -997,10 +1242,9 @@ Optimizations:
   Transf    step=3900  val_bpt=7.336  loss=4.9457  avg=5.65M  win=5.81M tok/s
   NPS-St    done  20.3s  avg=3.23M tok/s  final val_bpt=6.510
 
-[  ]
------------------------------------------------------------------
++--------+----------+----------+----------+----------+----------+
 | step   | H bpt    | TF bpt   | H-State bpt| NPS-St bpt| tokens M |
------------------------------------------------------------------
++--------+----------+----------+----------+----------+----------+
 |      0 |   16.224 |   15.805 |   16.556 |   16.311 |      0.0 |
 |    100 |    8.673 |    9.083 |    8.730 |    8.704 |      1.6 |
 |    200 |    8.384 |    8.731 |    8.191 |    8.175 |      3.3 |
@@ -1042,26 +1286,26 @@ Optimizations:
 |   3800 |    6.436 |    6.833 |    6.514 |    6.518 |     62.3 |
 |   3900 |    6.657 |    7.040 |    6.509 |    6.513 |     63.9 |
 |   4000 |    6.685 |    7.075 |    6.503 |    6.510 |     65.5 |
------------------------------------------------------------------
++--------+----------+----------+----------+----------+----------+
 
-Model          final bpt     vs H         tok/s
+Model       final bpt       vs H       tok/s
 --------------------------------------------------
 H              6.685               —      6.89M
 TF             7.075      +5.8% worse      5.78M
-H-State        6.503     -2.7% better      3.00M
-NPS-St         6.510     -2.6% better      3.23M
+H-State        6.503     +2.7% better      3.00M
+NPS-St         6.510     +2.6% better      3.23M
 
 Optimizations:
   Triton SSM scan: yes
-  torch.compile:   yes
+  torch.compile: yes
   H-State   step=3900  val_bpt=6.851  loss=3.8042  avg=2.82M  win=2.85M tok/s
   Transf    step= 300  val_bpt=8.307  loss=5.8079  avg=9.29M  win=9.73M tok/s
   H-State   done  23.2s  avg=2.82M tok/s  final val_bpt=6.847
 
-[ NoPredStateful (no pred coding + state carry) ]
+=== NoPredStateful (no pred coding + state carry) ===
   Transf    done  11.6s  avg=5.66M tok/s  final val_bpt=6.854
 
-[ HarmonicStateful (sequential batching + state carry) ]
+=== HarmonicStateful (sequential batching + state carry) ===
   NPS-St    step= 100  val_bpt=9.007  loss=5.9647  avg=2.94M  win=2.94M tok/s
   NPS-St    step= 200  val_bpt=8.521  loss=5.2090  avg=2.99M  win=3.05M tok/s
   H-State   step= 100  val_bpt=9.006  loss=5.6282  avg=2.26M  win=2.26M tok/s
@@ -1136,10 +1380,9 @@ Optimizations:
   H-State   step=2700  val_bpt=6.921  loss=4.5364  avg=3.03M  win=3.05M tok/s
   NPS-St    done  21.7s  avg=3.02M tok/s  final val_bpt=6.857
 
-[  ]
------------------------------------------------------------------
++--------+----------+----------+----------+----------+----------+
 | step   | H bpt    | TF bpt   | H-State bpt| NPS-St bpt| tokens M |
------------------------------------------------------------------
++--------+----------+----------+----------+----------+----------+
 |      0 |   16.330 |   15.879 |   16.392 |   16.200 |      0.0 |
 |    100 |    8.498 |    8.954 |    9.003 |    9.007 |      1.6 |
 |    200 |    7.787 |    8.238 |    8.535 |    8.521 |      3.3 |
@@ -1181,9 +1424,9 @@ Optimizations:
 |   3800 |    6.307 |    6.873 |    6.850 |    6.860 |     62.3 |
 |   3900 |    6.527 |    7.053 |    6.851 |    6.860 |     63.9 |
 |   4000 |    6.325 |    6.829 |    6.847 |    6.857 |     65.5 |
------------------------------------------------------------------
++--------+----------+----------+----------+----------+----------+
 
-Model          final bpt     vs H         tok/s
+Model       final bpt       vs H       tok/s
 --------------------------------------------------
 H              6.325               —      6.33M
 TF             6.829      +8.0% worse      5.79M
@@ -1192,7 +1435,7 @@ NPS-St         6.857      +8.4% worse      3.02M
 
 Optimizations:
   Triton SSM scan: yes
-  torch.compile:   yes
+  torch.compile: yes
   H-State   step=2800  val_bpt=6.921  loss=4.3627  avg=3.04M  win=3.34M tok/s
   Transf    step=1000  val_bpt=7.429  loss=5.2664  avg=9.00M  win=8.61M tok/s
   H-State   step=2900  val_bpt=6.922  loss=5.1187  avg=3.05M  win=3.36M tok/s
@@ -1210,7 +1453,7 @@ Optimizations:
   H-State   step=3900  val_bpt=6.832  loss=5.4478  avg=3.12M  win=3.35M tok/s
   H-State   done  21.0s  avg=3.12M tok/s  final val_bpt=6.821
 
-[ NoPredStateful (no pred coding + state carry) ]
+=== NoPredStateful (no pred coding + state carry) ===
   NPS-St    step= 100  val_bpt=9.011  loss=5.6793  avg=3.43M  win=3.43M tok/s
   Transf    step=1300  val_bpt=7.573  loss=5.1977  avg=9.02M  win=9.24M tok/s
   NPS-St    step= 200  val_bpt=8.476  loss=6.1841  avg=3.52M  win=3.62M tok/s
@@ -1262,10 +1505,9 @@ Optimizations:
   NPS-St    step=3900  val_bpt=6.843  loss=5.4536  avg=3.27M  win=3.17M tok/s
   NPS-St    done  20.0s  avg=3.27M tok/s  final val_bpt=6.835
 
-[  ]
------------------------------------------------------------------
++--------+----------+----------+----------+----------+----------+
 | step   | H bpt    | TF bpt   | H-State bpt| NPS-St bpt| tokens M |
------------------------------------------------------------------
++--------+----------+----------+----------+----------+----------+
 |      0 |   16.333 |   15.818 |   16.373 |   16.558 |      0.0 |
 |    100 |    8.847 |    9.229 |    9.006 |    9.011 |      1.6 |
 |    200 |    7.856 |    8.274 |    8.479 |    8.476 |      3.3 |
@@ -1307,9 +1549,9 @@ Optimizations:
 |   3800 |    6.814 |    7.477 |    6.843 |    6.855 |     62.3 |
 |   3900 |    6.688 |    7.336 |    6.832 |    6.843 |     63.9 |
 |   4000 |    6.198 |    6.854 |    6.821 |    6.835 |     65.5 |
------------------------------------------------------------------
++--------+----------+----------+----------+----------+----------+
 
-Model          final bpt     vs H         tok/s
+Model       final bpt       vs H       tok/s
 --------------------------------------------------
 H              6.198               —      5.63M
 TF             6.854     +10.6% worse      5.66M
@@ -1318,7 +1560,7 @@ NPS-St         6.835     +10.3% worse      3.27M
 
 Optimizations:
   Triton SSM scan: yes
-  torch.compile:   yes
+  torch.compile: yes
   Transf    step=2300  val_bpt=7.308  loss=5.0323  avg=9.11M  win=9.76M tok/s
   Transf    step=2400  val_bpt=6.967  loss=5.3381  avg=9.11M  win=9.07M tok/s
   Transf    step=2500  val_bpt=7.209  loss=5.2550  avg=9.10M  win=8.86M tok/s
@@ -1338,7 +1580,7 @@ Optimizations:
   Transf    step=3900  val_bpt=7.146  loss=4.5432  avg=9.01M  win=9.31M tok/s
   Transf    done  14.5s  avg=9.02M tok/s  final val_bpt=7.246
 
-[ HarmonicStateful (sequential batching + state carry) ]
+=== HarmonicStateful (sequential batching + state carry) ===
   H-State   step= 100  val_bpt=8.626  loss=6.2305  avg=4.26M  win=4.26M tok/s
   H-State   step= 200  val_bpt=8.086  loss=5.9868  avg=4.84M  win=5.62M tok/s
   H-State   step= 300  val_bpt=7.811  loss=5.5132  avg=5.15M  win=5.90M tok/s
@@ -1380,7 +1622,7 @@ Optimizations:
   H-State   step=3900  val_bpt=6.363  loss=4.3999  avg=5.61M  win=5.90M tok/s
   H-State   done  23.3s  avg=5.62M tok/s  final val_bpt=6.352
 
-[ NoPredStateful (no pred coding + state carry) ]
+=== NoPredStateful (no pred coding + state carry) ===
   NPS-St    step= 100  val_bpt=8.647  loss=6.2415  avg=6.00M  win=6.00M tok/s
   NPS-St    step= 200  val_bpt=8.105  loss=5.9718  avg=5.94M  win=5.87M tok/s
   NPS-St    step= 300  val_bpt=7.816  loss=5.5299  avg=6.07M  win=6.36M tok/s
@@ -1422,10 +1664,9 @@ Optimizations:
   NPS-St    step=3900  val_bpt=6.382  loss=4.4174  avg=6.10M  win=5.59M tok/s
   NPS-St    done  21.5s  avg=6.09M tok/s  final val_bpt=6.374
 
-[  ]
------------------------------------------------------------------
++--------+----------+----------+----------+----------+----------+
 | step   | H bpt    | TF bpt   | H-State bpt| NPS-St bpt| tokens M |
------------------------------------------------------------------
++--------+----------+----------+----------+----------+----------+
 |      0 |   16.539 |   15.958 |   16.256 |   16.514 |      0.0 |
 |    100 |    8.509 |    8.989 |    8.626 |    8.647 |      3.3 |
 |    200 |    8.079 |    8.547 |    8.086 |    8.105 |      6.6 |
@@ -1467,18 +1708,19 @@ Optimizations:
 |   3800 |    6.296 |    7.107 |    6.373 |    6.394 |    124.5 |
 |   3900 |    6.334 |    7.146 |    6.363 |    6.382 |    127.8 |
 |   4000 |    6.428 |    7.246 |    6.352 |    6.374 |    131.1 |
------------------------------------------------------------------
++--------+----------+----------+----------+----------+----------+
 
-Model          final bpt     vs H         tok/s
+Model       final bpt       vs H       tok/s
 --------------------------------------------------
 H              6.428               —     11.07M
 TF             7.246     +12.7% worse      9.02M
-H-State        6.352     -1.2% better      5.62M
+H-State        6.352     +1.2% better      5.62M
 NPS-St         6.374         parity      6.09M
 
 Optimizations:
   Triton SSM scan: yes
-  torch.compile:   yes
+  torch.compile: yes
 All 6 runs completed.
 Stopping app - local entrypoint completed.
+✓ App completed. View run at 
 https://modal.com/apps/profidash/main/ap-vOkOwBL7RLCGu0EiBMf90k

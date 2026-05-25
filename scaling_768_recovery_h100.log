@@ -1,0 +1,75 @@
+✓ Initialized. View run at 
+https://modal.com/apps/profidash/main/ap-6cqtg9Dadji4D9GWIxli3G
+✓ Created objects.
+├── 🔨 Created mount 
+│   /home/suicore/harmonic/architecture/scaling_768_recovery_modal.py
+├── 🔨 Created mount /home/suicore/harmonic/architecture/train_fast.py
+└── 🔨 Created function run_tf_32k.
+Recovery: TF@seq=32768@hidden=768, timeout=7200s
+device: cuda
+GPU: NVIDIA H100 80GB HBM3  torch: 2.5.1+cu124
+
+Testing Triton SSM scan...
+  Triton SSM scan: OK — using
+  torch.compile: enabled
+
+Loading enwiki8...
+  downloading http://mattmahoney.net/dc/enwik8.zip...
+  train 26.1M  val 2.9M  tokens
+Compiling models...
+  warmup Transformer...
+  warmup done — benchmarks will use compiled models.
+
+TransfFlash    105,533,952 params
+hidden=768  batch=1  seq=32768  steps=4000  total_tokens=131.1M
+
+=== TransformerFlash ===
+  Transf    step= 100  val_bpt=8.190  loss=6.1928  avg=2.46M  win=2.46M tok/s
+  Transf    step= 200  val_bpt=7.917  loss=5.0582  avg=3.90M  win=9.50M tok/s
+  Transf    step= 300  val_bpt=7.681  loss=5.2961  avg=4.87M  win=9.63M tok/s
+  Transf    step= 400  val_bpt=7.496  loss=5.2173  avg=5.55M  win=9.51M tok/s
+  Transf    step= 500  val_bpt=7.052  loss=5.1938  avg=6.07M  win=9.77M tok/s
+  Transf    step= 600  val_bpt=7.373  loss=5.2821  avg=6.48M  win=9.83M tok/s
+  Transf    step= 700  val_bpt=7.085  loss=4.8823  avg=6.81M  win=9.82M tok/s
+  Transf    step= 800  val_bpt=7.252  loss=4.8656  avg=7.09M  win=9.85M tok/s
+  Transf    step= 900  val_bpt=7.315  loss=4.7367  avg=7.30M  win=9.61M tok/s
+  Transf    step=1000  val_bpt=6.978  loss=4.8867  avg=7.50M  win=9.86M tok/s
+  Transf    step=1100  val_bpt=7.002  loss=3.8055  avg=7.65M  win=9.56M tok/s
+  Transf    step=1200  val_bpt=7.111  loss=4.6151  avg=7.78M  win=9.71M tok/s
+  Transf    step=1300  val_bpt=7.168  loss=4.8281  avg=7.91M  win=9.75M tok/s
+  Transf    step=1400  val_bpt=7.012  loss=3.8586  avg=8.02M  win=9.87M tok/s
+  Transf    step=1500  val_bpt=7.062  loss=4.8781  avg=8.12M  win=9.80M tok/s
+  Transf    step=1600  val_bpt=6.701  loss=4.9225  avg=8.20M  win=9.59M tok/s
+  Transf    step=1700  val_bpt=7.220  loss=4.4953  avg=8.28M  win=9.83M tok/s
+  Transf    step=1800  val_bpt=6.976  loss=4.9248  avg=8.35M  win=9.69M tok/s
+  Transf    step=1900  val_bpt=6.938  loss=4.5688  avg=8.41M  win=9.78M tok/s
+  Transf    step=2000  val_bpt=6.967  loss=4.9159  avg=8.47M  win=9.74M tok/s
+  Transf    step=2100  val_bpt=6.754  loss=4.6832  avg=8.53M  win=9.88M tok/s
+  Transf    step=2200  val_bpt=6.608  loss=4.3077  avg=8.57M  win=9.69M tok/s
+  Transf    step=2300  val_bpt=6.778  loss=4.6510  avg=8.62M  win=9.77M tok/s
+  Transf    step=2400  val_bpt=6.455  loss=4.9281  avg=8.66M  win=9.69M tok/s
+  Transf    step=2500  val_bpt=6.648  loss=4.8300  avg=8.70M  win=9.77M tok/s
+  Transf    step=2600  val_bpt=6.670  loss=4.4067  avg=8.73M  win=9.69M tok/s
+  Transf    step=2700  val_bpt=6.613  loss=4.5853  avg=8.76M  win=9.68M tok/s
+  Transf    step=2800  val_bpt=6.736  loss=4.0684  avg=8.80M  win=9.80M tok/s
+  Transf    step=2900  val_bpt=6.652  loss=3.8787  avg=8.83M  win=9.72M tok/s
+  Transf    step=3000  val_bpt=6.598  loss=4.6131  avg=8.85M  win=9.75M tok/s
+  Transf    step=3100  val_bpt=6.634  loss=4.0155  avg=8.88M  win=9.76M tok/s
+  Transf    step=3200  val_bpt=6.595  loss=4.6944  avg=8.90M  win=9.61M tok/s
+  Transf    step=3300  val_bpt=6.524  loss=4.5996  avg=8.93M  win=9.78M tok/s
+  Transf    step=3400  val_bpt=6.603  loss=4.5438  avg=8.95M  win=9.79M tok/s
+  Transf    step=3500  val_bpt=6.605  loss=4.7092  avg=8.97M  win=9.60M tok/s
+  Transf    step=3600  val_bpt=6.098  loss=4.4274  avg=8.99M  win=9.79M tok/s
+  Transf    step=3700  val_bpt=6.765  loss=4.0449  avg=8.99M  win=9.09M tok/s
+  Transf    step=3800  val_bpt=6.366  loss=4.1467  avg=8.99M  win=9.05M tok/s
+  Transf    step=3900  val_bpt=6.432  loss=3.8900  avg=9.01M  win=9.82M tok/s
+  Transf    done  14.5s  avg=9.03M tok/s  final val_bpt=6.482
+
+
+Optimizations:
+  Triton SSM scan: yes
+  torch.compile: yes
+Done.
+Stopping app - local entrypoint completed.
+✓ App completed. View run at 
+https://modal.com/apps/profidash/main/ap-6cqtg9Dadji4D9GWIxli3G

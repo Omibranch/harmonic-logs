@@ -1,8 +1,16 @@
+✓ Initialized. View run at 
+https://modal.com/apps/gribnikloh/main/ap-QS5C2hmrChN29GSeE4hvoK
+✓ Created objects.
+├── 🔨 Created mount 
+│   /home/suicore/harmonic/architecture/train_fast_longctx_modal.py
+├── 🔨 Created mount /home/suicore/harmonic/architecture/train_fast.py
+└── 🔨 Created function run.
+--- harmonic ---
 device: cuda
 GPU: NVIDIA H100 80GB HBM3  torch: 2.12.0+cu130
 
 Testing Triton SSM scan...
-  Triton SSM scan: OK - enabled
+  Triton SSM scan: OK — using
   torch.compile: enabled
 
 Loading wikitext-2...
@@ -19,12 +27,12 @@ Compiling models...
   warmup Harmonic...
 /usr/local/lib/python3.11/site-packages/torch/_inductor/compile_fx.py:320: UserWarning: TensorFloat32 tensor cores for float32 matrix multiplication available but not enabled. Consider setting `torch.set_float32_matmul_precision('high')` for better performance.
   warnings.warn(
-  warmup done - measurements use compiled models.
+  warmup done — benchmarks will use compiled models.
 
 HarmonicFair    27,965,952 params
 batch=2  seq=8192  steps=5000  total_tokens=81.9M
 
-[ HarmonicFair ]
+=== HarmonicFair ===
   Harmonic  step= 100  val_bpt=10.018  loss=6.9392  avg=3.14M  win=3.14M tok/s
   Harmonic  step= 200  val_bpt=9.644  loss=6.5208  avg=4.09M  win=5.86M tok/s
   Harmonic  step= 300  val_bpt=9.366  loss=6.4031  avg=4.56M  win=5.92M tok/s
