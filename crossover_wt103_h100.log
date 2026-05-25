@@ -1,10 +1,5 @@
-✓ Initialized. View run at 
-https://modal.com/apps/profidash/main/ap-1tCkoryPLeNAfOW6SsEH4X
-✓ Created objects.
-├── 🔨 Created mount /home/suicore/harmonic/architecture/train_fast.py
-├── 🔨 Created mount 
-│   /home/suicore/harmonic/architecture/crossover_wt103_modal.py
-└── 🔨 Created function run_one.
+# Run: https://modal.com/apps/profidash/main/ap-1tCkoryPLeNAfOW6SsEH4X
+
 WikiText-103 crossover: 6 seq lengths, H+Mamba+TF
 device: cuda
 device: cuda

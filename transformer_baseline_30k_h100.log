@@ -1,37 +1,4 @@
-✓ Initialized. View run at 
-https://modal.com/apps/artemmorozovnot/main/ap-gyVUpIyLsLDJRr1UUZ7Z5H
-✓ Created objects.
-├── 🔨 Created mount 
-│   /home/suicore/harmonic/experimental/modal_transformer_baseline.py
-├── 🔨 Created mount 
-│   /home/suicore/harmonic/experimental/train_transformer_baseline.py
-└── 🔨 Created function run_baseline.
-device: cuda
-GPU: NVIDIA H100 80GB HBM3  VRAM: 85.0GB  torch: 2.12.0+cu130
-Loading wikitext-103...
-Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
-
-[1AGenerating test split:   0%|          | 0/4358 [00:00<?, ? examples/s]
-[1AGenerating test split: 100%|██████████| 4358/4358 [00:00<00:00, 447417.07 examples/s]
-
-[1AGenerating train split:   0%|          | 0/1801350 [00:00<?, ? examples/s]
-[1AGenerating train split:   7%|▋         | 129000/1801350 [00:00<00:01, 1273607.07 examples/s]
-[1AGenerating train split:  15%|█▌        | 278000/1801350 [00:00<00:01, 1389518.60 examples/s]
-[1AGenerating train split:  24%|██▍       | 429000/1801350 [00:00<00:00, 1439837.98 examples/s]
-[1AGenerating train split:  32%|███▏      | 582000/1801350 [00:00<00:00, 1471757.10 examples/s]
-[1AGenerating train split:  42%|████▏     | 756000/1801350 [00:00<00:00, 1565018.16 examples/s]
-[1AGenerating train split:  55%|█████▍    | 990675/1801350 [00:00<00:00, 1541492.06 examples/s]
-[1AGenerating train split:  64%|██████▎   | 1145675/1801350 [00:00<00:00, 1540285.96 examples/s]
-[1AGenerating train split:  72%|███████▏  | 1302675/1801350 [00:00<00:00, 1547464.70 examples/s]
-[1AGenerating train split:  82%|████████▏ | 1476675/1801350 [00:00<00:00, 1556060.66 examples/s]
-[1AGenerating train split:  91%|█████████ | 1642675/1801350 [00:01<00:00, 1583766.69 examples/s]
-[1AGenerating train split: 100%|██████████| 1801350/1801350 [00:01<00:00, 1539151.09 examples/s]
-
-[1AGenerating validation split:   0%|          | 0/3760 [00:00<?, ? examples/s]
-[1AGenerating validation split: 100%|██████████| 3760/3760 [00:00<00:00, 927954.28 examples/s]
-  train: 115,716,078 tokens  val: 242,643 tokens
-  GPTBaseline: 35,700,224 unique parameters  (d=512, n_heads=8, n_layers=3, ffn=2048)
-  H3L-512 baseline: 34,656,768 unique parameters  (Transformer gets ++1,043,456 = +3.0%)
+# Run: https://modal.com/apps/artemmorozovnot/main/ap-gyVUpIyLsLDJRr1UUZ7Z5H
 
 Training: 30,000 steps  seq=1024  batch=16
 bf16 autocast: ON  |  TF32 matmul: ON

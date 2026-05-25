@@ -1,12 +1,8 @@
-✓ Initialized. View run at 
-https://modal.com/apps/artemmorozovnot/main/ap-N7LLYZhhMBz8jmkdueWKVV
-✓ Created objects.
-├── 🔨 Created mount /home/suicore/harmonic/experimental/modal_regen.py
-├── 🔨 Created mount /home/suicore/harmonic/experimental/train_generate.py
-└── 🔨 Created function run_regen.
 Loaded best ckpt: step=104000  val_bpt=6.661
 
+=================================================================
 TEXT GENERATION  (temperature=1.0, top_k=50, rep_penalty=1.3)
+=================================================================
 
 Prompt: "The history of"
 ----------------------------------------
@@ -28,6 +24,7 @@ Prompt: "According to recent research"
 ----------------------------------------
 According to recent research work , and a second @-@ day in 2001 when she was an alternative of the script . By 2009 , her son 's death were used upon two @,@ 000 years previously had taken together with some of their jobs 's families from that . The show took three months of five days after weeks filming . The episode received generally positive reviews for three hours ; some critics , who praised the film as the best performance being done by fans on whether a lot of one can be considered to its current location because it was made up and then has played more " interesting than other " best @-@ themed show quality with the songs for that year . It remains a better for time supporting television . To this episode , her acting worked together the new studio as producer writer director David Diddell , an executive company which called it for the original script , director and of 2005 the film had more than one two million fans across cast a worldwide ; despite its release , being noted " so much in a
 
+=================================================================
 Stopping app - local entrypoint completed.
 ✓ App completed. View run at 
 https://modal.com/apps/artemmorozovnot/main/ap-N7LLYZhhMBz8jmkdueWKVV

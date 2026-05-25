@@ -1,10 +1,5 @@
-✓ Initialized. View run at 
-https://modal.com/apps/profidash/main/ap-6cqtg9Dadji4D9GWIxli3G
-✓ Created objects.
-├── 🔨 Created mount 
-│   /home/suicore/harmonic/architecture/scaling_768_recovery_modal.py
-├── 🔨 Created mount /home/suicore/harmonic/architecture/train_fast.py
-└── 🔨 Created function run_tf_32k.
+# Run: https://modal.com/apps/profidash/main/ap-6cqtg9Dadji4D9GWIxli3G
+
 Recovery: TF@seq=32768@hidden=768, timeout=7200s
 device: cuda
 GPU: NVIDIA H100 80GB HBM3  torch: 2.5.1+cu124
