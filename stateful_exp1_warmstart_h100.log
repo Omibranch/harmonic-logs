@@ -1,0 +1,43 @@
+Created objects.
+Stateful exp1: batch=64 seq=1024 steps=1000 (65.5M tokens)
+Три числа: H-random / H-seq-nocarry / H-stateful-carry
+device: cuda
+GPU: NVIDIA H100 80GB HBM3  torch: 2.5.1+cu124
+Тестирование Triton SSM scan...
+Triton SSM scan: OK — используем
+torch.compile: выключен
+Загрузка enwiki8...
+скачиваем http://mattmahoney.net/dc/enwik8.zip...
+train 26.1M  val 2.9M  токенов
+hidden=256  batch=64  seq=1024  steps=1000  total_tokens=65.5M
+--- Harmonic (random batch) ---
+H         step= 100  val_bpt=8.252  loss=6.1014  avg=5.42M  win=5.42M tok/s
+H         step= 200  val_bpt=7.634  loss=5.2448  avg=7.14M  win=10.48M tok/s
+H         step= 300  val_bpt=7.387  loss=5.1897  avg=8.07M  win=10.92M tok/s
+H         step= 400  val_bpt=7.211  loss=5.0245  avg=8.65M  win=10.99M tok/s
+H         step= 500  val_bpt=7.088  loss=4.9570  avg=8.97M  win=10.57M tok/s
+H         step= 600  val_bpt=7.091  loss=4.9928  avg=9.22M  win=10.67M tok/s
+H         step= 700  val_bpt=6.962  loss=4.7432  avg=9.44M  win=11.00M tok/s
+H         step= 800  val_bpt=6.929  loss=4.7238  avg=9.58M  win=10.68M tok/s
+H         step= 900  val_bpt=6.893  loss=4.6037  avg=9.74M  win=11.29M tok/s
+H         готово  6.6s  avg=9.88M tok/s  final val_bpt=6.897
+--- H-Stateful (warm-start from H, then sequential fine-tune) ---
+H-St      step= 100  val_bpt=6.817  loss=4.6517  avg=9.40M  win=9.40M tok/s
+H-St      step= 200  val_bpt=6.726  loss=4.6272  avg=9.70M  win=10.02M tok/s
+H-St      step= 300  val_bpt=6.654  loss=4.5999  avg=9.75M  win=9.86M tok/s
+H-St      step= 400  val_bpt=6.601  loss=4.6688  avg=9.59M  win=9.14M tok/s
+H-St      готово  3.5s  avg=9.50M tok/s  final val_bpt=6.583
+--- Context curve ---
+warmup    H no-carry    H-Stateful     delta
+--------  ------------  ------------  --------
+0        6.9012        6.6143   +0.2869
+5        6.8320        6.5472   +0.2848
+10        6.8255        6.5437   +0.2817
+20        6.8609        6.5829   +0.2780
+50        6.8212        6.5586   +0.2626
+100        6.8262        6.5665   +0.2598
+H random eval:          6.8973 bpt  (baseline)
+H sequential no-carry:  6.9012 bpt  (0 warmup)
+H-Stateful with carry:  6.5829 bpt  (trained stateful)
+H-Stateful @ 100 ctx:   6.5665 bpt  (100 warmup batches)
+Done.

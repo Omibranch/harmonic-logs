@@ -1,0 +1,89 @@
+Created objects.
+Stateful exp3: seq=8192, batch=8, steps=1000
+H-Stateful vs Mamba-Stateful, 2 параллельных H100
+Context curve корректна до warmup=200 (3.26M tokens per stream)
+device: cuda
+GPU: NVIDIA H100 80GB HBM3  torch: 2.5.1+cu124
+Тестирование Triton SSM scan...
+device: cuda
+GPU: NVIDIA H100 80GB HBM3  torch: 2.5.1+cu124
+Тестирование Triton SSM scan...
+Triton SSM scan: OK — используем
+torch.compile: выключен
+Загрузка enwiki8...
+скачиваем http://mattmahoney.net/dc/enwik8.zip...
+Triton SSM scan: OK — используем
+torch.compile: выключен
+Загрузка enwiki8...
+скачиваем http://mattmahoney.net/dc/enwik8.zip...
+train 26.1M  val 2.9M  токенов
+hidden=256  batch=8  seq=8192  steps=1000  total_tokens=65.5M
+--- Mamba (random batch) ---
+train 26.1M  val 2.9M  токенов
+hidden=256  batch=8  seq=8192  steps=1000  total_tokens=65.5M
+--- Harmonic (random batch) ---
+Mamba     step= 100  val_bpt=9.045  loss=6.4696  avg=7.46M  win=7.46M tok/s
+H         step= 100  val_bpt=8.387  loss=6.0193  avg=5.99M  win=5.99M tok/s
+Mamba     step= 200  val_bpt=8.084  loss=5.6155  avg=9.45M  win=12.88M tok/s
+H         step= 200  val_bpt=7.862  loss=5.4867  avg=7.80M  win=11.19M tok/s
+Mamba     step= 300  val_bpt=7.541  loss=5.2052  avg=10.37M  win=12.89M tok/s
+H         step= 300  val_bpt=7.405  loss=5.0598  avg=8.71M  win=11.33M tok/s
+Mamba     step= 400  val_bpt=7.513  loss=5.1934  avg=10.84M  win=12.57M tok/s
+H         step= 400  val_bpt=7.438  loss=5.0621  avg=9.17M  win=10.93M tok/s
+Mamba     step= 500  val_bpt=7.262  loss=4.6507  avg=11.18M  win=12.77M tok/s
+H         step= 500  val_bpt=7.175  loss=4.5541  avg=9.46M  win=10.82M tok/s
+Mamba     step= 600  val_bpt=7.150  loss=5.2283  avg=11.44M  win=12.93M tok/s
+H         step= 600  val_bpt=7.067  loss=5.1830  avg=9.68M  win=10.97M tok/s
+Mamba     step= 700  val_bpt=7.150  loss=5.3712  avg=11.62M  win=12.85M tok/s
+H         step= 700  val_bpt=7.047  loss=5.3182  avg=9.82M  win=10.76M tok/s
+Mamba     step= 800  val_bpt=7.094  loss=5.5204  avg=11.77M  win=12.94M tok/s
+H         step= 800  val_bpt=6.984  loss=5.4310  avg=9.97M  win=11.09M tok/s
+H         step= 900  val_bpt=6.950  loss=5.0691  avg=10.08M  win=11.06M tok/s
+Mamba     step= 900  val_bpt=7.066  loss=5.1365  avg=11.89M  win=12.86M tok/s
+H         готово  6.4s  avg=10.17M tok/s  final val_bpt=6.782
+Mamba     готово  5.5s  avg=11.98M tok/s  final val_bpt=6.888
+H inference-only stateful (no fine-tune): 7.0120 bpt
+--- H-Stateful (warm-start from H, then sequential fine-tune) ---
+Mamba inference-only stateful: 7.1103 bpt
+--- Mamba-Stateful (warm-start, sequential fine-tune) ---
+H-St      step= 100  val_bpt=6.985  loss=5.1715  avg=10.78M  win=10.78M tok/s
+M-St      step= 100  val_bpt=7.045  loss=5.1860  avg=12.67M tok/s
+H-St      step= 200  val_bpt=6.899  loss=4.7806  avg=11.04M  win=11.31M tok/s
+M-St      step= 200  val_bpt=6.956  loss=4.8228  avg=12.78M tok/s
+H-St      step= 300  val_bpt=6.820  loss=4.8243  avg=10.93M  win=10.70M tok/s
+M-St      step= 300  val_bpt=6.895  loss=4.8641  avg=12.79M tok/s
+H-St      step= 400  val_bpt=6.762  loss=4.9184  avg=10.82M  win=10.52M tok/s
+M-St      step= 400  val_bpt=6.854  loss=4.9981  avg=12.78M tok/s
+H-St      готово  3.0s  avg=10.76M tok/s  final val_bpt=6.745
+--- Context curve ---
+M-St      готово  2.6s  avg=12.75M tok/s  final val_bpt=6.838
+--- Context curve ---
+(max safe warmup = 22 batches = 180,224 tokens)
+warmup    H no-carry    H-Stateful     delta
+--------  ------------  ------------  --------
+0        6.8390        6.5700   +0.2690
+5        6.7321        6.4715   +0.2606
+10        6.8105        6.5527   +0.2578
+20        7.0144        6.7453   +0.2691
+50        (wrap)        (wrap)         —
+100        (wrap)        (wrap)         —
+200        (wrap)        (wrap)         —
+H random eval:              6.7822 bpt  (baseline)
+H sequential no-carry:      6.8390 bpt
+H inference-only stateful:  7.0120 bpt  (delta -0.1730 — pure inference benefit)
+H-Stateful trained:         6.7453 bpt  (delta +0.0936 — training + inference benefit)
+(max safe warmup = 22 batches)
+warmup  Mamba no-carry  Mamba-Stateful     delta
+--------  --------------  --------------  --------
+0          6.9660          6.6922   +0.2738
+5          6.8554          6.5906   +0.2648
+10          6.9246          6.6608   +0.2638
+20          7.1103          6.8381   +0.2722
+50          (wrap)          (wrap)         —
+100          (wrap)          (wrap)         —
+200          (wrap)          (wrap)         —
+Mamba random eval:              6.8882 bpt  (baseline)
+Mamba sequential no-carry:      6.9660 bpt
+Mamba inference-only stateful:  7.1103 bpt  (delta -0.1443)
+Mamba-Stateful trained:         6.8381 bpt  (delta +0.1279)
+Done.

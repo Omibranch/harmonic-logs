@@ -1,0 +1,1289 @@
+files
+Created objects.
+Running app...
+Phase 1: SSM warmup 10K steps (~$2, ~20 min)
+Running app...
+Loading TinyLlama/TinyLlama-1.1B-Chat-v1.0...
+Note: Environment variable`HF_TOKEN` is set and is the current active token independently from the token you've just configured.
+`torch_dtype` is deprecated! Use `dtype` instead!
+Replacing 22 attention layers with HarmonicBlock (hidden=2048, d_state=128, compress=4)...
+Swapped 22 layers.
+Total params:    1033.2M
+Harmonic params: 140.7M (new, random init)
+FFN+Emb params:  892.4M (pretrained)
+Phase 1 (SSM warmup): 140.7M trainable params
+Params: 1033.2M total, 140.7M trainable (FFN frozen)
+Token indices sequence length is longer than the specified maximum sequence length for this model (3957 > 2048). Running this sequence through the model will result in indexing errors
+step= 1000  bpt=1.5933  2.2min
+step= 2000  bpt=0.9642  4.2min
+step= 3000  bpt=0.5535  6.2min
+step= 4000  bpt=0.4524  8.2min
+step= 5000  bpt=0.3909  10.2min
+step= 6000  bpt=0.3456  12.2min
+step= 7000  bpt=0.4659  14.2min
+step= 8000  bpt=0.3976  16.2min
+step= 9000  bpt=0.3994  18.1min
+step=10000  bpt=0.3386  20.3min
+Saved checkpoint: step=10000, bpt=0.3386 → /checkpoints/phase1_final
+Processing Files (0 / 0)      : |          |  0.00B /  0.00B
+New Data Upload               : |          |  0.00B /  0.00B
+...final/hallamonic_state.pt:   0%|          | 7.97MB / 2.07GB
+Processing Files (0 / 1)      :   0%|          | 7.97MB / 2.07GB,   ???B/s
+...final/hallamonic_state.pt:   6%|▌         |  127MB / 2.07GB
+Processing Files (0 / 1)      :   6%|▌         |  127MB / 2.07GB,   ???B/s
+...final/hallamonic_state.pt:  10%|█         |  214MB / 2.07GB
+Processing Files (0 / 1)      :  10%|█         |  214MB / 2.07GB, 20.7MB/s
+...final/hallamonic_state.pt:  16%|█▌        |  322MB / 2.07GB
+Processing Files (0 / 1)      :  16%|█▌        |  322MB / 2.07GB, 30.7MB/s
+...final/hallamonic_state.pt:  17%|█▋        |  341MB / 2.07GB
+Processing Files (0 / 1)      :  17%|█▋        |  341MB / 2.07GB, 31.8MB/s
+...final/hallamonic_state.pt:  23%|██▎       |  473MB / 2.07GB
+Processing Files (0 / 1)      :  23%|██▎       |  473MB / 2.07GB, 43.6MB/s
+New Data Upload               :  46%|████▌     | 30.9MB / 67.1MB, 2.96MB/s
+...final/hallamonic_state.pt:  29%|██▊       |  594MB / 2.07GB
+Processing Files (0 / 1)      :  29%|██▊       |  594MB / 2.07GB, 54.1MB/s
+New Data Upload               : 100%|█████████▉| 66.8MB / 67.1MB, 6.30MB/s
+...final/hallamonic_state.pt:  32%|███▏      |  670MB / 2.07GB
+Processing Files (0 / 1)      :  32%|███▏      |  670MB / 2.07GB, 60.0MB/s
+...final/hallamonic_state.pt:  36%|███▌      |  734MB / 2.07GB
+Processing Files (0 / 1)      :  36%|███▌      |  734MB / 2.07GB, 64.6MB/s
+New Data Upload               :  51%|█████     | 68.6MB /  134MB, 6.18MB/s
+...final/hallamonic_state.pt:  43%|████▎     |  894MB / 2.07GB
+Processing Files (0 / 1)      :  43%|████▎     |  894MB / 2.07GB, 78.1MB/s
+New Data Upload               :  96%|█████████▌|  129MB /  134MB, 11.6MB/s
+...final/hallamonic_state.pt:  48%|████▊     |  992MB / 2.07GB
+Processing Files (0 / 1)      :  48%|████▊     |  992MB / 2.07GB, 85.3MB/s
+New Data Upload               : 100%|█████████▉|  134MB /  134MB, 11.8MB/s
+...final/hallamonic_state.pt:  49%|████▉     | 1.02GB / 2.07GB
+Processing Files (0 / 1)      :  49%|████▉     | 1.02GB / 2.07GB, 86.1MB/s
+...final/hallamonic_state.pt:  54%|█████▍    | 1.12GB / 2.07GB
+Processing Files (0 / 1)      :  54%|█████▍    | 1.12GB / 2.07GB, 93.5MB/s
+New Data Upload               :  96%|█████████▌|  193MB /  201MB, 16.7MB/s
+...final/hallamonic_state.pt:  56%|█████▋    | 1.16GB / 2.07GB
+Processing Files (0 / 1)      :  56%|█████▋    | 1.16GB / 2.07GB, 94.8MB/s
+New Data Upload               :  75%|███████▍  |  201MB /  268MB, 17.0MB/s
+...final/hallamonic_state.pt:  61%|██████▏   | 1.27GB / 2.07GB
+Processing Files (0 / 1)      :  61%|██████▏   | 1.27GB / 2.07GB,  102MB/s
+New Data Upload               :  93%|█████████▎|  250MB /  268MB, 21.1MB/s
+...final/hallamonic_state.pt:  63%|██████▎   | 1.30GB / 2.07GB
+Processing Files (0 / 1)      :  63%|██████▎   | 1.30GB / 2.07GB,  103MB/s
+New Data Upload               :  80%|███████▉  |  267MB /  335MB, 22.2MB/s
+...final/hallamonic_state.pt:  67%|██████▋   | 1.39GB / 2.07GB
+Processing Files (0 / 1)      :  67%|██████▋   | 1.39GB / 2.07GB,  108MB/s
+New Data Upload               :  83%|████████▎ |  278MB /  335MB, 22.6MB/s
+...final/hallamonic_state.pt:  67%|██████▋   | 1.39GB / 2.07GB
+Processing Files (0 / 1)      :  67%|██████▋   | 1.39GB / 2.07GB,  106MB/s
+New Data Upload               :  69%|██████▉   |  278MB /  402MB, 22.2MB/s
+...final/hallamonic_state.pt:  71%|███████▏  | 1.48GB / 2.07GB
+Processing Files (0 / 1)      :  71%|███████▏  | 1.48GB / 2.07GB,  112MB/s
+New Data Upload               :  81%|████████▏ |  328MB /  402MB, 26.1MB/s
+...final/hallamonic_state.pt:  78%|███████▊  | 1.61GB / 2.07GB
+Processing Files (0 / 1)      :  78%|███████▊  | 1.61GB / 2.07GB,  121MB/s
+New Data Upload               :  86%|████████▌ |  345MB /  402MB, 27.0MB/s
+...final/hallamonic_state.pt:  85%|████████▍ | 1.75GB / 2.07GB
+Processing Files (0 / 1)      :  85%|████████▍ | 1.75GB / 2.07GB,  131MB/s
+New Data Upload               :  92%|█████████▏|  371MB /  402MB, 28.7MB/s
+...final/hallamonic_state.pt:  89%|████████▉ | 1.84GB / 2.07GB
+Processing Files (0 / 1)      :  89%|████████▉ | 1.84GB / 2.07GB,  136MB/s
+New Data Upload               :  86%|████████▌ |  402MB /  469MB, 30.8MB/s
+...final/hallamonic_state.pt:  94%|█████████▎| 1.93GB / 2.07GB
+Processing Files (0 / 1)      :  94%|█████████▎| 1.93GB / 2.07GB,  141MB/s
+New Data Upload               :  89%|████████▉ |  420MB /  469MB, 31.7MB/s
+...final/hallamonic_state.pt:  99%|█████████▉| 2.05GB / 2.07GB
+Processing Files (0 / 1)      :  99%|█████████▉| 2.05GB / 2.07GB,  147MB/s
+New Data Upload               :  96%|█████████▌|  466MB /  486MB, 35.0MB/s
+...final/hallamonic_state.pt: 100%|█████████▉| 2.07GB / 2.07GB
+Processing Files (0 / 1)      : 100%|█████████▉| 2.07GB / 2.07GB,  146MB/s
+New Data Upload               : 100%|█████████▉|  485MB /  486MB, 35.9MB/s
+...final/hallamonic_state.pt: 100%|█████████▉| 2.07GB / 2.07GB
+Processing Files (0 / 1)      : 100%|█████████▉| 2.07GB / 2.07GB,  140MB/s
+New Data Upload               : 100%|█████████▉|  486MB /  486MB, 34.4MB/s
+...final/hallamonic_state.pt: 100%|██████████| 2.07GB / 2.07GB
+Processing Files (1 / 1)      : 100%|██████████| 2.07GB / 2.07GB,  137MB/s
+New Data Upload               : 100%|██████████|  486MB /  486MB, 33.7MB/s  Processing Files (1 / 1)      : 100%|██████████| 2.07GB / 2.07GB,  137MB/s
+New Data Upload               : 100%|██████████|  486MB /  486MB, 33.7MB/s
+...final/hallamonic_state.pt: 100%|██████████| 2.07GB / 2.07GB
+Pushed to HuggingFace: Omibranch/harmonic-checkpoints-phase1
+Phase 1 done. Best bpt: 0.3386  ckpt: /checkpoints/phase1_final
+Phase 1 done: /checkpoints/phase1_final
+Phase 2: Full finetune 5K steps, 1xH100 grad_accum=4 (~$10, ~70 min)
+Note: Environment variable`HF_TOKEN` is set and is the current active token independently from the token you've just configured.
+Loading TinyLlama/TinyLlama-1.1B-Chat-v1.0...
+`torch_dtype` is deprecated! Use `dtype` instead!
+Replacing 22 attention layers with HarmonicBlock (hidden=2048, d_state=128, compress=4)...
+Swapped 22 layers.
+Total params:    1033.2M
+Harmonic params: 140.7M (new, random init)
+FFN+Emb params:  892.4M (pretrained)
+All 1033.2M params trainable
+Loaded checkpoint from /checkpoints/phase1_final
+Unfrozen: 1033.2M trainable params
+Effective batch: 33K tokens/grad_step
+Token indices sequence length is longer than the specified maximum sequence length for this model (3957 > 2048). Running this sequence through the model will result in indexing errors
+step=  500  bpt=0.3729  16M tok  7.1min
+step= 1000  bpt=0.3542  33M tok  14.0min
+Saved checkpoint: step=1000, bpt=0.3542 → /checkpoints/phase2_step1000
+Processing Files (0 / 0)      : |          |  0.00B /  0.00B
+New Data Upload               : |          |  0.00B /  0.00B
+...p1000/hallamonic_state.pt:   0%|          |  465kB / 2.07GB
+Processing Files (0 / 1)      :   0%|          |  465kB / 2.07GB, 45.5kB/s
+...p1000/hallamonic_state.pt:   0%|          |  465kB / 2.07GB
+...p1000/hallamonic_state.pt:   0%|          | 1.08MB / 2.07GB
+Processing Files (0 / 1)      :   0%|          | 1.08MB / 2.07GB,  101kB/s
+New Data Upload               :   0%|          |  612kB /  134MB, 58.6kB/s
+...p1000/hallamonic_state.pt:   0%|          | 10.3MB / 2.07GB
+Processing Files (0 / 1)      :   0%|          | 10.3MB / 2.07GB,  972kB/s
+New Data Upload               :   7%|▋         | 9.80MB /  134MB,  930kB/s
+...p1000/hallamonic_state.pt:   1%|▏         | 29.3MB / 2.07GB
+Processing Files (0 / 1)      :   1%|▏         | 29.3MB / 2.07GB, 2.74MB/s
+New Data Upload               :  14%|█▍        | 28.8MB /  201MB, 2.70MB/s
+...p1000/hallamonic_state.pt:   2%|▏         | 45.8MB / 2.07GB
+Processing Files (0 / 1)      :   2%|▏         | 45.8MB / 2.07GB, 4.23MB/s
+New Data Upload               :  23%|██▎       | 45.3MB /  201MB, 4.19MB/s
+...p1000/hallamonic_state.pt:   3%|▎         | 66.0MB / 2.07GB
+Processing Files (0 / 1)      :   3%|▎         | 66.0MB / 2.07GB, 6.01MB/s
+New Data Upload               :  33%|███▎      | 65.5MB /  201MB, 5.98MB/s
+...p1000/hallamonic_state.pt:   4%|▍         | 82.5MB / 2.07GB
+Processing Files (0 / 1)      :   4%|▍         | 82.5MB / 2.07GB, 7.41MB/s
+New Data Upload               :  41%|████      | 82.0MB /  201MB, 7.37MB/s
+...p1000/hallamonic_state.pt:   5%|▍         | 96.6MB / 2.07GB
+Processing Files (0 / 1)      :   5%|▍         | 96.6MB / 2.07GB, 8.53MB/s
+New Data Upload               :  48%|████▊     | 96.1MB /  201MB, 8.50MB/s
+...p1000/hallamonic_state.pt:   5%|▌         |  106MB / 2.07GB
+Processing Files (0 / 1)      :   5%|▌         |  106MB / 2.07GB, 9.23MB/s
+New Data Upload               :  53%|█████▎    |  106MB /  201MB, 9.20MB/s
+...p1000/hallamonic_state.pt:   5%|▌         |  111MB / 2.07GB
+Processing Files (0 / 1)      :   5%|▌         |  111MB / 2.07GB, 9.47MB/s
+New Data Upload               :  55%|█████▌    |  111MB /  201MB, 9.44MB/s
+...p1000/hallamonic_state.pt:   6%|▌         |  116MB / 2.07GB
+Processing Files (0 / 1)      :   6%|▌         |  116MB / 2.07GB, 9.70MB/s
+New Data Upload               :  58%|█████▊    |  116MB /  201MB, 9.67MB/s
+...p1000/hallamonic_state.pt:   6%|▌         |  123MB / 2.07GB
+Processing Files (0 / 1)      :   6%|▌         |  123MB / 2.07GB, 10.1MB/s
+New Data Upload               :  61%|██████    |  122MB /  201MB, 10.0MB/s
+...p1000/hallamonic_state.pt:   6%|▌         |  128MB / 2.07GB
+Processing Files (0 / 1)      :   6%|▌         |  128MB / 2.07GB, 10.3MB/s
+New Data Upload               :  47%|████▋     |  127MB /  268MB, 10.2MB/s
+...p1000/hallamonic_state.pt:   7%|▋         |  145MB / 2.07GB
+Processing Files (0 / 1)      :   7%|▋         |  145MB / 2.07GB, 11.6MB/s
+New Data Upload               :  43%|████▎     |  144MB /  335MB, 11.5MB/s
+...p1000/hallamonic_state.pt:   8%|▊         |  163MB / 2.07GB
+Processing Files (0 / 1)      :   8%|▊         |  163MB / 2.07GB, 12.9MB/s
+New Data Upload               :  48%|████▊     |  163MB /  335MB, 12.9MB/s
+...p1000/hallamonic_state.pt:   9%|▉         |  186MB / 2.07GB
+Processing Files (0 / 1)      :   9%|▉         |  186MB / 2.07GB, 14.7MB/s
+New Data Upload               :  46%|████▌     |  186MB /  402MB, 14.7MB/s
+...p1000/hallamonic_state.pt:  10%|█         |  215MB / 2.07GB
+Processing Files (0 / 1)      :  10%|█         |  215MB / 2.07GB, 16.9MB/s
+New Data Upload               :  53%|█████▎    |  215MB /  402MB, 16.9MB/s
+...p1000/hallamonic_state.pt:  12%|█▏        |  246MB / 2.07GB
+Processing Files (0 / 1)      :  12%|█▏        |  246MB / 2.07GB, 19.3MB/s
+New Data Upload               :  52%|█████▏    |  246MB /  469MB, 19.3MB/s
+...p1000/hallamonic_state.pt:  13%|█▎        |  276MB / 2.07GB
+Processing Files (0 / 1)      :  13%|█▎        |  276MB / 2.07GB, 21.4MB/s
+...p1000/hallamonic_state.pt:  15%|█▌        |  319MB / 2.07GB
+Processing Files (0 / 1)      :  15%|█▌        |  319MB / 2.07GB, 24.7MB/s
+New Data Upload               :  59%|█████▉    |  319MB /  536MB, 24.7MB/s
+...p1000/hallamonic_state.pt:  18%|█▊        |  368MB / 2.07GB
+Processing Files (0 / 1)      :  18%|█▊        |  368MB / 2.07GB, 28.4MB/s
+New Data Upload               :  69%|██████▊   |  368MB /  536MB, 28.4MB/s
+...p1000/hallamonic_state.pt:  20%|█▉        |  412MB / 2.07GB
+Processing Files (0 / 1)      :  20%|█▉        |  412MB / 2.07GB, 31.5MB/s
+New Data Upload               :  68%|██████▊   |  411MB /  604MB, 31.5MB/s
+...p1000/hallamonic_state.pt:  22%|██▏       |  457MB / 2.07GB
+Processing Files (0 / 1)      :  22%|██▏       |  457MB / 2.07GB, 34.7MB/s
+New Data Upload               :  68%|██████▊   |  456MB /  671MB, 34.7MB/s
+...p1000/hallamonic_state.pt:  23%|██▎       |  481MB / 2.07GB
+Processing Files (0 / 1)      :  23%|██▎       |  481MB / 2.07GB, 36.1MB/s
+New Data Upload               :  72%|███████▏  |  481MB /  671MB, 36.0MB/s
+...p1000/hallamonic_state.pt:  24%|██▍       |  504MB / 2.07GB
+Processing Files (0 / 1)      :  24%|██▍       |  504MB / 2.07GB, 37.3MB/s
+New Data Upload               :  68%|██████▊   |  504MB /  738MB, 37.2MB/s
+...p1000/hallamonic_state.pt:  25%|██▌       |  525MB / 2.07GB
+Processing Files (0 / 1)      :  25%|██▌       |  525MB / 2.07GB, 38.2MB/s
+New Data Upload               :  71%|███████   |  524MB /  738MB, 38.2MB/s
+...p1000/hallamonic_state.pt:  27%|██▋       |  562MB / 2.07GB
+Processing Files (0 / 1)      :  27%|██▋       |  562MB / 2.07GB, 40.5MB/s
+New Data Upload               :  70%|██████▉   |  562MB /  805MB, 40.5MB/s
+...p1000/hallamonic_state.pt:  30%|██▉       |  614MB / 2.07GB
+Processing Files (0 / 1)      :  30%|██▉       |  614MB / 2.07GB, 44.0MB/s
+New Data Upload               :  70%|███████   |  614MB /  872MB, 44.0MB/s
+...p1000/hallamonic_state.pt:  32%|███▏      |  657MB / 2.07GB
+Processing Files (0 / 1)      :  32%|███▏      |  657MB / 2.07GB, 46.7MB/s
+New Data Upload               :  75%|███████▌  |  657MB /  872MB, 46.7MB/s
+...p1000/hallamonic_state.pt:  34%|███▍      |  701MB / 2.07GB
+Processing Files (0 / 1)      :  34%|███▍      |  701MB / 2.07GB, 49.4MB/s
+New Data Upload               :  75%|███████▍  |  700MB /  939MB, 49.3MB/s
+...p1000/hallamonic_state.pt:  36%|███▌      |  748MB / 2.07GB
+Processing Files (0 / 1)      :  36%|███▌      |  748MB / 2.07GB, 52.2MB/s
+New Data Upload               :  80%|███████▉  |  747MB /  939MB, 52.2MB/s
+...p1000/hallamonic_state.pt:  38%|███▊      |  792MB / 2.07GB
+Processing Files (0 / 1)      :  38%|███▊      |  792MB / 2.07GB, 54.8MB/s
+New Data Upload               :  79%|███████▊  |  792MB / 1.01GB, 54.8MB/s
+...p1000/hallamonic_state.pt:  40%|███▉      |  826MB / 2.07GB
+Processing Files (0 / 1)      :  40%|███▉      |  826MB / 2.07GB, 56.5MB/s
+New Data Upload               :  77%|███████▋  |  826MB / 1.07GB, 56.5MB/s
+...p1000/hallamonic_state.pt:  41%|████      |  841MB / 2.07GB
+Processing Files (0 / 1)      :  41%|████      |  841MB / 2.07GB, 56.6MB/s
+New Data Upload               :  78%|███████▊  |  841MB / 1.07GB, 56.6MB/s
+...p1000/hallamonic_state.pt:  42%|████▏     |  873MB / 2.07GB
+Processing Files (0 / 1)      :  42%|████▏     |  873MB / 2.07GB, 58.0MB/s
+New Data Upload               :  77%|███████▋  |  872MB / 1.14GB, 58.0MB/s
+...p1000/hallamonic_state.pt:  44%|████▍     |  910MB / 2.07GB
+Processing Files (0 / 1)      :  44%|████▍     |  910MB / 2.07GB, 59.8MB/s
+New Data Upload               :  75%|███████▌  |  909MB / 1.21GB, 59.8MB/s
+...p1000/hallamonic_state.pt:  46%|████▌     |  952MB / 2.07GB
+Processing Files (0 / 1)      :  46%|████▌     |  952MB / 2.07GB, 62.1MB/s
+New Data Upload               :  79%|███████▉  |  952MB / 1.21GB, 62.0MB/s
+...p1000/hallamonic_state.pt:  48%|████▊     |  994MB / 2.07GB
+Processing Files (0 / 1)      :  48%|████▊     |  994MB / 2.07GB, 64.2MB/s
+New Data Upload               :  78%|███████▊  |  994MB / 1.27GB, 64.2MB/s
+...p1000/hallamonic_state.pt:  50%|████▉     | 1.02GB / 2.07GB            Processing Files (0 / 1)      :  50%|████▉     | 1.02GB / 2.07GB, 65.3MB/s
+New Data Upload               :  76%|███████▋  | 1.02GB / 1.34GB, 65.3MB/s
+...p1000/hallamonic_state.pt:  51%|█████▏    | 1.06GB / 2.07GB
+Processing Files (0 / 1)      :  51%|█████▏    | 1.06GB / 2.07GB, 66.9MB/s
+New Data Upload               :  79%|███████▉  | 1.06GB / 1.34GB, 66.9MB/s
+...p1000/hallamonic_state.pt:  53%|█████▎    | 1.10GB / 2.07GB
+Processing Files (0 / 1)      :  53%|█████▎    | 1.10GB / 2.07GB, 68.4MB/s
+New Data Upload               :  78%|███████▊  | 1.09GB / 1.41GB, 68.4MB/s
+...p1000/hallamonic_state.pt:  55%|█████▍    | 1.13GB / 2.07GB
+Processing Files (0 / 1)      :  55%|█████▍    | 1.13GB / 2.07GB, 69.6MB/s
+New Data Upload               :  76%|███████▋  | 1.13GB / 1.48GB, 69.6MB/s
+...p1000/hallamonic_state.pt:  56%|█████▌    | 1.16GB / 2.07GB
+Processing Files (0 / 1)      :  56%|█████▌    | 1.16GB / 2.07GB, 70.9MB/s
+New Data Upload               :  79%|███████▊  | 1.16GB / 1.48GB, 70.9MB/s
+...p1000/hallamonic_state.pt:  58%|█████▊    | 1.20GB / 2.07GB
+Processing Files (0 / 1)      :  58%|█████▊    | 1.20GB / 2.07GB, 72.3MB/s
+New Data Upload               :  78%|███████▊  | 1.20GB / 1.54GB, 72.3MB/s
+...p1000/hallamonic_state.pt:  60%|██████    | 1.24GB / 2.07GB
+Processing Files (0 / 1)      :  60%|██████    | 1.24GB / 2.07GB, 74.3MB/s
+New Data Upload               :  80%|████████  | 1.24GB / 1.54GB, 74.3MB/s
+...p1000/hallamonic_state.pt:  62%|██████▏   | 1.28GB / 2.07GB
+Processing Files (0 / 1)      :  62%|██████▏   | 1.28GB / 2.07GB, 76.4MB/s
+New Data Upload               :  80%|███████▉  | 1.28GB / 1.61GB, 76.4MB/s
+...p1000/hallamonic_state.pt:  64%|██████▍   | 1.33GB / 2.07GB
+Processing Files (0 / 1)      :  64%|██████▍   | 1.33GB / 2.07GB, 78.1MB/s
+New Data Upload               :  82%|████████▏ | 1.33GB / 1.61GB, 78.1MB/s
+...p1000/hallamonic_state.pt:  67%|██████▋   | 1.38GB / 2.07GB
+Processing Files (0 / 1)      :  67%|██████▋   | 1.38GB / 2.07GB, 81.0MB/s
+New Data Upload               :  82%|████████▏ | 1.38GB / 1.68GB, 81.0MB/s
+...p1000/hallamonic_state.pt:  70%|██████▉   | 1.44GB / 2.07GB
+Processing Files (0 / 1)      :  70%|██████▉   | 1.44GB / 2.07GB, 83.7MB/s
+New Data Upload               :  86%|████████▌ | 1.44GB / 1.68GB, 83.7MB/s
+...p1000/hallamonic_state.pt:  72%|███████▏  | 1.49GB / 2.07GB
+Processing Files (0 / 1)      :  72%|███████▏  | 1.49GB / 2.07GB, 86.5MB/s
+New Data Upload               :  86%|████████▌ | 1.49GB / 1.74GB, 86.5MB/s
+...p1000/hallamonic_state.pt:  75%|███████▍  | 1.54GB / 2.07GB
+Processing Files (0 / 1)      :  75%|███████▍  | 1.54GB / 2.07GB, 88.5MB/s
+New Data Upload               :  85%|████████▌ | 1.54GB / 1.81GB, 88.5MB/s
+...p1000/hallamonic_state.pt:  76%|███████▋  | 1.58GB / 2.07GB
+Processing Files (0 / 1)      :  76%|███████▋  | 1.58GB / 2.07GB, 89.8MB/s
+New Data Upload               :  87%|████████▋ | 1.58GB / 1.81GB, 89.8MB/s
+...p1000/hallamonic_state.pt:  78%|███████▊  | 1.61GB / 2.07GB
+Processing Files (0 / 1)      :  78%|███████▊  | 1.61GB / 2.07GB, 90.7MB/s
+New Data Upload               :  86%|████████▌ | 1.61GB / 1.88GB, 90.7MB/s
+...p1000/hallamonic_state.pt:  80%|███████▉  | 1.65GB / 2.07GB
+Processing Files (0 / 1)      :  80%|███████▉  | 1.65GB / 2.07GB, 91.7MB/s
+New Data Upload               :  88%|████████▊ | 1.65GB / 1.88GB, 91.7MB/s
+...p1000/hallamonic_state.pt:  82%|████████▏ | 1.70GB / 2.07GB
+Processing Files (0 / 1)      :  82%|████████▏ | 1.70GB / 2.07GB, 93.9MB/s
+New Data Upload               :  87%|████████▋ | 1.70GB / 1.94GB, 93.9MB/s
+...p1000/hallamonic_state.pt:  85%|████████▍ | 1.75GB / 2.07GB
+Processing Files (0 / 1)      :  85%|████████▍ | 1.75GB / 2.07GB, 95.7MB/s
+New Data Upload               :  87%|████████▋ | 1.75GB / 2.01GB, 95.7MB/s
+...p1000/hallamonic_state.pt:  86%|████████▌ | 1.78GB / 2.07GB
+Processing Files (0 / 1)      :  86%|████████▌ | 1.78GB / 2.07GB, 96.5MB/s
+New Data Upload               :  89%|████████▊ | 1.78GB / 2.01GB, 96.5MB/s
+...p1000/hallamonic_state.pt:  88%|████████▊ | 1.82GB / 2.07GB            Processing Files (0 / 1)      :  88%|████████▊ | 1.82GB / 2.07GB, 97.8MB/s
+New Data Upload               :  88%|████████▊ | 1.82GB / 2.07GB, 97.8MB/s
+...p1000/hallamonic_state.pt:  90%|█████████ | 1.86GB / 2.07GB
+Processing Files (0 / 1)      :  90%|█████████ | 1.86GB / 2.07GB, 98.8MB/s
+New Data Upload               :  90%|█████████ | 1.86GB / 2.07GB, 98.8MB/s
+...p1000/hallamonic_state.pt:  92%|█████████▏| 1.89GB / 2.07GB
+Processing Files (0 / 1)      :  92%|█████████▏| 1.89GB / 2.07GB, 99.6MB/s
+New Data Upload               :  92%|█████████▏| 1.89GB / 2.07GB, 99.5MB/s
+...p1000/hallamonic_state.pt:  94%|█████████▍| 1.94GB / 2.07GB
+Processing Files (0 / 1)      :  94%|█████████▍| 1.94GB / 2.07GB,  101MB/s
+New Data Upload               :  94%|█████████▍| 1.94GB / 2.07GB,  101MB/s
+...p1000/hallamonic_state.pt:  95%|█████████▌| 1.97GB / 2.07GB
+Processing Files (0 / 1)      :  95%|█████████▌| 1.97GB / 2.07GB,  102MB/s
+New Data Upload               :  95%|█████████▌| 1.97GB / 2.07GB,  102MB/s
+...p1000/hallamonic_state.pt:  97%|█████████▋| 2.00GB / 2.07GB
+Processing Files (0 / 1)      :  97%|█████████▋| 2.00GB / 2.07GB,  102MB/s
+New Data Upload               :  97%|█████████▋| 2.00GB / 2.07GB,  102MB/s
+...p1000/hallamonic_state.pt:  97%|█████████▋| 2.01GB / 2.07GB
+Processing Files (0 / 1)      :  97%|█████████▋| 2.01GB / 2.07GB,  100MB/s
+New Data Upload               :  97%|█████████▋| 2.00GB / 2.07GB,  100MB/s
+...p1000/hallamonic_state.pt:  97%|█████████▋| 2.01GB / 2.07GB
+Processing Files (0 / 1)      :  97%|█████████▋| 2.01GB / 2.07GB, 98.9MB/s
+New Data Upload               :  97%|█████████▋| 2.01GB / 2.07GB, 98.8MB/s
+...p1000/hallamonic_state.pt:  98%|█████████▊| 2.02GB / 2.07GB
+Processing Files (0 / 1)      :  98%|█████████▊| 2.02GB / 2.07GB, 97.6MB/s
+New Data Upload               :  98%|█████████▊| 2.02GB / 2.07GB, 97.6MB/s
+...p1000/hallamonic_state.pt:  98%|█████████▊| 2.03GB / 2.07GB
+Processing Files (0 / 1)      :  98%|█████████▊| 2.03GB / 2.07GB, 96.3MB/s
+New Data Upload               :  98%|█████████▊| 2.03GB / 2.07GB, 96.3MB/s
+...p1000/hallamonic_state.pt:  98%|█████████▊| 2.03GB / 2.07GB
+Processing Files (0 / 1)      :  98%|█████████▊| 2.03GB / 2.07GB, 94.9MB/s
+New Data Upload               :  98%|█████████▊| 2.03GB / 2.07GB, 94.9MB/s
+...p1000/hallamonic_state.pt:  99%|█████████▊| 2.04GB / 2.07GB
+Processing Files (0 / 1)      :  99%|█████████▊| 2.04GB / 2.07GB, 93.7MB/s
+New Data Upload               :  99%|█████████▊| 2.04GB / 2.07GB, 93.7MB/s
+...p1000/hallamonic_state.pt:  99%|█████████▉| 2.05GB / 2.07GB
+Processing Files (0 / 1)      :  99%|█████████▉| 2.05GB / 2.07GB, 92.5MB/s
+New Data Upload               :  99%|█████████▉| 2.05GB / 2.07GB, 92.5MB/s
+...p1000/hallamonic_state.pt:  99%|█████████▉| 2.05GB / 2.07GB
+Processing Files (0 / 1)      :  99%|█████████▉| 2.05GB / 2.07GB, 91.2MB/s
+New Data Upload               :  99%|█████████▉| 2.05GB / 2.07GB, 91.2MB/s
+...p1000/hallamonic_state.pt:  99%|█████████▉| 2.06GB / 2.07GB
+Processing Files (0 / 1)      :  99%|█████████▉| 2.06GB / 2.07GB, 88.0MB/s
+New Data Upload               :  99%|█████████▉| 2.05GB / 2.07GB, 88.0MB/s
+...p1000/hallamonic_state.pt: 100%|█████████▉| 2.06GB / 2.07GB
+Processing Files (0 / 1)      : 100%|█████████▉| 2.06GB / 2.07GB, 86.5MB/s
+New Data Upload               : 100%|█████████▉| 2.06GB / 2.07GB, 86.5MB/s
+...p1000/hallamonic_state.pt: 100%|█████████▉| 2.06GB / 2.07GB
+Processing Files (0 / 1)      : 100%|█████████▉| 2.06GB / 2.07GB, 85.1MB/s
+New Data Upload               : 100%|█████████▉| 2.06GB / 2.07GB, 85.1MB/s
+...p1000/hallamonic_state.pt: 100%|█████████▉| 2.06GB / 2.07GB
+Processing Files (0 / 1)      : 100%|█████████▉| 2.06GB / 2.07GB, 83.7MB/s
+New Data Upload               : 100%|█████████▉| 2.06GB / 2.07GB, 83.7MB/s
+...p1000/hallamonic_state.pt: 100%|█████████▉| 2.07GB / 2.07GB
+Processing Files (0 / 1)      : 100%|█████████▉| 2.07GB / 2.07GB, 80.8MB/s
+New Data Upload               : 100%|█████████▉| 2.06GB / 2.07GB, 80.8MB/s
+...p1000/hallamonic_state.pt: 100%|█████████▉| 2.07GB / 2.07GB
+Processing Files (0 / 1)      : 100%|█████████▉| 2.07GB / 2.07GB, 79.3MB/s
+New Data Upload               : 100%|█████████▉| 2.07GB / 2.07GB, 79.3MB/s
+...p1000/hallamonic_state.pt: 100%|██████████| 2.07GB / 2.07GB
+Processing Files (1 / 1)      : 100%|██████████| 2.07GB / 2.07GB, 72.3MB/s
+New Data Upload               : 100%|██████████| 2.07GB / 2.07GB, 72.3MB/s
+Processing Files (1 / 1)      : 100%|██████████| 2.07GB / 2.07GB, 72.3MB/s
+New Data Upload               : 100%|██████████| 2.07GB / 2.07GB, 72.3MB/s
+...p1000/hallamonic_state.pt: 100%|██████████| 2.07GB / 2.07GB
+Pushed to HuggingFace: Omibranch/harmonic-checkpoints-phase2-step1000
+step= 1500  bpt=0.3617  49M tok  21.9min
+step= 2000  bpt=0.3491  66M tok  28.8min
+Saved checkpoint: step=2000, bpt=0.3491 → /checkpoints/phase2_step2000
+Processing Files (0 / 0)      : |          |  0.00B /  0.00B
+New Data Upload               : |          |  0.00B /  0.00B
+...p2000/hallamonic_state.pt:   0%|          |  465kB / 2.07GB
+Processing Files (0 / 1)      :   0%|          |  465kB / 2.07GB,   ???B/s
+...p2000/hallamonic_state.pt:   0%|          |  465kB / 2.07GB
+...p2000/hallamonic_state.pt:   0%|          | 2.22MB / 2.07GB
+Processing Files (0 / 1)      :   0%|          | 2.22MB / 2.07GB,  216kB/s
+New Data Upload               :   0%|          |  613kB /  134MB, 59.9kB/s
+...p2000/hallamonic_state.pt:   0%|          | 4.70MB / 2.07GB
+Processing Files (0 / 1)      :   0%|          | 4.70MB / 2.07GB,  451kB/s
+New Data Upload               :   2%|▏         | 3.06MB /  134MB,  296kB/s
+...p2000/hallamonic_state.pt:   1%|          | 22.5MB / 2.07GB            Processing Files (0 / 1)      :   1%|          | 22.5MB / 2.07GB, 2.15MB/s
+New Data Upload               :  10%|█         | 20.8MB /  201MB, 2.00MB/s
+...p2000/hallamonic_state.pt:   3%|▎         | 54.3MB / 2.07GB
+Processing Files (0 / 1)      :   3%|▎         | 54.3MB / 2.07GB, 5.15MB/s
+New Data Upload               :  26%|██▌       | 52.7MB /  201MB, 5.00MB/s
+...p2000/hallamonic_state.pt:   4%|▎         | 73.3MB / 2.07GB
+Processing Files (0 / 1)      :   4%|▎         | 73.3MB / 2.07GB, 6.83MB/s
+New Data Upload               :  36%|███▌      | 71.6MB /  201MB, 6.68MB/s
+...p2000/hallamonic_state.pt:   4%|▍         | 91.6MB / 2.07GB
+Processing Files (0 / 1)      :   4%|▍         | 91.6MB / 2.07GB, 8.40MB/s
+New Data Upload               :  45%|████▍     | 90.0MB /  201MB, 8.26MB/s
+...p2000/hallamonic_state.pt:   5%|▌         |  108MB / 2.07GB
+Processing Files (0 / 1)      :   5%|▌         |  108MB / 2.07GB, 9.70MB/s
+New Data Upload               :  53%|█████▎    |  106MB /  201MB, 9.56MB/s
+...p2000/hallamonic_state.pt:   6%|▌         |  124MB / 2.07GB
+Processing Files (0 / 1)      :   6%|▌         |  124MB / 2.07GB, 11.0MB/s
+New Data Upload               :  61%|██████    |  122MB /  201MB, 10.9MB/s
+...p2000/hallamonic_state.pt:   7%|▋         |  135MB / 2.07GB
+Processing Files (0 / 1)      :   7%|▋         |  135MB / 2.07GB, 11.8MB/s
+New Data Upload               :  66%|██████▋   |  133MB /  201MB, 11.6MB/s
+...p2000/hallamonic_state.pt:   7%|▋         |  137MB / 2.07GB
+Processing Files (0 / 1)      :   7%|▋         |  137MB / 2.07GB, 11.1MB/s
+New Data Upload               :  67%|██████▋   |  134MB /  201MB, 11.0MB/s
+...p2000/hallamonic_state.pt:   7%|▋         |  137MB / 2.07GB
+...p2000/hallamonic_state.pt:   7%|▋         |  152MB / 2.07GB            Processing Files (0 / 1)      :   7%|▋         |  152MB / 2.07GB, 12.0MB/s
+New Data Upload               :  56%|█████▌    |  150MB /  268MB, 11.8MB/s
+...p2000/hallamonic_state.pt:   8%|▊         |  169MB / 2.07GB
+Processing Files (0 / 1)      :   8%|▊         |  169MB / 2.07GB, 13.3MB/s
+New Data Upload               :  50%|████▉     |  167MB /  335MB, 13.1MB/s
+...p2000/hallamonic_state.pt:  10%|▉         |  201MB / 2.07GB
+Processing Files (0 / 1)      :  10%|▉         |  201MB / 2.07GB, 15.8MB/s
+New Data Upload               :  49%|████▉     |  198MB /  402MB, 15.6MB/s
+...p2000/hallamonic_state.pt:  11%|█         |  231MB / 2.07GB
+Processing Files (0 / 1)      :  11%|█         |  231MB / 2.07GB, 18.2MB/s
+New Data Upload               :  57%|█████▋    |  228MB /  402MB, 17.9MB/s
+...p2000/hallamonic_state.pt:  12%|█▏        |  245MB / 2.07GB
+Processing Files (0 / 1)      :  12%|█▏        |  245MB / 2.07GB, 19.0MB/s
+New Data Upload               :  52%|█████▏    |  242MB /  469MB, 18.7MB/s
+...p2000/hallamonic_state.pt:  13%|█▎        |  263MB / 2.07GB
+Processing Files (0 / 1)      :  13%|█▎        |  263MB / 2.07GB, 20.1MB/s
+New Data Upload               :  48%|████▊     |  259MB /  536MB, 19.8MB/s
+...p2000/hallamonic_state.pt:  14%|█▍        |  295MB / 2.07GB
+Processing Files (0 / 1)      :  14%|█▍        |  295MB / 2.07GB, 22.5MB/s
+New Data Upload               :  54%|█████▍    |  291MB /  536MB, 22.2MB/s
+...p2000/hallamonic_state.pt:  17%|█▋        |  344MB / 2.07GB
+Processing Files (0 / 1)      :  17%|█▋        |  344MB / 2.07GB, 26.3MB/s
+New Data Upload               :  56%|█████▌    |  339MB /  603MB, 25.9MB/s
+...p2000/hallamonic_state.pt:  19%|█▉        |  399MB / 2.07GB
+Processing Files (0 / 1)      :  19%|█▉        |  399MB / 2.07GB, 30.4MB/s
+New Data Upload               :  65%|██████▌   |  394MB /  603MB, 30.1MB/s
+...p2000/hallamonic_state.pt:  21%|██        |  436MB / 2.07GB
+Processing Files (0 / 1)      :  21%|██        |  436MB / 2.07GB, 33.0MB/s
+New Data Upload               :  64%|██████▍   |  432MB /  671MB, 32.7MB/s
+...p2000/hallamonic_state.pt:  24%|██▎       |  487MB / 2.07GB
+Processing Files (0 / 1)      :  24%|██▎       |  487MB / 2.07GB, 36.6MB/s
+New Data Upload               :  65%|██████▌   |  481MB /  738MB, 36.2MB/s
+...p2000/hallamonic_state.pt:  26%|██▌       |  527MB / 2.07GB
+Processing Files (0 / 1)      :  26%|██▌       |  527MB / 2.07GB, 39.3MB/s
+New Data Upload               :  71%|███████   |  522MB /  738MB, 38.9MB/s
+...p2000/hallamonic_state.pt:  28%|██▊       |  573MB / 2.07GB
+Processing Files (0 / 1)      :  28%|██▊       |  573MB / 2.07GB, 42.3MB/s
+New Data Upload               :  70%|███████   |  567MB /  805MB, 42.0MB/s
+...p2000/hallamonic_state.pt:  30%|██▉       |  612MB / 2.07GB
+Processing Files (0 / 1)      :  30%|██▉       |  612MB / 2.07GB, 44.8MB/s
+New Data Upload               :  75%|███████▌  |  606MB /  805MB, 44.4MB/s
+...p2000/hallamonic_state.pt:  31%|███▏      |  648MB / 2.07GB
+Processing Files (0 / 1)      :  31%|███▏      |  648MB / 2.07GB, 46.8MB/s
+New Data Upload               :  74%|███████▎  |  641MB /  872MB, 46.4MB/s
+...p2000/hallamonic_state.pt:  34%|███▍      |  702MB / 2.07GB
+Processing Files (0 / 1)      :  34%|███▍      |  702MB / 2.07GB, 50.5MB/s
+New Data Upload               :  74%|███████▍  |  696MB /  939MB, 50.0MB/s
+...p2000/hallamonic_state.pt:  36%|███▌      |  737MB / 2.07GB
+Processing Files (0 / 1)      :  36%|███▌      |  737MB / 2.07GB, 52.3MB/s
+New Data Upload               :  78%|███████▊  |  730MB /  939MB, 51.8MB/s
+...p2000/hallamonic_state.pt:  37%|███▋      |  768MB / 2.07GB
+Processing Files (0 / 1)      :  37%|███▋      |  768MB / 2.07GB, 53.8MB/s
+New Data Upload               :  76%|███████▌  |  761MB / 1.01GB, 53.4MB/s
+...p2000/hallamonic_state.pt:  39%|███▉      |  808MB / 2.07GB
+Processing Files (0 / 1)      :  39%|███▉      |  808MB / 2.07GB, 56.0MB/s
+New Data Upload               :  75%|███████▍  |  800MB / 1.07GB, 55.5MB/s
+...p2000/hallamonic_state.pt:  42%|████▏     |  863MB / 2.07GB
+Processing Files (0 / 1)      :  42%|████▏     |  863MB / 2.07GB, 59.4MB/s
+New Data Upload               :  80%|███████▉  |  854MB / 1.07GB, 58.8MB/s
+...p2000/hallamonic_state.pt:  45%|████▍     |  923MB / 2.07GB
+Processing Files (0 / 1)      :  45%|████▍     |  923MB / 2.07GB, 63.1MB/s
+New Data Upload               :  80%|████████  |  914MB / 1.14GB, 62.6MB/s
+...p2000/hallamonic_state.pt:  47%|████▋     |  981MB / 2.07GB
+Processing Files (0 / 1)      :  47%|████▋     |  981MB / 2.07GB, 66.6MB/s
+New Data Upload               :  85%|████████▌ |  971MB / 1.14GB, 66.0MB/s
+...p2000/hallamonic_state.pt:  49%|████▉     | 1.01GB / 2.07GB
+Processing Files (0 / 1)      :  49%|████▉     | 1.01GB / 2.07GB, 68.0MB/s
+New Data Upload               :  83%|████████▎ | 1.01GB / 1.21GB, 67.4MB/s
+...p2000/hallamonic_state.pt:  52%|█████▏    | 1.07GB / 2.07GB
+Processing Files (0 / 1)      :  52%|█████▏    | 1.07GB / 2.07GB, 70.9MB/s
+New Data Upload               :  83%|████████▎ | 1.06GB / 1.27GB, 70.3MB/s
+...p2000/hallamonic_state.pt:  53%|█████▎    | 1.09GB / 2.07GB
+Processing Files (0 / 1)      :  53%|█████▎    | 1.09GB / 2.07GB, 71.5MB/s
+New Data Upload               :  81%|████████  | 1.08GB / 1.34GB, 70.9MB/s
+...p2000/hallamonic_state.pt:  55%|█████▍    | 1.13GB / 2.07GB
+Processing Files (0 / 1)      :  55%|█████▍    | 1.13GB / 2.07GB, 73.0MB/s
+New Data Upload               :  83%|████████▎ | 1.12GB / 1.34GB, 72.4MB/s
+...p2000/hallamonic_state.pt:  56%|█████▋    | 1.16GB / 2.07GB
+Processing Files (0 / 1)      :  56%|█████▋    | 1.16GB / 2.07GB, 74.3MB/s
+New Data Upload               :  82%|████████▏ | 1.15GB / 1.41GB, 73.7MB/s
+...p2000/hallamonic_state.pt:  58%|█████▊    | 1.19GB / 2.07GB
+Processing Files (0 / 1)      :  58%|█████▊    | 1.19GB / 2.07GB, 74.9MB/s
+New Data Upload               :  80%|███████▉  | 1.18GB / 1.48GB, 74.3MB/s
+...p2000/hallamonic_state.pt:  59%|█████▊    | 1.21GB / 2.07GB
+Processing Files (0 / 1)      :  59%|█████▊    | 1.21GB / 2.07GB, 75.3MB/s
+New Data Upload               :  81%|████████▏ | 1.20GB / 1.48GB, 74.7MB/s
+...p2000/hallamonic_state.pt:  61%|██████    | 1.25GB / 2.07GB
+Processing Files (0 / 1)      :  61%|██████    | 1.25GB / 2.07GB, 76.8MB/s
+New Data Upload               :  80%|████████  | 1.24GB / 1.54GB, 76.2MB/s
+...p2000/hallamonic_state.pt:  62%|██████▏   | 1.29GB / 2.07GB
+Processing Files (0 / 1)      :  62%|██████▏   | 1.29GB / 2.07GB, 78.1MB/s
+New Data Upload               :  83%|████████▎ | 1.27GB / 1.54GB, 77.4MB/s
+...p2000/hallamonic_state.pt:  64%|██████▍   | 1.33GB / 2.07GB
+Processing Files (0 / 1)      :  64%|██████▍   | 1.33GB / 2.07GB, 79.8MB/s
+New Data Upload               :  82%|████████▏ | 1.31GB / 1.61GB, 79.1MB/s
+...p2000/hallamonic_state.pt:  66%|██████▌   | 1.37GB / 2.07GB
+Processing Files (0 / 1)      :  66%|██████▌   | 1.37GB / 2.07GB, 81.3MB/s
+New Data Upload               :  81%|████████  | 1.35GB / 1.68GB, 80.6MB/s
+...p2000/hallamonic_state.pt:  68%|██████▊   | 1.41GB / 2.07GB
+Processing Files (0 / 1)      :  68%|██████▊   | 1.41GB / 2.07GB, 83.3MB/s
+New Data Upload               :  83%|████████▎ | 1.40GB / 1.68GB, 82.6MB/s
+...p2000/hallamonic_state.pt:  70%|██████▉   | 1.44GB / 2.07GB
+Processing Files (0 / 1)      :  70%|██████▉   | 1.44GB / 2.07GB, 83.9MB/s
+New Data Upload               :  82%|████████▏ | 1.43GB / 1.74GB, 83.2MB/s
+...p2000/hallamonic_state.pt:  71%|███████   | 1.46GB / 2.07GB
+Processing Files (0 / 1)      :  71%|███████   | 1.46GB / 2.07GB, 84.1MB/s
+New Data Upload               :  83%|████████▎ | 1.45GB / 1.74GB, 83.4MB/s
+...p2000/hallamonic_state.pt:  72%|███████▏  | 1.48GB / 2.07GB
+Processing Files (0 / 1)      :  72%|███████▏  | 1.48GB / 2.07GB, 84.1MB/s
+New Data Upload               :  81%|████████  | 1.47GB / 1.81GB, 83.4MB/s
+...p2000/hallamonic_state.pt:  73%|███████▎  | 1.50GB / 2.07GB
+Processing Files (0 / 1)      :  73%|███████▎  | 1.50GB / 2.07GB, 84.0MB/s
+New Data Upload               :  79%|███████▉  | 1.49GB / 1.88GB, 83.3MB/s
+...p2000/hallamonic_state.pt:  74%|███████▍  | 1.54GB / 2.07GB
+Processing Files (0 / 1)      :  74%|███████▍  | 1.54GB / 2.07GB, 84.9MB/s
+New Data Upload               :  81%|████████  | 1.52GB / 1.88GB, 84.2MB/s
+...p2000/hallamonic_state.pt:  76%|███████▌  | 1.57GB / 2.07GB
+Processing Files (0 / 1)      :  76%|███████▌  | 1.57GB / 2.07GB, 86.1MB/s
+New Data Upload               :  80%|████████  | 1.56GB / 1.94GB, 85.4MB/s
+...p2000/hallamonic_state.pt:  79%|███████▊  | 1.62GB / 2.07GB
+Processing Files (0 / 1)      :  79%|███████▊  | 1.62GB / 2.07GB, 88.4MB/s
+New Data Upload               :  83%|████████▎ | 1.61GB / 1.94GB, 87.7MB/s
+...p2000/hallamonic_state.pt:  81%|████████▏ | 1.68GB / 2.07GB
+Processing Files (0 / 1)      :  81%|████████▏ | 1.68GB / 2.07GB, 91.2MB/s
+New Data Upload               :  83%|████████▎ | 1.67GB / 2.01GB, 90.5MB/s
+...p2000/hallamonic_state.pt:  84%|████████▍ | 1.74GB / 2.07GB
+Processing Files (0 / 1)      :  84%|████████▍ | 1.74GB / 2.07GB, 93.7MB/s
+New Data Upload               :  84%|████████▍ | 1.72GB / 2.05GB, 93.0MB/s
+...p2000/hallamonic_state.pt:  85%|████████▌ | 1.76GB / 2.07GB
+Processing Files (0 / 1)      :  85%|████████▌ | 1.76GB / 2.07GB, 93.8MB/s
+New Data Upload               :  85%|████████▌ | 1.75GB / 2.05GB, 93.2MB/s
+...p2000/hallamonic_state.pt:  87%|████████▋ | 1.80GB / 2.07GB
+Processing Files (0 / 1)      :  87%|████████▋ | 1.80GB / 2.07GB, 94.8MB/s
+New Data Upload               :  87%|████████▋ | 1.78GB / 2.05GB, 94.1MB/s
+...p2000/hallamonic_state.pt:  89%|████████▊ | 1.83GB / 2.07GB
+Processing Files (0 / 1)      :  89%|████████▊ | 1.83GB / 2.07GB, 95.6MB/s
+New Data Upload               :  89%|████████▊ | 1.82GB / 2.05GB, 95.0MB/s
+...p2000/hallamonic_state.pt:  90%|█████████ | 1.87GB / 2.07GB
+Processing Files (0 / 1)      :  90%|█████████ | 1.87GB / 2.07GB, 96.4MB/s
+New Data Upload               :  90%|█████████ | 1.85GB / 2.05GB, 95.8MB/s
+...p2000/hallamonic_state.pt:  92%|█████████▏| 1.89GB / 2.07GB            Processing Files (0 / 1)      :  92%|█████████▏| 1.89GB / 2.07GB, 96.6MB/s
+New Data Upload               :  92%|█████████▏| 1.88GB / 2.05GB, 95.9MB/s
+...p2000/hallamonic_state.pt:  93%|█████████▎| 1.92GB / 2.07GB
+Processing Files (0 / 1)      :  93%|█████████▎| 1.92GB / 2.07GB, 97.1MB/s
+New Data Upload               :  93%|█████████▎| 1.91GB / 2.05GB, 96.5MB/s
+...p2000/hallamonic_state.pt:  94%|█████████▍| 1.95GB / 2.07GB
+Processing Files (0 / 1)      :  94%|█████████▍| 1.95GB / 2.07GB, 97.1MB/s
+New Data Upload               :  94%|█████████▍| 1.93GB / 2.05GB, 96.5MB/s
+...p2000/hallamonic_state.pt:  95%|█████████▍| 1.96GB / 2.07GB
+Processing Files (0 / 1)      :  95%|█████████▍| 1.96GB / 2.07GB, 96.4MB/s
+New Data Upload               :  95%|█████████▍| 1.95GB / 2.05GB, 95.8MB/s
+...p2000/hallamonic_state.pt:  96%|█████████▌| 1.97GB / 2.07GB
+Processing Files (0 / 1)      :  96%|█████████▌| 1.97GB / 2.07GB, 95.5MB/s
+New Data Upload               :  96%|█████████▌| 1.96GB / 2.05GB, 94.9MB/s
+...p2000/hallamonic_state.pt:  96%|█████████▌| 1.98GB / 2.07GB
+Processing Files (0 / 1)      :  96%|█████████▌| 1.98GB / 2.07GB, 94.2MB/s
+New Data Upload               :  96%|█████████▌| 1.97GB / 2.05GB, 93.6MB/s
+...p2000/hallamonic_state.pt:  96%|█████████▌| 1.98GB / 2.07GB
+Processing Files (0 / 1)      :  96%|█████████▌| 1.98GB / 2.07GB, 92.4MB/s
+New Data Upload               :  96%|█████████▌| 1.97GB / 2.05GB, 91.9MB/s
+...p2000/hallamonic_state.pt:  96%|█████████▋| 1.99GB / 2.07GB
+Processing Files (0 / 1)      :  96%|█████████▋| 1.99GB / 2.07GB, 91.3MB/s
+New Data Upload               :  96%|█████████▋| 1.98GB / 2.05GB, 90.7MB/s
+...p2000/hallamonic_state.pt:  97%|█████████▋| 2.00GB / 2.07GB
+Processing Files (0 / 1)      :  97%|█████████▋| 2.00GB / 2.07GB, 90.0MB/s
+New Data Upload               :  97%|█████████▋| 1.98GB / 2.05GB, 89.5MB/s
+...p2000/hallamonic_state.pt:  97%|█████████▋| 2.00GB / 2.07GB
+Processing Files (0 / 1)      :  97%|█████████▋| 2.00GB / 2.07GB, 88.8MB/s
+New Data Upload               :  97%|█████████▋| 1.99GB / 2.05GB, 88.2MB/s
+...p2000/hallamonic_state.pt:  97%|█████████▋| 2.01GB / 2.07GB
+Processing Files (0 / 1)      :  97%|█████████▋| 2.01GB / 2.07GB, 87.4MB/s
+New Data Upload               :  97%|█████████▋| 1.99GB / 2.05GB, 86.9MB/s
+...p2000/hallamonic_state.pt:  97%|█████████▋| 2.01GB / 2.07GB
+Processing Files (0 / 1)      :  97%|█████████▋| 2.01GB / 2.07GB, 86.4MB/s
+New Data Upload               :  97%|█████████▋| 2.00GB / 2.05GB, 85.9MB/s
+...p2000/hallamonic_state.pt:  98%|█████████▊| 2.02GB / 2.07GB
+Processing Files (0 / 1)      :  98%|█████████▊| 2.02GB / 2.07GB, 84.9MB/s
+New Data Upload               :  98%|█████████▊| 2.00GB / 2.05GB, 84.4MB/s
+...p2000/hallamonic_state.pt:  98%|█████████▊| 2.03GB / 2.07GB
+Processing Files (0 / 1)      :  98%|█████████▊| 2.03GB / 2.07GB, 84.0MB/s
+New Data Upload               :  98%|█████████▊| 2.01GB / 2.05GB, 83.5MB/s
+...p2000/hallamonic_state.pt:  98%|█████████▊| 2.03GB / 2.07GB
+Processing Files (0 / 1)      :  98%|█████████▊| 2.03GB / 2.07GB, 82.8MB/s
+New Data Upload               :  98%|█████████▊| 2.02GB / 2.05GB, 82.4MB/s
+...p2000/hallamonic_state.pt:  99%|█████████▊| 2.04GB / 2.07GB
+Processing Files (0 / 1)      :  99%|█████████▊| 2.04GB / 2.07GB, 80.2MB/s
+New Data Upload               :  99%|█████████▊| 2.02GB / 2.05GB, 79.7MB/s
+...p2000/hallamonic_state.pt:  99%|█████████▊| 2.04GB / 2.07GB
+Processing Files (0 / 1)      :  99%|█████████▊| 2.04GB / 2.07GB, 79.0MB/s
+New Data Upload               :  99%|█████████▊| 2.03GB / 2.05GB, 78.5MB/s
+...p2000/hallamonic_state.pt:  99%|█████████▉| 2.05GB / 2.07GB
+Processing Files (0 / 1)      :  99%|█████████▉| 2.05GB / 2.07GB, 77.9MB/s
+New Data Upload               :  99%|█████████▉| 2.03GB / 2.05GB, 77.4MB/s
+...p2000/hallamonic_state.pt:  99%|█████████▉| 2.05GB / 2.07GB
+Processing Files (0 / 1)      :  99%|█████████▉| 2.05GB / 2.07GB, 76.7MB/s
+New Data Upload               :  99%|█████████▉| 2.04GB / 2.05GB, 76.3MB/s
+...p2000/hallamonic_state.pt:  99%|█████████▉| 2.05GB / 2.07GB
+Processing Files (0 / 1)      :  99%|█████████▉| 2.05GB / 2.07GB, 75.5MB/s
+New Data Upload               :  99%|█████████▉| 2.04GB / 2.05GB, 75.1MB/s
+...p2000/hallamonic_state.pt:  99%|█████████▉| 2.05GB / 2.07GB            Processing Files (0 / 1)      :  99%|█████████▉| 2.05GB / 2.07GB, 72.9MB/s
+New Data Upload               :  99%|█████████▉| 2.04GB / 2.05GB, 72.5MB/s
+...p2000/hallamonic_state.pt: 100%|█████████▉| 2.06GB / 2.07GB
+Processing Files (0 / 1)      : 100%|█████████▉| 2.06GB / 2.07GB, 71.7MB/s
+New Data Upload               : 100%|█████████▉| 2.04GB / 2.05GB, 71.3MB/s
+...p2000/hallamonic_state.pt: 100%|█████████▉| 2.06GB / 2.07GB
+Processing Files (0 / 1)      : 100%|█████████▉| 2.06GB / 2.07GB, 70.7MB/s
+New Data Upload               : 100%|█████████▉| 2.05GB / 2.05GB, 70.3MB/s
+...p2000/hallamonic_state.pt: 100%|█████████▉| 2.06GB / 2.07GB
+Processing Files (0 / 1)      : 100%|█████████▉| 2.06GB / 2.07GB, 68.3MB/s
+New Data Upload               : 100%|█████████▉| 2.05GB / 2.05GB, 67.9MB/s
+...p2000/hallamonic_state.pt: 100%|█████████▉| 2.07GB / 2.07GB
+Processing Files (0 / 1)      : 100%|█████████▉| 2.07GB / 2.07GB, 67.2MB/s
+New Data Upload               : 100%|█████████▉| 2.05GB / 2.05GB, 66.9MB/s
+...p2000/hallamonic_state.pt: 100%|█████████▉| 2.07GB / 2.07GB
+Processing Files (0 / 1)      : 100%|█████████▉| 2.07GB / 2.07GB, 64.8MB/s
+New Data Upload               : 100%|█████████▉| 2.05GB / 2.05GB, 64.5MB/s
+...p2000/hallamonic_state.pt: 100%|██████████| 2.07GB / 2.07GB
+Processing Files (1 / 1)      : 100%|██████████| 2.07GB / 2.07GB, 60.2MB/s
+New Data Upload               : 100%|██████████| 2.05GB / 2.05GB, 59.9MB/s  Processing Files (1 / 1)      : 100%|██████████| 2.07GB / 2.07GB, 60.2MB/s
+New Data Upload               : 100%|██████████| 2.05GB / 2.05GB, 59.9MB/s
+...p2000/hallamonic_state.pt: 100%|██████████| 2.07GB / 2.07GB
+Pushed to HuggingFace: Omibranch/harmonic-checkpoints-phase2-step2000
+step= 2500  bpt=0.3395  82M tok  36.7min
+step= 3000  bpt=0.3732  98M tok  43.7min
+Saved checkpoint: step=3000, bpt=0.3732 → /checkpoints/phase2_step3000
+Processing Files (0 / 0)      : |          |  0.00B /  0.00B
+New Data Upload               : |          |  0.00B /  0.00B
+...p3000/hallamonic_state.pt:   0%|          |  465kB / 2.07GB
+Processing Files (0 / 1)      :   0%|          |  465kB / 2.07GB,   ???B/s
+...p3000/hallamonic_state.pt:   0%|          |  465kB / 2.07GB
+...p3000/hallamonic_state.pt:   0%|          | 1.08MB / 2.07GB
+Processing Files (0 / 1)      :   0%|          | 1.08MB / 2.07GB,  104kB/s
+New Data Upload               :   0%|          |  613kB /  134MB, 60.0kB/s
+...p3000/hallamonic_state.pt:   0%|          | 2.25MB / 2.07GB
+Processing Files (0 / 1)      :   0%|          | 2.25MB / 2.07GB,  215kB/s
+...p3000/hallamonic_state.pt:   1%|          | 15.1MB / 2.07GB
+Processing Files (0 / 1)      :   1%|          | 15.1MB / 2.07GB, 1.45MB/s
+New Data Upload               :   7%|▋         | 13.5MB /  201MB, 1.30MB/s
+...p3000/hallamonic_state.pt:   2%|▏         | 34.1MB / 2.07GB
+Processing Files (0 / 1)      :   2%|▏         | 34.1MB / 2.07GB, 3.24MB/s
+New Data Upload               :  16%|█▌        | 32.5MB /  201MB, 3.09MB/s
+...p3000/hallamonic_state.pt:   3%|▎         | 65.4MB / 2.07GB
+Processing Files (0 / 1)      :   3%|▎         | 65.4MB / 2.07GB, 6.13MB/s
+New Data Upload               :  32%|███▏      | 63.8MB /  201MB, 5.99MB/s
+...p3000/hallamonic_state.pt:   5%|▍         | 99.1MB / 2.07GB
+Processing Files (0 / 1)      :   5%|▍         | 99.1MB / 2.07GB, 9.17MB/s
+New Data Upload               :  48%|████▊     | 97.5MB /  201MB, 9.03MB/s
+...p3000/hallamonic_state.pt:   6%|▌         |  118MB / 2.07GB
+Processing Files (0 / 1)      :   6%|▌         |  118MB / 2.07GB, 10.7MB/s
+New Data Upload               :  58%|█████▊    |  116MB /  201MB, 10.6MB/s
+...p3000/hallamonic_state.pt:   7%|▋         |  135MB / 2.07GB
+Processing Files (0 / 1)      :   7%|▋         |  135MB / 2.07GB, 12.1MB/s
+New Data Upload               :  66%|██████▋   |  134MB /  201MB, 12.0MB/s
+...p3000/hallamonic_state.pt:   7%|▋         |  141MB / 2.07GB
+Processing Files (0 / 1)      :   7%|▋         |  141MB / 2.07GB, 12.0MB/s
+New Data Upload               :  69%|██████▊   |  138MB /  201MB, 11.8MB/s
+...p3000/hallamonic_state.pt:   7%|▋         |  141MB / 2.07GB            Processing Files (0 / 1)      :   7%|▋         |  141MB / 2.07GB, 11.8MB/s
+New Data Upload               :  52%|█████▏    |  138MB /  268MB, 11.6MB/s
+...p3000/hallamonic_state.pt:   8%|▊         |  155MB / 2.07GB
+Processing Files (0 / 1)      :   8%|▊         |  155MB / 2.07GB, 12.8MB/s
+New Data Upload               :  57%|█████▋    |  153MB /  268MB, 12.6MB/s
+...p3000/hallamonic_state.pt:   9%|▊         |  176MB / 2.07GB
+Processing Files (0 / 1)      :   9%|▊         |  176MB / 2.07GB, 14.4MB/s
+New Data Upload               :  52%|█████▏    |  173MB /  335MB, 14.1MB/s
+...p3000/hallamonic_state.pt:  10%|█         |  215MB / 2.07GB
+Processing Files (0 / 1)      :  10%|█         |  215MB / 2.07GB, 17.6MB/s
+New Data Upload               :  53%|█████▎    |  212MB /  402MB, 17.4MB/s
+...p3000/hallamonic_state.pt:  12%|█▏        |  246MB / 2.07GB
+Processing Files (0 / 1)      :  12%|█▏        |  246MB / 2.07GB, 20.0MB/s
+New Data Upload               :  60%|██████    |  243MB /  402MB, 19.7MB/s
+...p3000/hallamonic_state.pt:  13%|█▎        |  274MB / 2.07GB
+Processing Files (0 / 1)      :  13%|█▎        |  274MB / 2.07GB, 22.0MB/s
+New Data Upload               :  58%|█████▊    |  270MB /  470MB, 21.7MB/s
+...p3000/hallamonic_state.pt:  15%|█▌        |  313MB / 2.07GB
+Processing Files (0 / 1)      :  15%|█▌        |  313MB / 2.07GB, 25.0MB/s
+New Data Upload               :  66%|██████▌   |  309MB /  470MB, 24.7MB/s
+...p3000/hallamonic_state.pt:  17%|█▋        |  350MB / 2.07GB
+Processing Files (0 / 1)      :  17%|█▋        |  350MB / 2.07GB, 27.7MB/s
+New Data Upload               :  74%|███████▎  |  346MB /  470MB, 27.4MB/s
+...p3000/hallamonic_state.pt:  18%|█▊        |  376MB / 2.07GB
+Processing Files (0 / 1)      :  18%|█▊        |  376MB / 2.07GB, 29.4MB/s
+New Data Upload               :  69%|██████▉   |  372MB /  537MB, 29.1MB/s
+...p3000/hallamonic_state.pt:  19%|█▉        |  399MB / 2.07GB
+Processing Files (0 / 1)      :  19%|█▉        |  399MB / 2.07GB, 30.8MB/s
+New Data Upload               :  65%|██████▌   |  394MB /  604MB, 30.4MB/s
+...p3000/hallamonic_state.pt:  21%|██        |  429MB / 2.07GB
+Processing Files (0 / 1)      :  21%|██        |  429MB / 2.07GB, 32.7MB/s
+New Data Upload               :  70%|███████   |  424MB /  604MB, 32.3MB/s
+...p3000/hallamonic_state.pt:  23%|██▎       |  467MB / 2.07GB
+Processing Files (0 / 1)      :  23%|██▎       |  467MB / 2.07GB, 35.3MB/s
+New Data Upload               :  69%|██████▉   |  462MB /  671MB, 34.9MB/s
+...p3000/hallamonic_state.pt:  24%|██▍       |  499MB / 2.07GB
+Processing Files (0 / 1)      :  24%|██▍       |  499MB / 2.07GB, 37.3MB/s
+New Data Upload               :  74%|███████▎  |  494MB /  671MB, 36.9MB/s
+...p3000/hallamonic_state.pt:  26%|██▌       |  542MB / 2.07GB
+Processing Files (0 / 1)      :  26%|██▌       |  542MB / 2.07GB, 40.1MB/s
+New Data Upload               :  73%|███████▎  |  536MB /  738MB, 39.7MB/s
+...p3000/hallamonic_state.pt:  29%|██▉       |  596MB / 2.07GB
+Processing Files (0 / 1)      :  29%|██▉       |  596MB / 2.07GB, 43.9MB/s
+New Data Upload               :  73%|███████▎  |  590MB /  805MB, 43.5MB/s
+...p3000/hallamonic_state.pt:  31%|███       |  643MB / 2.07GB
+Processing Files (0 / 1)      :  31%|███       |  643MB / 2.07GB, 47.0MB/s
+New Data Upload               :  79%|███████▉  |  637MB /  805MB, 46.6MB/s
+...p3000/hallamonic_state.pt:  33%|███▎      |  683MB / 2.07GB
+Processing Files (0 / 1)      :  33%|███▎      |  683MB / 2.07GB, 49.4MB/s
+New Data Upload               :  78%|███████▊  |  677MB /  872MB, 49.0MB/s
+...p3000/hallamonic_state.pt:  35%|███▍      |  722MB / 2.07GB
+Processing Files (0 / 1)      :  35%|███▍      |  722MB / 2.07GB, 51.6MB/s
+New Data Upload               :  82%|████████▏ |  716MB /  872MB, 51.2MB/s
+...p3000/hallamonic_state.pt:  37%|███▋      |  769MB / 2.07GB
+Processing Files (0 / 1)      :  37%|███▋      |  769MB / 2.07GB, 54.5MB/s
+New Data Upload               :  81%|████████  |  762MB /  939MB, 54.0MB/s
+...p3000/hallamonic_state.pt:  39%|███▉      |  803MB / 2.07GB
+Processing Files (0 / 1)      :  39%|███▉      |  803MB / 2.07GB, 56.2MB/s
+New Data Upload               :  79%|███████▉  |  796MB / 1.01GB, 55.8MB/s
+...p3000/hallamonic_state.pt:  41%|████      |  841MB / 2.07GB
+Processing Files (0 / 1)      :  41%|████      |  841MB / 2.07GB, 58.2MB/s
+New Data Upload               :  83%|████████▎ |  833MB / 1.01GB, 57.7MB/s
+...p3000/hallamonic_state.pt:  42%|████▏     |  870MB / 2.07GB
+Processing Files (0 / 1)      :  42%|████▏     |  870MB / 2.07GB, 59.4MB/s
+New Data Upload               :  80%|████████  |  862MB / 1.07GB, 58.9MB/s
+...p3000/hallamonic_state.pt:  45%|████▍     |  920MB / 2.07GB
+Processing Files (0 / 1)      :  45%|████▍     |  920MB / 2.07GB, 62.3MB/s
+New Data Upload               :  80%|███████▉  |  911MB / 1.14GB, 61.8MB/s
+...p3000/hallamonic_state.pt:  47%|████▋     |  967MB / 2.07GB
+Processing Files (0 / 1)      :  47%|████▋     |  967MB / 2.07GB, 64.9MB/s
+New Data Upload               :  79%|███████▉  |  958MB / 1.21GB, 64.3MB/s
+...p3000/hallamonic_state.pt:  49%|████▉     | 1.02GB / 2.07GB
+Processing Files (0 / 1)      :  49%|████▉     | 1.02GB / 2.07GB, 67.7MB/s
+New Data Upload               :  83%|████████▎ | 1.01GB / 1.21GB, 67.1MB/s
+...p3000/hallamonic_state.pt:  52%|█████▏    | 1.07GB / 2.07GB
+Processing Files (0 / 1)      :  52%|█████▏    | 1.07GB / 2.07GB, 70.5MB/s
+New Data Upload               :  83%|████████▎ | 1.06GB / 1.27GB, 69.9MB/s
+...p3000/hallamonic_state.pt:  54%|█████▍    | 1.11GB / 2.07GB
+Processing Files (0 / 1)      :  54%|█████▍    | 1.11GB / 2.07GB, 72.6MB/s
+New Data Upload               :  82%|████████▏ | 1.10GB / 1.34GB, 72.0MB/s
+...p3000/hallamonic_state.pt:  56%|█████▌    | 1.16GB / 2.07GB
+Processing Files (0 / 1)      :  56%|█████▌    | 1.16GB / 2.07GB, 75.2MB/s
+New Data Upload               :  86%|████████▌ | 1.15GB / 1.34GB, 74.6MB/s
+...p3000/hallamonic_state.pt:  58%|█████▊    | 1.20GB / 2.07GB
+Processing Files (0 / 1)      :  58%|█████▊    | 1.20GB / 2.07GB, 77.0MB/s
+New Data Upload               :  85%|████████▍ | 1.19GB / 1.41GB, 76.4MB/s
+...p3000/hallamonic_state.pt:  60%|█████▉    | 1.23GB / 2.07GB
+Processing Files (0 / 1)      :  60%|█████▉    | 1.23GB / 2.07GB, 78.1MB/s
+New Data Upload               :  83%|████████▎ | 1.22GB / 1.48GB, 77.4MB/s
+...p3000/hallamonic_state.pt:  61%|██████▏   | 1.27GB / 2.07GB
+Processing Files (0 / 1)      :  61%|██████▏   | 1.27GB / 2.07GB, 79.0MB/s
+New Data Upload               :  85%|████████▌ | 1.26GB / 1.48GB, 78.3MB/s
+...p3000/hallamonic_state.pt:  63%|██████▎   | 1.30GB / 2.07GB
+Processing Files (0 / 1)      :  63%|██████▎   | 1.30GB / 2.07GB, 80.0MB/s
+New Data Upload               :  83%|████████▎ | 1.29GB / 1.54GB, 79.3MB/s
+...p3000/hallamonic_state.pt:  65%|██████▌   | 1.35GB / 2.07GB
+Processing Files (0 / 1)      :  65%|██████▌   | 1.35GB / 2.07GB, 82.5MB/s
+New Data Upload               :  83%|████████▎ | 1.34GB / 1.61GB, 81.8MB/s
+...p3000/hallamonic_state.pt:  68%|██████▊   | 1.40GB / 2.07GB
+Processing Files (0 / 1)      :  68%|██████▊   | 1.40GB / 2.07GB, 84.6MB/s
+New Data Upload               :  86%|████████▌ | 1.38GB / 1.61GB, 83.9MB/s
+...p3000/hallamonic_state.pt:  70%|███████   | 1.45GB / 2.07GB
+Processing Files (0 / 1)      :  70%|███████   | 1.45GB / 2.07GB, 87.2MB/s
+New Data Upload               :  86%|████████▌ | 1.44GB / 1.68GB, 86.5MB/s
+...p3000/hallamonic_state.pt:  73%|███████▎  | 1.51GB / 2.07GB
+Processing Files (0 / 1)      :  73%|███████▎  | 1.51GB / 2.07GB, 89.9MB/s
+New Data Upload               :  89%|████████▉ | 1.49GB / 1.68GB, 89.3MB/s
+...p3000/hallamonic_state.pt:  75%|███████▍  | 1.55GB / 2.07GB
+Processing Files (0 / 1)      :  75%|███████▍  | 1.55GB / 2.07GB, 91.6MB/s
+New Data Upload               :  88%|████████▊ | 1.54GB / 1.74GB, 90.9MB/s
+...p3000/hallamonic_state.pt:  78%|███████▊  | 1.61GB / 2.07GB
+Processing Files (0 / 1)      :  78%|███████▊  | 1.61GB / 2.07GB, 94.3MB/s
+New Data Upload               :  88%|████████▊ | 1.59GB / 1.81GB, 93.6MB/s
+...p3000/hallamonic_state.pt:  79%|███████▉  | 1.64GB / 2.07GB
+Processing Files (0 / 1)      :  79%|███████▉  | 1.64GB / 2.07GB, 95.3MB/s
+New Data Upload               :  90%|█████████ | 1.63GB / 1.81GB, 94.6MB/s
+...p3000/hallamonic_state.pt:  82%|████████▏ | 1.69GB / 2.07GB
+Processing Files (0 / 1)      :  82%|████████▏ | 1.69GB / 2.07GB, 96.8MB/s
+New Data Upload               :  89%|████████▉ | 1.67GB / 1.88GB, 96.1MB/s
+...p3000/hallamonic_state.pt:  84%|████████▎ | 1.73GB / 2.07GB
+Processing Files (0 / 1)      :  84%|████████▎ | 1.73GB / 2.07GB, 98.2MB/s
+...p3000/hallamonic_state.pt:  86%|████████▌ | 1.77GB / 2.07GB
+Processing Files (0 / 1)      :  86%|████████▌ | 1.77GB / 2.07GB, 99.4MB/s
+New Data Upload               :  90%|█████████ | 1.75GB / 1.95GB, 98.7MB/s
+...p3000/hallamonic_state.pt:  88%|████████▊ | 1.81GB / 2.07GB
+Processing Files (0 / 1)      :  88%|████████▊ | 1.81GB / 2.07GB,  101MB/s
+New Data Upload               :  89%|████████▉ | 1.80GB / 2.01GB,  100MB/s
+...p3000/hallamonic_state.pt:  89%|████████▉ | 1.85GB / 2.07GB
+Processing Files (0 / 1)      :  89%|████████▉ | 1.85GB / 2.07GB,  102MB/s
+New Data Upload               :  91%|█████████ | 1.83GB / 2.01GB,  101MB/s
+...p3000/hallamonic_state.pt:  92%|█████████▏| 1.89GB / 2.07GB
+Processing Files (0 / 1)      :  92%|█████████▏| 1.89GB / 2.07GB,  103MB/s
+New Data Upload               :  92%|█████████▏| 1.88GB / 2.05GB,  103MB/s
+...p3000/hallamonic_state.pt:  94%|█████████▍| 1.94GB / 2.07GB
+Processing Files (0 / 1)      :  94%|█████████▍| 1.94GB / 2.07GB,  105MB/s
+New Data Upload               :  94%|█████████▍| 1.93GB / 2.05GB,  104MB/s
+...p3000/hallamonic_state.pt:  96%|█████████▌| 1.98GB / 2.07GB
+Processing Files (0 / 1)      :  96%|█████████▌| 1.98GB / 2.07GB,  106MB/s
+New Data Upload               :  96%|█████████▌| 1.97GB / 2.05GB,  106MB/s
+...p3000/hallamonic_state.pt:  98%|█████████▊| 2.03GB / 2.07GB
+Processing Files (0 / 1)      :  98%|█████████▊| 2.03GB / 2.07GB,  107MB/s
+New Data Upload               :  98%|█████████▊| 2.01GB / 2.05GB,  107MB/s
+...p3000/hallamonic_state.pt: 100%|█████████▉| 2.06GB / 2.07GB
+Processing Files (0 / 1)      : 100%|█████████▉| 2.06GB / 2.07GB,  108MB/s
+New Data Upload               : 100%|█████████▉| 2.05GB / 2.05GB,  107MB/s
+...p3000/hallamonic_state.pt: 100%|█████████▉| 2.07GB / 2.07GB
+Processing Files (0 / 1)      : 100%|█████████▉| 2.07GB / 2.07GB,  106MB/s
+New Data Upload               : 100%|█████████▉| 2.05GB / 2.05GB,  106MB/s
+...p3000/hallamonic_state.pt: 100%|█████████▉| 2.07GB / 2.07GB
+Processing Files (0 / 1)      : 100%|█████████▉| 2.07GB / 2.07GB,  104MB/s
+New Data Upload               : 100%|█████████▉| 2.05GB / 2.05GB,  104MB/s
+...p3000/hallamonic_state.pt: 100%|█████████▉| 2.07GB / 2.07GB
+Processing Files (0 / 1)      : 100%|█████████▉| 2.07GB / 2.07GB,  102MB/s
+New Data Upload               : 100%|█████████▉| 2.05GB / 2.05GB,  102MB/s
+...p3000/hallamonic_state.pt: 100%|██████████| 2.07GB / 2.07GB
+Processing Files (1 / 1)      : 100%|██████████| 2.07GB / 2.07GB,  100MB/s
+New Data Upload               : 100%|██████████| 2.05GB / 2.05GB, 99.9MB/s  Processing Files (1 / 1)      : 100%|██████████| 2.07GB / 2.07GB,  100MB/s
+New Data Upload               : 100%|██████████| 2.05GB / 2.05GB, 99.9MB/s
+...p3000/hallamonic_state.pt: 100%|██████████| 2.07GB / 2.07GB
+Pushed to HuggingFace: Omibranch/harmonic-checkpoints-phase2-step3000
+step= 3500  bpt=0.3459  115M tok  51.5min
+step= 4000  bpt=0.3491  131M tok  58.5min
+Saved checkpoint: step=4000, bpt=0.3491 → /checkpoints/phase2_step4000
+Processing Files (0 / 0)      : |          |  0.00B /  0.00B
+New Data Upload               : |          |  0.00B /  0.00B
+...p4000/hallamonic_state.pt:   0%|          |  465kB / 2.07GB
+Processing Files (0 / 1)      :   0%|          |  465kB / 2.07GB,   ???B/s
+...p4000/hallamonic_state.pt:   0%|          |  465kB / 2.07GB
+...p4000/hallamonic_state.pt:   0%|          | 1.08MB / 2.07GB
+Processing Files (0 / 1)      :   0%|          | 1.08MB / 2.07GB,  104kB/s
+New Data Upload               :   0%|          |  613kB /  134MB, 60.0kB/s
+...p4000/hallamonic_state.pt:   0%|          | 2.25MB / 2.07GB
+Processing Files (0 / 1)      :   0%|          | 2.25MB / 2.07GB,  215kB/s
+...p4000/hallamonic_state.pt:   1%|          | 14.5MB / 2.07GB
+Processing Files (0 / 1)      :   1%|          | 14.5MB / 2.07GB, 1.39MB/s
+New Data Upload               :   6%|▋         | 12.9MB /  201MB, 1.24MB/s
+...p4000/hallamonic_state.pt:   2%|▏         | 32.9MB / 2.07GB
+Processing Files (0 / 1)      :   2%|▏         | 32.9MB / 2.07GB, 3.12MB/s
+New Data Upload               :  16%|█▌        | 31.3MB /  201MB, 2.97MB/s
+...p4000/hallamonic_state.pt:   3%|▎         | 65.4MB / 2.07GB
+Processing Files (0 / 1)      :   3%|▎         | 65.4MB / 2.07GB, 6.13MB/s
+New Data Upload               :  32%|███▏      | 63.8MB /  201MB, 5.99MB/s
+...p4000/hallamonic_state.pt:   5%|▍         |  101MB / 2.07GB
+Processing Files (0 / 1)      :   5%|▍         |  101MB / 2.07GB, 9.34MB/s
+New Data Upload               :  49%|████▉     | 99.3MB /  201MB, 9.20MB/s
+...p4000/hallamonic_state.pt:   6%|▌         |  120MB / 2.07GB
+Processing Files (0 / 1)      :   6%|▌         |  120MB / 2.07GB, 10.9MB/s
+New Data Upload               :  59%|█████▉    |  118MB /  201MB, 10.8MB/s
+...p4000/hallamonic_state.pt:   7%|▋         |  135MB / 2.07GB
+Processing Files (0 / 1)      :   7%|▋         |  135MB / 2.07GB, 12.1MB/s
+New Data Upload               :  66%|██████▋   |  134MB /  201MB, 11.9MB/s
+...p4000/hallamonic_state.pt:   7%|▋         |  141MB / 2.07GB
+Processing Files (0 / 1)      :   7%|▋         |  141MB / 2.07GB, 12.0MB/s
+New Data Upload               :  52%|█████▏    |  138MB /  268MB, 11.8MB/s
+...p4000/hallamonic_state.pt:   7%|▋         |  145MB / 2.07GB
+Processing Files (0 / 1)      :   7%|▋         |  145MB / 2.07GB, 12.2MB/s
+New Data Upload               :  53%|█████▎    |  143MB /  268MB, 12.0MB/s
+...p4000/hallamonic_state.pt:   8%|▊         |  160MB / 2.07GB
+Processing Files (0 / 1)      :   8%|▊         |  160MB / 2.07GB, 13.2MB/s
+New Data Upload               :  47%|████▋     |  157MB /  335MB, 13.0MB/s
+...p4000/hallamonic_state.pt:   9%|▉         |  182MB / 2.07GB
+Processing Files (0 / 1)      :   9%|▉         |  182MB / 2.07GB, 15.0MB/s
+New Data Upload               :  54%|█████▎    |  179MB /  335MB, 14.7MB/s
+...p4000/hallamonic_state.pt:  11%|█         |  217MB / 2.07GB
+Processing Files (0 / 1)      :  11%|█         |  217MB / 2.07GB, 17.8MB/s
+New Data Upload               :  64%|██████▍   |  214MB /  335MB, 17.5MB/s
+...p4000/hallamonic_state.pt:  13%|█▎        |  260MB / 2.07GB
+Processing Files (0 / 1)      :  13%|█▎        |  260MB / 2.07GB, 21.2MB/s
+New Data Upload               :  64%|██████▎   |  256MB /  402MB, 20.9MB/s
+...p4000/hallamonic_state.pt:  14%|█▍        |  296MB / 2.07GB
+Processing Files (0 / 1)      :  14%|█▍        |  296MB / 2.07GB, 24.0MB/s
+New Data Upload               :  62%|██████▏   |  293MB /  469MB, 23.7MB/s
+...p4000/hallamonic_state.pt:  16%|█▌        |  321MB / 2.07GB
+Processing Files (0 / 1)      :  16%|█▌        |  321MB / 2.07GB, 25.6MB/s
+New Data Upload               :  59%|█████▉    |  317MB /  536MB, 25.3MB/s
+...p4000/hallamonic_state.pt:  17%|█▋        |  357MB / 2.07GB
+Processing Files (0 / 1)      :  17%|█▋        |  357MB / 2.07GB, 28.2MB/s
+New Data Upload               :  66%|██████▌   |  353MB /  536MB, 27.9MB/s
+...p4000/hallamonic_state.pt:  19%|█▉        |  396MB / 2.07GB
+Processing Files (0 / 1)      :  19%|█▉        |  396MB / 2.07GB, 31.0MB/s
+New Data Upload               :  65%|██████▍   |  391MB /  603MB, 30.7MB/s
+...p4000/hallamonic_state.pt:  21%|██        |  436MB / 2.07GB
+Processing Files (0 / 1)      :  21%|██        |  436MB / 2.07GB, 33.9MB/s
+New Data Upload               :  64%|██████▍   |  432MB /  670MB, 33.5MB/s
+...p4000/hallamonic_state.pt:  23%|██▎       |  474MB / 2.07GB
+Processing Files (0 / 1)      :  23%|██▎       |  474MB / 2.07GB, 36.5MB/s
+New Data Upload               :  70%|███████   |  469MB /  670MB, 36.1MB/s
+...p4000/hallamonic_state.pt:  25%|██▌       |  522MB / 2.07GB
+Processing Files (0 / 1)      :  25%|██▌       |  522MB / 2.07GB, 39.8MB/s
+New Data Upload               :  70%|██████▉   |  516MB /  738MB, 39.4MB/s
+...p4000/hallamonic_state.pt:  27%|██▋       |  565MB / 2.07GB
+Processing Files (0 / 1)      :  27%|██▋       |  565MB / 2.07GB, 42.6MB/s
+New Data Upload               :  76%|███████▌  |  559MB /  738MB, 42.2MB/s
+...p4000/hallamonic_state.pt:  30%|██▉       |  612MB / 2.07GB
+Processing Files (0 / 1)      :  30%|██▉       |  612MB / 2.07GB, 45.7MB/s
+New Data Upload               :  75%|███████▌  |  606MB /  805MB, 45.3MB/s
+...p4000/hallamonic_state.pt:  32%|███▏      |  664MB / 2.07GB
+Processing Files (0 / 1)      :  32%|███▏      |  664MB / 2.07GB, 49.3MB/s
+New Data Upload               :  76%|███████▌  |  658MB /  872MB, 48.8MB/s
+...p4000/hallamonic_state.pt:  34%|███▍      |  701MB / 2.07GB
+Processing Files (0 / 1)      :  34%|███▍      |  701MB / 2.07GB, 51.3MB/s
+New Data Upload               :  80%|███████▉  |  694MB /  872MB, 50.8MB/s
+...p4000/hallamonic_state.pt:  36%|███▋      |  751MB / 2.07GB
+Processing Files (0 / 1)      :  36%|███▋      |  751MB / 2.07GB, 54.5MB/s
+New Data Upload               :  79%|███████▉  |  744MB /  939MB, 54.0MB/s
+...p4000/hallamonic_state.pt:  38%|███▊      |  792MB / 2.07GB
+Processing Files (0 / 1)      :  38%|███▊      |  792MB / 2.07GB, 56.8MB/s
+New Data Upload               :  78%|███████▊  |  785MB / 1.01GB, 56.3MB/s
+...p4000/hallamonic_state.pt:  40%|████      |  828MB / 2.07GB
+Processing Files (0 / 1)      :  40%|████      |  828MB / 2.07GB, 58.7MB/s
+New Data Upload               :  82%|████████▏ |  821MB / 1.01GB, 58.2MB/s
+...p4000/hallamonic_state.pt:  42%|████▏     |  872MB / 2.07GB
+Processing Files (0 / 1)      :  42%|████▏     |  872MB / 2.07GB, 61.1MB/s
+New Data Upload               :  81%|████████  |  864MB / 1.07GB, 60.6MB/s
+...p4000/hallamonic_state.pt:  44%|████▍     |  915MB / 2.07GB
+Processing Files (0 / 1)      :  44%|████▍     |  915MB / 2.07GB, 63.4MB/s
+New Data Upload               :  80%|███████▉  |  906MB / 1.14GB, 62.8MB/s
+...p4000/hallamonic_state.pt:  46%|████▋     |  960MB / 2.07GB
+Processing Files (0 / 1)      :  46%|████▋     |  960MB / 2.07GB, 65.8MB/s
+New Data Upload               :  83%|████████▎ |  951MB / 1.14GB, 65.2MB/s
+...p4000/hallamonic_state.pt:  49%|████▊     | 1.00GB / 2.07GB
+Processing Files (0 / 1)      :  49%|████▊     | 1.00GB / 2.07GB, 68.1MB/s
+New Data Upload               :  82%|████████▏ |  995MB / 1.21GB, 67.5MB/s
+...p4000/hallamonic_state.pt:  51%|█████     | 1.05GB / 2.07GB
+Processing Files (0 / 1)      :  51%|█████     | 1.05GB / 2.07GB, 70.6MB/s
+New Data Upload               :  86%|████████▋ | 1.04GB / 1.21GB, 70.0MB/s
+...p4000/hallamonic_state.pt:  53%|█████▎    | 1.10GB / 2.07GB
+Processing Files (0 / 1)      :  53%|█████▎    | 1.10GB / 2.07GB, 72.8MB/s
+New Data Upload               :  85%|████████▌ | 1.09GB / 1.27GB, 72.2MB/s
+...p4000/hallamonic_state.pt:  55%|█████▌    | 1.14GB / 2.07GB
+Processing Files (0 / 1)      :  55%|█████▌    | 1.14GB / 2.07GB, 74.8MB/s
+New Data Upload               :  89%|████████▊ | 1.13GB / 1.27GB, 74.2MB/s
+...p4000/hallamonic_state.pt:  57%|█████▋    | 1.17GB / 2.07GB
+Processing Files (0 / 1)      :  57%|█████▋    | 1.17GB / 2.07GB, 76.1MB/s
+New Data Upload               :  87%|████████▋ | 1.16GB / 1.34GB, 75.5MB/s
+...p4000/hallamonic_state.pt:  59%|█████▉    | 1.22GB / 2.07GB
+Processing Files (0 / 1)      :  59%|█████▉    | 1.22GB / 2.07GB, 78.1MB/s
+New Data Upload               :  86%|████████▌ | 1.21GB / 1.41GB, 77.5MB/s
+...p4000/hallamonic_state.pt:  61%|██████    | 1.26GB / 2.07GB
+Processing Files (0 / 1)      :  61%|██████    | 1.26GB / 2.07GB, 79.8MB/s
+New Data Upload               :  84%|████████▍ | 1.25GB / 1.48GB, 79.1MB/s
+...p4000/hallamonic_state.pt:  63%|██████▎   | 1.29GB / 2.07GB
+Processing Files (0 / 1)      :  63%|██████▎   | 1.29GB / 2.07GB, 81.3MB/s
+...p4000/hallamonic_state.pt:  65%|██████▍   | 1.34GB / 2.07GB
+Processing Files (0 / 1)      :  65%|██████▍   | 1.34GB / 2.07GB, 83.0MB/s
+New Data Upload               :  86%|████████▌ | 1.33GB / 1.54GB, 82.3MB/s
+...p4000/hallamonic_state.pt:  67%|██████▋   | 1.38GB / 2.07GB
+Processing Files (0 / 1)      :  67%|██████▋   | 1.38GB / 2.07GB, 84.9MB/s
+New Data Upload               :  85%|████████▌ | 1.37GB / 1.61GB, 84.2MB/s
+...p4000/hallamonic_state.pt:  69%|██████▉   | 1.43GB / 2.07GB
+Processing Files (0 / 1)      :  69%|██████▉   | 1.43GB / 2.07GB, 87.3MB/s
+New Data Upload               :  88%|████████▊ | 1.42GB / 1.61GB, 86.6MB/s
+...p4000/hallamonic_state.pt:  72%|███████▏  | 1.48GB / 2.07GB
+Processing Files (0 / 1)      :  72%|███████▏  | 1.48GB / 2.07GB, 89.3MB/s
+New Data Upload               :  88%|████████▊ | 1.47GB / 1.68GB, 88.6MB/s
+...p4000/hallamonic_state.pt:  74%|███████▎  | 1.52GB / 2.07GB
+Processing Files (0 / 1)      :  74%|███████▎  | 1.52GB / 2.07GB, 90.7MB/s
+New Data Upload               :  86%|████████▋ | 1.51GB / 1.74GB, 90.0MB/s
+...p4000/hallamonic_state.pt:  76%|███████▌  | 1.56GB / 2.07GB
+Processing Files (0 / 1)      :  76%|███████▌  | 1.56GB / 2.07GB, 92.2MB/s
+New Data Upload               :  89%|████████▉ | 1.55GB / 1.74GB, 91.5MB/s
+...p4000/hallamonic_state.pt:  77%|███████▋  | 1.60GB / 2.07GB            Processing Files (0 / 1)      :  77%|███████▋  | 1.60GB / 2.07GB, 93.1MB/s
+New Data Upload               :  87%|████████▋ | 1.58GB / 1.81GB, 92.4MB/s
+...p4000/hallamonic_state.pt:  79%|███████▉  | 1.63GB / 2.07GB
+Processing Files (0 / 1)      :  79%|███████▉  | 1.63GB / 2.07GB, 93.9MB/s
+New Data Upload               :  86%|████████▌ | 1.62GB / 1.88GB, 93.2MB/s
+...p4000/hallamonic_state.pt:  81%|████████  | 1.67GB / 2.07GB
+Processing Files (0 / 1)      :  81%|████████  | 1.67GB / 2.07GB, 95.4MB/s
+New Data Upload               :  88%|████████▊ | 1.66GB / 1.88GB, 94.6MB/s
+...p4000/hallamonic_state.pt:  84%|████████▎ | 1.73GB / 2.07GB
+Processing Files (0 / 1)      :  84%|████████▎ | 1.73GB / 2.07GB, 97.9MB/s
+New Data Upload               :  88%|████████▊ | 1.71GB / 1.94GB, 97.3MB/s
+...p4000/hallamonic_state.pt:  86%|████████▌ | 1.77GB / 2.07GB
+Processing Files (0 / 1)      :  86%|████████▌ | 1.77GB / 2.07GB, 99.8MB/s
+New Data Upload               :  91%|█████████ | 1.76GB / 1.94GB, 99.1MB/s
+...p4000/hallamonic_state.pt:  88%|████████▊ | 1.82GB / 2.07GB
+Processing Files (0 / 1)      :  88%|████████▊ | 1.82GB / 2.07GB,  101MB/s
+New Data Upload               :  90%|████████▉ | 1.80GB / 2.01GB,  100MB/s
+...p4000/hallamonic_state.pt:  90%|████████▉ | 1.86GB / 2.07GB
+Processing Files (0 / 1)      :  90%|████████▉ | 1.86GB / 2.07GB,  102MB/s
+New Data Upload               :  90%|████████▉ | 1.85GB / 2.05GB,  102MB/s
+...p4000/hallamonic_state.pt:  92%|█████████▏| 1.91GB / 2.07GB
+Processing Files (0 / 1)      :  92%|█████████▏| 1.91GB / 2.07GB,  104MB/s
+New Data Upload               :  92%|█████████▏| 1.89GB / 2.05GB,  103MB/s
+...p4000/hallamonic_state.pt:  94%|█████████▎| 1.93GB / 2.07GB
+Processing Files (0 / 1)      :  94%|█████████▎| 1.93GB / 2.07GB,  104MB/s
+New Data Upload               :  94%|█████████▎| 1.92GB / 2.05GB,  104MB/s
+...p4000/hallamonic_state.pt:  96%|█████████▌| 1.97GB / 2.07GB
+Processing Files (0 / 1)      :  96%|█████████▌| 1.97GB / 2.07GB,  105MB/s
+New Data Upload               :  95%|█████████▌| 1.96GB / 2.05GB,  105MB/s
+...p4000/hallamonic_state.pt:  97%|█████████▋| 2.01GB / 2.07GB
+Processing Files (0 / 1)      :  97%|█████████▋| 2.01GB / 2.07GB,  106MB/s
+New Data Upload               :  97%|█████████▋| 1.99GB / 2.05GB,  105MB/s
+...p4000/hallamonic_state.pt:  98%|█████████▊| 2.02GB / 2.07GB
+Processing Files (0 / 1)      :  98%|█████████▊| 2.02GB / 2.07GB,  105MB/s
+New Data Upload               :  98%|█████████▊| 2.00GB / 2.05GB,  104MB/s
+...p4000/hallamonic_state.pt:  98%|█████████▊| 2.02GB / 2.07GB
+Processing Files (0 / 1)      :  98%|█████████▊| 2.02GB / 2.07GB,  103MB/s
+New Data Upload               :  98%|█████████▊| 2.01GB / 2.05GB,  103MB/s
+...p4000/hallamonic_state.pt:  98%|█████████▊| 2.03GB / 2.07GB
+Processing Files (0 / 1)      :  98%|█████████▊| 2.03GB / 2.07GB,  102MB/s
+New Data Upload               :  98%|█████████▊| 2.02GB / 2.05GB,  101MB/s
+...p4000/hallamonic_state.pt:  99%|█████████▊| 2.04GB / 2.07GB
+Processing Files (0 / 1)      :  99%|█████████▊| 2.04GB / 2.07GB,  100MB/s
+New Data Upload               :  99%|█████████▊| 2.03GB / 2.05GB, 99.8MB/s
+...p4000/hallamonic_state.pt:  99%|█████████▉| 2.05GB / 2.07GB
+Processing Files (0 / 1)      :  99%|█████████▉| 2.05GB / 2.07GB, 98.9MB/s
+New Data Upload               :  99%|█████████▉| 2.03GB / 2.05GB, 98.3MB/s
+...p4000/hallamonic_state.pt:  99%|█████████▉| 2.05GB / 2.07GB
+Processing Files (0 / 1)      :  99%|█████████▉| 2.05GB / 2.07GB, 97.5MB/s
+New Data Upload               :  99%|█████████▉| 2.04GB / 2.05GB, 96.9MB/s
+...p4000/hallamonic_state.pt: 100%|█████████▉| 2.06GB / 2.07GB
+Processing Files (0 / 1)      : 100%|█████████▉| 2.06GB / 2.07GB, 96.1MB/s
+New Data Upload               : 100%|█████████▉| 2.04GB / 2.05GB, 95.5MB/s
+...p4000/hallamonic_state.pt: 100%|█████████▉| 2.06GB / 2.07GB
+Processing Files (0 / 1)      : 100%|█████████▉| 2.06GB / 2.07GB, 94.7MB/s
+New Data Upload               : 100%|█████████▉| 2.05GB / 2.05GB, 94.2MB/s
+...p4000/hallamonic_state.pt: 100%|█████████▉| 2.07GB / 2.07GB
+Processing Files (0 / 1)      : 100%|█████████▉| 2.07GB / 2.07GB, 93.1MB/s
+New Data Upload               : 100%|█████████▉| 2.05GB / 2.05GB, 92.6MB/s
+...p4000/hallamonic_state.pt: 100%|██████████| 2.07GB / 2.07GB
+Processing Files (1 / 1)      : 100%|██████████| 2.07GB / 2.07GB, 87.9MB/s
+New Data Upload               : 100%|██████████| 2.05GB / 2.05GB, 87.4MB/s
+Processing Files (1 / 1)      : 100%|██████████| 2.07GB / 2.07GB, 87.9MB/s
+New Data Upload               : 100%|██████████| 2.05GB / 2.05GB, 87.4MB/s
+...p4000/hallamonic_state.pt: 100%|██████████| 2.07GB / 2.07GB
+Pushed to HuggingFace: Omibranch/harmonic-checkpoints-phase2-step4000
+step= 4500  bpt=0.3446  147M tok  66.3min
+step= 5000  bpt=0.3541  164M tok  73.2min
+Saved checkpoint: step=5000, bpt=0.3541 → /checkpoints/phase2_step5000
+Processing Files (0 / 0)      : |          |  0.00B /  0.00B
+New Data Upload               : |          |  0.00B /  0.00B
+...p5000/hallamonic_state.pt:   0%|          |  465kB / 2.07GB
+Processing Files (0 / 1)      :   0%|          |  465kB / 2.07GB,   ???B/s
+...p5000/hallamonic_state.pt:   0%|          | 1.08MB / 2.07GB
+Processing Files (0 / 1)      :   0%|          | 1.08MB / 2.07GB,  104kB/s
+New Data Upload               :   0%|          |  614kB /  134MB, 60.0kB/s
+...p5000/hallamonic_state.pt:   0%|          | 7.78MB / 2.07GB
+Processing Files (0 / 1)      :   0%|          | 7.78MB / 2.07GB,  751kB/s
+New Data Upload               :   5%|▍         | 6.14MB /  134MB,  595kB/s
+...p5000/hallamonic_state.pt:   1%|          | 25.6MB / 2.07GB
+Processing Files (0 / 1)      :   1%|          | 25.6MB / 2.07GB, 2.45MB/s
+New Data Upload               :  12%|█▏        | 24.0MB /  201MB, 2.30MB/s
+...p5000/hallamonic_state.pt:   3%|▎         | 54.4MB / 2.07GB
+Processing Files (0 / 1)      :   3%|▎         | 54.4MB / 2.07GB, 5.15MB/s
+New Data Upload               :  26%|██▌       | 52.8MB /  201MB, 5.00MB/s
+...p5000/hallamonic_state.pt:   4%|▍         | 88.8MB / 2.07GB
+Processing Files (0 / 1)      :   4%|▍         | 88.8MB / 2.07GB, 8.29MB/s
+New Data Upload               :  43%|████▎     | 87.1MB /  201MB, 8.15MB/s
+...p5000/hallamonic_state.pt:   6%|▌         |  118MB / 2.07GB
+Processing Files (0 / 1)      :   6%|▌         |  118MB / 2.07GB, 10.8MB/s
+New Data Upload               :  58%|█████▊    |  116MB /  201MB, 10.7MB/s
+...p5000/hallamonic_state.pt:   7%|▋         |  135MB / 2.07GB
+Processing Files (0 / 1)      :   7%|▋         |  135MB / 2.07GB, 12.2MB/s
+New Data Upload               :  66%|██████▋   |  134MB /  201MB, 12.1MB/s
+...p5000/hallamonic_state.pt:   7%|▋         |  135MB / 2.07GB
+Processing Files (0 / 1)      :   7%|▋         |  135MB / 2.07GB, 11.7MB/s
+New Data Upload               :  67%|██████▋   |  134MB /  201MB, 11.6MB/s
+...p5000/hallamonic_state.pt:   7%|▋         |  141MB / 2.07GB
+Processing Files (0 / 1)      :   7%|▋         |  141MB / 2.07GB, 11.9MB/s
+New Data Upload               :  52%|█████▏    |  138MB /  268MB, 11.7MB/s
+...p5000/hallamonic_state.pt:   7%|▋         |  142MB / 2.07GB
+Processing Files (0 / 1)      :   7%|▋         |  142MB / 2.07GB, 11.7MB/s
+New Data Upload               :  41%|████▏     |  139MB /  335MB, 11.5MB/s
+...p5000/hallamonic_state.pt:   8%|▊         |  163MB / 2.07GB
+Processing Files (0 / 1)      :   8%|▊         |  163MB / 2.07GB, 13.4MB/s
+New Data Upload               :  48%|████▊     |  161MB /  335MB, 13.2MB/s
+...p5000/hallamonic_state.pt:   9%|▉         |  190MB / 2.07GB
+Processing Files (0 / 1)      :   9%|▉         |  190MB / 2.07GB, 15.6MB/s
+New Data Upload               :  56%|█████▌    |  188MB /  335MB, 15.3MB/s
+...p5000/hallamonic_state.pt:  11%|█         |  232MB / 2.07GB
+Processing Files (0 / 1)      :  11%|█         |  232MB / 2.07GB, 18.9MB/s
+New Data Upload               :  57%|█████▋    |  229MB /  402MB, 18.7MB/s
+...p5000/hallamonic_state.pt:  14%|█▎        |  284MB / 2.07GB
+Processing Files (0 / 1)      :  14%|█▎        |  284MB / 2.07GB, 23.2MB/s
+New Data Upload               :  70%|██████▉   |  280MB /  402MB, 22.9MB/s
+...p5000/hallamonic_state.pt:  15%|█▌        |  318MB / 2.07GB
+Processing Files (0 / 1)      :  15%|█▌        |  318MB / 2.07GB, 25.7MB/s
+New Data Upload               :  67%|██████▋   |  315MB /  470MB, 25.4MB/s
+...p5000/hallamonic_state.pt:  17%|█▋        |  345MB / 2.07GB
+Processing Files (0 / 1)      :  17%|█▋        |  345MB / 2.07GB, 27.5MB/s
+New Data Upload               :  73%|███████▎  |  341MB /  470MB, 27.2MB/s
+...p5000/hallamonic_state.pt:  18%|█▊        |  372MB / 2.07GB
+Processing Files (0 / 1)      :  18%|█▊        |  372MB / 2.07GB, 29.3MB/s
+New Data Upload               :  69%|██████▊   |  368MB /  537MB, 29.0MB/s
+...p5000/hallamonic_state.pt:  20%|█▉        |  406MB / 2.07GB
+Processing Files (0 / 1)      :  20%|█▉        |  406MB / 2.07GB, 31.7MB/s
+New Data Upload               :  66%|██████▋   |  401MB /  604MB, 31.3MB/s
+...p5000/hallamonic_state.pt:  22%|██▏       |  445MB / 2.07GB
+Processing Files (0 / 1)      :  22%|██▏       |  445MB / 2.07GB, 34.3MB/s
+New Data Upload               :  73%|███████▎  |  440MB /  604MB, 34.0MB/s
+...p5000/hallamonic_state.pt:  23%|██▎       |  482MB / 2.07GB
+Processing Files (0 / 1)      :  23%|██▎       |  482MB / 2.07GB, 36.8MB/s
+New Data Upload               :  71%|███████   |  477MB /  671MB, 36.5MB/s
+...p5000/hallamonic_state.pt:  25%|██▌       |  521MB / 2.07GB
+Processing Files (0 / 1)      :  25%|██▌       |  521MB / 2.07GB, 39.4MB/s
+New Data Upload               :  70%|██████▉   |  515MB /  738MB, 39.0MB/s
+...p5000/hallamonic_state.pt:  27%|██▋       |  563MB / 2.07GB
+Processing Files (0 / 1)      :  27%|██▋       |  563MB / 2.07GB, 42.2MB/s
+New Data Upload               :  76%|███████▌  |  557MB /  738MB, 41.8MB/s
+...p5000/hallamonic_state.pt:  29%|██▉       |  605MB / 2.07GB
+Processing Files (0 / 1)      :  29%|██▉       |  605MB / 2.07GB, 44.9MB/s
+New Data Upload               :  74%|███████▍  |  599MB /  805MB, 44.5MB/s
+...p5000/hallamonic_state.pt:  32%|███▏      |  657MB / 2.07GB
+Processing Files (0 / 1)      :  32%|███▏      |  657MB / 2.07GB, 48.3MB/s
+New Data Upload               :  75%|███████▍  |  650MB /  872MB, 47.9MB/s
+...p5000/hallamonic_state.pt:  34%|███▍      |  707MB / 2.07GB
+Processing Files (0 / 1)      :  34%|███▍      |  707MB / 2.07GB, 51.6MB/s
+New Data Upload               :  75%|███████▍  |  700MB /  939MB, 51.1MB/s
+...p5000/hallamonic_state.pt:  36%|███▌      |  749MB / 2.07GB
+Processing Files (0 / 1)      :  36%|███▌      |  749MB / 2.07GB, 54.1MB/s
+New Data Upload               :  79%|███████▉  |  742MB /  939MB, 53.6MB/s
+...p5000/hallamonic_state.pt:  39%|███▊      |  796MB / 2.07GB
+Processing Files (0 / 1)      :  39%|███▊      |  796MB / 2.07GB, 56.9MB/s
+New Data Upload               :  84%|████████▍ |  789MB /  939MB, 56.4MB/s
+...p5000/hallamonic_state.pt:  41%|████      |  840MB / 2.07GB
+Processing Files (0 / 1)      :  41%|████      |  840MB / 2.07GB, 59.4MB/s
+New Data Upload               :  83%|████████▎ |  833MB / 1.01GB, 58.9MB/s
+...p5000/hallamonic_state.pt:  43%|████▎     |  881MB / 2.07GB
+Processing Files (0 / 1)      :  43%|████▎     |  881MB / 2.07GB, 61.6MB/s
+New Data Upload               :  81%|████████▏ |  874MB / 1.07GB, 61.1MB/s
+...p5000/hallamonic_state.pt:  44%|████▍     |  914MB / 2.07GB
+Processing Files (0 / 1)      :  44%|████▍     |  914MB / 2.07GB, 63.0MB/s
+New Data Upload               :  79%|███████▉  |  905MB / 1.14GB, 62.5MB/s
+...p5000/hallamonic_state.pt:  46%|████▌     |  941MB / 2.07GB
+Processing Files (0 / 1)      :  46%|████▌     |  941MB / 2.07GB, 64.0MB/s
+New Data Upload               :  82%|████████▏ |  933MB / 1.14GB, 63.5MB/s
+...p5000/hallamonic_state.pt:  48%|████▊     |  984MB / 2.07GB            Processing Files (0 / 1)      :  48%|████▊     |  984MB / 2.07GB, 66.2MB/s
+New Data Upload               :  81%|████████  |  975MB / 1.21GB, 65.6MB/s
+...p5000/hallamonic_state.pt:  50%|█████     | 1.04GB / 2.07GB
+Processing Files (0 / 1)      :  50%|█████     | 1.04GB / 2.07GB, 69.5MB/s
+New Data Upload               :  81%|████████  | 1.03GB / 1.27GB, 68.9MB/s
+...p5000/hallamonic_state.pt:  53%|█████▎    | 1.10GB / 2.07GB
+Processing Files (0 / 1)      :  53%|█████▎    | 1.10GB / 2.07GB, 72.7MB/s
+New Data Upload               :  81%|████████  | 1.09GB / 1.34GB, 72.1MB/s
+...p5000/hallamonic_state.pt:  56%|█████▌    | 1.15GB / 2.07GB
+Processing Files (0 / 1)      :  56%|█████▌    | 1.15GB / 2.07GB, 75.6MB/s
+New Data Upload               :  85%|████████▍ | 1.14GB / 1.34GB, 74.9MB/s
+...p5000/hallamonic_state.pt:  58%|█████▊    | 1.20GB / 2.07GB
+Processing Files (0 / 1)      :  58%|█████▊    | 1.20GB / 2.07GB, 77.8MB/s
+New Data Upload               :  84%|████████▍ | 1.19GB / 1.41GB, 77.2MB/s
+...p5000/hallamonic_state.pt:  60%|██████    | 1.24GB / 2.07GB
+Processing Files (0 / 1)      :  60%|██████    | 1.24GB / 2.07GB, 80.1MB/s
+New Data Upload               :  84%|████████▎ | 1.23GB / 1.48GB, 79.4MB/s
+...p5000/hallamonic_state.pt:  63%|██████▎   | 1.30GB / 2.07GB
+Processing Files (0 / 1)      :  63%|██████▎   | 1.30GB / 2.07GB, 83.0MB/s
+New Data Upload               :  87%|████████▋ | 1.29GB / 1.48GB, 82.3MB/s
+...p5000/hallamonic_state.pt:  65%|██████▌   | 1.35GB / 2.07GB
+Processing Files (0 / 1)      :  65%|██████▌   | 1.35GB / 2.07GB, 85.4MB/s
+New Data Upload               :  87%|████████▋ | 1.34GB / 1.54GB, 84.7MB/s
+...p5000/hallamonic_state.pt:  67%|██████▋   | 1.38GB / 2.07GB
+Processing Files (0 / 1)      :  67%|██████▋   | 1.38GB / 2.07GB, 86.4MB/s
+New Data Upload               :  85%|████████▌ | 1.37GB / 1.61GB, 85.7MB/s
+...p5000/hallamonic_state.pt:  68%|██████▊   | 1.41GB / 2.07GB
+Processing Files (0 / 1)      :  68%|██████▊   | 1.41GB / 2.07GB, 86.9MB/s
+New Data Upload               :  87%|████████▋ | 1.40GB / 1.61GB, 86.1MB/s
+...p5000/hallamonic_state.pt:  70%|██████▉   | 1.44GB / 2.07GB
+Processing Files (0 / 1)      :  70%|██████▉   | 1.44GB / 2.07GB, 87.4MB/s
+New Data Upload               :  85%|████████▌ | 1.43GB / 1.68GB, 86.7MB/s
+...p5000/hallamonic_state.pt:  72%|███████▏  | 1.49GB / 2.07GB
+Processing Files (0 / 1)      :  72%|███████▏  | 1.49GB / 2.07GB, 89.4MB/s
+New Data Upload               :  84%|████████▍ | 1.47GB / 1.74GB, 88.7MB/s
+...p5000/hallamonic_state.pt:  74%|███████▍  | 1.54GB / 2.07GB
+Processing Files (0 / 1)      :  74%|███████▍  | 1.54GB / 2.07GB, 91.9MB/s
+New Data Upload               :  84%|████████▍ | 1.53GB / 1.81GB, 91.1MB/s
+...p5000/hallamonic_state.pt:  77%|███████▋  | 1.59GB / 2.07GB
+Processing Files (0 / 1)      :  77%|███████▋  | 1.59GB / 2.07GB, 94.2MB/s
+New Data Upload               :  87%|████████▋ | 1.58GB / 1.81GB, 93.5MB/s
+...p5000/hallamonic_state.pt:  80%|████████  | 1.66GB / 2.07GB
+Processing Files (0 / 1)      :  80%|████████  | 1.66GB / 2.07GB, 97.6MB/s
+New Data Upload               :  88%|████████▊ | 1.65GB / 1.88GB, 96.9MB/s
+...p5000/hallamonic_state.pt:  83%|████████▎ | 1.71GB / 2.07GB
+Processing Files (0 / 1)      :  83%|████████▎ | 1.71GB / 2.07GB, 99.5MB/s
+New Data Upload               :  87%|████████▋ | 1.69GB / 1.94GB, 98.8MB/s
+...p5000/hallamonic_state.pt:  85%|████████▌ | 1.77GB / 2.07GB
+Processing Files (0 / 1)      :  85%|████████▌ | 1.77GB / 2.07GB,  102MB/s
+New Data Upload               :  90%|█████████ | 1.75GB / 1.94GB,  102MB/s
+...p5000/hallamonic_state.pt:  88%|████████▊ | 1.82GB / 2.07GB
+Processing Files (0 / 1)      :  88%|████████▊ | 1.82GB / 2.07GB,  104MB/s
+New Data Upload               :  90%|████████▉ | 1.80GB / 2.01GB,  103MB/s
+...p5000/hallamonic_state.pt:  90%|█████████ | 1.86GB / 2.07GB
+Processing Files (0 / 1)      :  90%|█████████ | 1.86GB / 2.07GB,  106MB/s
+New Data Upload               :  90%|█████████ | 1.85GB / 2.05GB,  105MB/s
+...p5000/hallamonic_state.pt:  92%|█████████▏| 1.91GB / 2.07GB
+Processing Files (0 / 1)      :  92%|█████████▏| 1.91GB / 2.07GB,  107MB/s
+New Data Upload               :  92%|█████████▏| 1.89GB / 2.05GB,  107MB/s
+...p5000/hallamonic_state.pt:  95%|█████████▍| 1.95GB / 2.07GB
+Processing Files (0 / 1)      :  95%|█████████▍| 1.95GB / 2.07GB,  109MB/s
+New Data Upload               :  95%|█████████▍| 1.94GB / 2.05GB,  108MB/s
+...p5000/hallamonic_state.pt:  97%|█████████▋| 2.00GB / 2.07GB
+Processing Files (0 / 1)      :  97%|█████████▋| 2.00GB / 2.07GB,  110MB/s
+New Data Upload               :  97%|█████████▋| 1.98GB / 2.05GB,  109MB/s
+...p5000/hallamonic_state.pt:  98%|█████████▊| 2.03GB / 2.07GB
+Processing Files (0 / 1)      :  98%|█████████▊| 2.03GB / 2.07GB,  110MB/s
+New Data Upload               :  98%|█████████▊| 2.01GB / 2.05GB,  109MB/s
+...p5000/hallamonic_state.pt:  99%|█████████▊| 2.04GB / 2.07GB
+Processing Files (0 / 1)      :  99%|█████████▊| 2.04GB / 2.07GB,  109MB/s
+New Data Upload               :  99%|█████████▊| 2.02GB / 2.05GB,  108MB/s
+...p5000/hallamonic_state.pt:  99%|█████████▉| 2.05GB / 2.07GB
+Processing Files (0 / 1)      :  99%|█████████▉| 2.05GB / 2.07GB,  108MB/s
+New Data Upload               :  99%|█████████▉| 2.04GB / 2.05GB,  107MB/s
+...p5000/hallamonic_state.pt: 100%|█████████▉| 2.06GB / 2.07GB
+Processing Files (0 / 1)      : 100%|█████████▉| 2.06GB / 2.07GB,  107MB/s
+New Data Upload               : 100%|█████████▉| 2.05GB / 2.05GB,  106MB/s
+...p5000/hallamonic_state.pt: 100%|█████████▉| 2.07GB / 2.07GB            Processing Files (0 / 1)      : 100%|█████████▉| 2.07GB / 2.07GB,  105MB/s
+New Data Upload               : 100%|█████████▉| 2.05GB / 2.05GB,  104MB/s
+...p5000/hallamonic_state.pt: 100%|██████████| 2.07GB / 2.07GB
+Processing Files (1 / 1)      : 100%|██████████| 2.07GB / 2.07GB, 98.9MB/s
+New Data Upload               : 100%|██████████| 2.05GB / 2.05GB, 98.4MB/s
+Processing Files (1 / 1)      : 100%|██████████| 2.07GB / 2.07GB, 98.9MB/s
+New Data Upload               : 100%|██████████| 2.05GB / 2.05GB, 98.4MB/s
+...p5000/hallamonic_state.pt: 100%|██████████| 2.07GB / 2.07GB
+Pushed to HuggingFace: Omibranch/harmonic-checkpoints-phase2-step5000
+Saved checkpoint: step=5000, bpt=0.3395 → /checkpoints/phase2_final
+Processing Files (0 / 0)      : |          |  0.00B /  0.00B
+New Data Upload               : |          |  0.00B /  0.00B
+...final/hallamonic_state.pt:   6%|▌         |  120MB / 2.07GB
+Processing Files (0 / 1)      :   6%|▌         |  120MB / 2.07GB,   ???B/s
+...final/hallamonic_state.pt:  11%|█         |  232MB / 2.07GB
+Processing Files (0 / 1)      :  11%|█         |  232MB / 2.07GB,   ???B/s
+...final/hallamonic_state.pt:  17%|█▋        |  352MB / 2.07GB
+Processing Files (0 / 1)      :  17%|█▋        |  352MB / 2.07GB, 33.8MB/s
+...final/hallamonic_state.pt:  22%|██▏       |  464MB / 2.07GB
+Processing Files (0 / 1)      :  22%|██▏       |  464MB / 2.07GB, 43.9MB/s
+...final/hallamonic_state.pt:  28%|██▊       |  584MB / 2.07GB
+Processing Files (0 / 1)      :  28%|██▊       |  584MB / 2.07GB, 54.4MB/s
+...final/hallamonic_state.pt:  34%|███▎      |  696MB / 2.07GB
+Processing Files (0 / 1)      :  34%|███▎      |  696MB / 2.07GB, 63.8MB/s
+...final/hallamonic_state.pt:  39%|███▉      |  816MB / 2.07GB
+Processing Files (0 / 1)      :  39%|███▉      |  816MB / 2.07GB, 73.7MB/s
+...final/hallamonic_state.pt:  45%|████▍     |  928MB / 2.07GB
+Processing Files (0 / 1)      :  45%|████▍     |  928MB / 2.07GB, 82.5MB/s
+...final/hallamonic_state.pt:  51%|█████     | 1.05GB / 2.07GB
+Processing Files (0 / 1)      :  51%|█████     | 1.05GB / 2.07GB, 91.8MB/s
+...final/hallamonic_state.pt:  57%|█████▋    | 1.17GB / 2.07GB
+Processing Files (0 / 1)      :  57%|█████▋    | 1.17GB / 2.07GB,  101MB/s
+...final/hallamonic_state.pt:  62%|██████▏   | 1.28GB / 2.07GB
+Processing Files (0 / 1)      :  62%|██████▏   | 1.28GB / 2.07GB,  109MB/s
+...final/hallamonic_state.pt:  68%|██████▊   | 1.40GB / 2.07GB
+Processing Files (0 / 1)      :  68%|██████▊   | 1.40GB / 2.07GB,  117MB/s
+...final/hallamonic_state.pt:  73%|███████▎  | 1.51GB / 2.07GB
+Processing Files (0 / 1)      :  73%|███████▎  | 1.51GB / 2.07GB,  125MB/s
+...final/hallamonic_state.pt:  79%|███████▉  | 1.63GB / 2.07GB
+Processing Files (0 / 1)      :  79%|███████▉  | 1.63GB / 2.07GB,  133MB/s
+...final/hallamonic_state.pt:  85%|████████▍ | 1.75GB / 2.07GB
+Processing Files (0 / 1)      :  85%|████████▍ | 1.75GB / 2.07GB,  141MB/s
+...final/hallamonic_state.pt:  90%|█████████ | 1.86GB / 2.07GB
+Processing Files (0 / 1)      :  90%|█████████ | 1.86GB / 2.07GB,  148MB/s
+...final/hallamonic_state.pt:  96%|█████████▌| 1.98GB / 2.07GB
+Processing Files (0 / 1)      :  96%|█████████▌| 1.98GB / 2.07GB,  155MB/s
+...final/hallamonic_state.pt: 100%|██████████| 2.07GB / 2.07GB
+Processing Files (1 / 1)      : 100%|██████████| 2.07GB / 2.07GB,  159MB/s
+New Data Upload               : |          |  0.00B /  0.00B,  0.00B/s
+...final/hallamonic_state.pt: 100%|██████████| 2.07GB / 2.07GB
+Phase 2 done: /checkpoints/phase2_final
+Eval: crossover seq=[1024, 4096, 8192] vs TinyLlama baseline (~$1)
+Pushed to HuggingFace: Omibranch/harmonic-checkpoints-phase2-final
+Phase 2 done. Best bpt: 0.3395
+Note: Environment variable`HF_TOKEN` is set and is the current active token independently from the token you've just configured.
+Loading TinyLlama/TinyLlama-1.1B-Chat-v1.0...
+`torch_dtype` is deprecated! Use `dtype` instead!
+Replacing 22 attention layers with HarmonicBlock (hidden=2048, d_state=128, compress=4)...
+Swapped 22 layers.
+Total params:    1033.2M
+Harmonic params: 140.7M (new, random init)
+FFN+Emb params:  892.4M (pretrained)
+All 1033.2M params trainable
+Loaded checkpoint from /checkpoints/phase2_final
+Loading TinyLlama baseline...
+Generating test split:   0%|          | 0/4358 [00:00<?, ? examples/s]Generating test split: 100%|██████████| 4358/4358 [00:00<00:00, 351427.08 examples/s]
+Generating train split:   0%|          | 0/1801350 [00:00<?, ? examples/s]
+Generating train split:   5%|▍         | 88000/1801350 [00:00<00:01, 870181.40 examples/s]
+Generating train split:  11%|█▏        | 206000/1801350 [00:00<00:01, 1046783.62 examples/s]
+Generating train split:  19%|█▉        | 340000/1801350 [00:00<00:01, 1175500.51 examples/s]
+Generating train split:  29%|██▉       | 524000/1801350 [00:00<00:01, 1195012.47 examples/s]
+Generating train split:  40%|███▉      | 712000/1801350 [00:00<00:00, 1202345.81 examples/s]
+Generating train split:  47%|████▋     | 843000/1801350 [00:00<00:00, 1228760.14 examples/s]
+Generating train split:  54%|█████▎    | 967675/1801350 [00:00<00:00, 1197792.52 examples/s]
+Generating train split:  61%|██████    | 1093675/1801350 [00:00<00:00, 1206479.14 examples/s]
+Generating train split:  71%|███████   | 1273675/1801350 [00:01<00:00, 1196695.86 examples/s]
+Generating train split:  80%|████████  | 1449675/1801350 [00:01<00:00, 1183583.20 examples/s]
+Generating train split:  90%|█████████ | 1625675/1801350 [00:01<00:00, 1177220.28 examples/s]
+Generating train split:  97%|█████████▋| 1750675/1801350 [00:01<00:00, 1189886.93 examples/s]
+Generating train split: 100%|██████████| 1801350/1801350 [00:01<00:00, 1181598.39 examples/s]
+Generating validation split:   0%|          | 0/3760 [00:00<?, ? examples/s]Generating validation split: 100%|██████████| 3760/3760 [00:00<00:00, 701475.98 examples/s]
+Token indices sequence length is longer than the specified maximum sequence length for this model (294896 > 2048). Running this sequence through the model will result in indexing errors
+Val tokens: 294,896
+seq    Hallamonic     TinyLlama     delta      winner
+--------  ------------  ------------  --------  ----------
+1024        0.4321        2.8436   +2.4116  Hallamonic
+4096        0.4525        7.3188   +6.8663  Hallamonic
+8192        0.4774       10.5564  +10.0790  Hallamonic
+All done.
