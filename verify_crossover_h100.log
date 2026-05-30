@@ -1,0 +1,78 @@
+HALLAMONIC EVAL VERIFICATION
+Loading Hallamonic from /checkpoints/phase2_final...
+Loading TinyLlama/TinyLlama-1.1B-Chat-v1.0...
+Replacing 22 attention layers with HarmonicBlock (hidden=2048, d_state=128, compress=4)...
+Swapped 22 layers.
+Total params:    1033.2M
+Harmonic params: 140.7M (new, random init)
+FFN+Emb params:  892.4M (pretrained)
+All 1033.2M params trainable
+Loaded checkpoint from /checkpoints/phase2_final
+Loading TinyLlama baseline...
+vocab_size=32000, random baseline=14.97 bpt
+Wikitext val tokens: 294,896
+TEST 1: manual F.cross_entropy vs model.loss (should match)
+model.loss:          0.298555 nats = 0.4307 bpt
+manual cross_entropy:0.298555 nats = 0.4307 bpt
+diff: 0.000000 nats  OK — match
+TinyLlama model.loss: 1.799726 nats = 2.5965 bpt
+TEST 2: per-token next-word prediction on known sentence
+If prob > 0.5 for most tokens -> suspicious
+Tokens: ['<s>', 'The', 'quick', 'brown', 'fo', 'x', 'j', 'umps', 'over', 'the', 'lazy', 'dog', '.', 'The', 'capital', 'of', 'France', 'is', 'Paris', '.']
+pos         token    H_prob    B_prob        H_top1        B_top1
+----  ------------  --------  --------  ------------  ------------
+0         'The'    0.9999    0.0001           The             <
+1       'quick'    0.9928    0.0002         quick
+2       'brown'    0.9992    0.9267         brown         brown
+3          'fo'    0.9911    0.9906            fo            fo
+4           'x'    1.0000    0.9979             x             x
+5           'j'    0.9999    0.9684             j             j
+6        'umps'    1.0000    0.9994          umps          umps
+7        'over'    1.0000    0.9755          over          over
+8         'the'    1.0000    0.9716           the           the
+9        'lazy'    0.9997    0.9833          lazy          lazy
+10         'dog'    0.9992    0.9760           dog           dog
+11           '.'    1.0000    0.3982             .             .
+12         'The'    1.0000    0.0747           The
+13     'capital'    0.9993    0.0001       capital         quick
+14          'of'    1.0000    0.1270            of        letter
+Hallamonic mean prob for actual tokens: 0.9987
+TinyLlama  mean prob for actual tokens: 0.6260
+(random baseline would be ~0.000031)
+TEST 3: per-batch loss, seq=1024, 20 batches
+Checking for anomalies or uniformly low loss
+batch     H_bpt     B_bpt     delta
+------  --------  --------  --------
+0    0.4307    2.5965   +2.1657
+1    0.4495    3.0299   +2.5804
+2    0.4225    2.5095   +2.0870
+3    0.4403    3.1358   +2.6955
+4    0.4108    2.8969   +2.4861
+5    0.3859    2.8517   +2.4658
+6    0.4422    2.7920   +2.3498
+7    0.4229    2.6932   +2.2702
+8    0.4745    3.2877   +2.8132
+9    0.4977    3.1480   +2.6503
+10    0.3629    2.8629   +2.5000
+11    0.4208    3.1248   +2.7040
+12    0.4460    2.9382   +2.4922
+13    0.4271    2.4920   +2.0649
+14    0.3782    2.9028   +2.5246
+15    0.5022    1.9106   +1.4083
+16    0.4621    2.4561   +1.9940
+17    0.4800    2.7873   +2.3073
+18    0.3738    2.9159   +2.5422
+19    0.4111    3.5412   +3.1301
+MEAN     0.4321    2.8436   +2.4116
+TEST 4: random token sequence (sanity check)
+Expected: ~15.0 bpt (random baseline)
+Hallamonic on random tokens: 3.8263 bpt
+TinyLlama  on random tokens: 17.8257 bpt
+Expected:                   ~14.97 bpt
+TEST 5: crossover at seq=1024/4096/8192 (replication)
+seq     H_bpt     B_bpt     delta        winner
+------  --------  --------  --------  ------------
+1024    0.4377    2.8941   +2.4564    Hallamonic
+4096    0.4514    7.2225   +6.7710    Hallamonic
+8192    0.4700   10.5647  +10.0946    Hallamonic
+VERIFICATION DONE

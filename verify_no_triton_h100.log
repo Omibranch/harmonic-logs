@@ -1,0 +1,17 @@
+Loading TinyLlama/TinyLlama-1.1B-Chat-v1.0...
+Replacing 22 attention layers with HarmonicBlock (hidden=2048, d_state=128, compress=4)...
+Swapped 22 layers.
+Total params:    1033.2M
+Harmonic params: 140.7M (new, random init)
+FFN+Emb params:  892.4M (pretrained)
+All 1033.2M params trainable
+Loaded checkpoint from /checkpoints/phase2_final
+TEST: Triton scan vs sequential fallback
+_HAS_TRITON (before patch) = True
+Triton scan (original): 0.4256 bpt  (mean over 8 batches, seq=1024)
+_HAS_TRITON (after patch)  = False
+Sequential fallback (PyTorch): 0.4254 bpt  (mean over 8 batches, seq=1024)
+Triton bpt:     0.4256
+Sequential bpt: 0.4254
+diff:           -0.0002 bpt
+VERDICT: scan OK — числа одинаковые, Triton не виноват

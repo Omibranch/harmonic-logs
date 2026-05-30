@@ -1,0 +1,32 @@
+HALLAMONIC CLEAN EVAL — no fineweb-edu overlap
+Loading Hallamonic from /checkpoints/phase2_final...
+Loading TinyLlama/TinyLlama-1.1B-Chat-v1.0...
+Replacing 22 attention layers with HarmonicBlock (hidden=2048, d_state=128, compress=4)...
+Swapped 22 layers.
+Total params:    1033.2M
+Harmonic params: 140.7M (new, random init)
+FFN+Emb params:  892.4M (pretrained)
+All 1033.2M params trainable
+Loaded checkpoint from /checkpoints/phase2_final
+Loading TinyLlama baseline...
+Models loaded.
+Loading Penn Treebank (ptb_text_only)...
+If the dataset is based on a loading script, please ask the dataset author to remove it and convert it to a standard format like Parquet.
+Falling back to lambada_openai...
+Lambada tokens: 456,350
+DATASET: Lambada OpenAI test  (456,350 tokens)
+seq     H_bpt     B_bpt     delta        winner   batches
+------  --------  --------  --------  ------------  --------
+1024    0.4355    4.2926   +3.8571    Hallamonic        15
+4096    0.4361    7.5324   +7.0963    Hallamonic        15
+8192    0.4496    9.8917   +9.4421    Hallamonic        15
+Loading fineweb-edu held-out (skip=500000 docs)...
+fineweb-edu held-out: 100,195 tokens from 83 docs
+DATASET: fineweb-edu held-out (skip=500,000)  (100,000 tokens)
+seq     H_bpt     B_bpt     delta        winner   batches
+------  --------  --------  --------  ------------  --------
+1024    0.3638    3.3666   +3.0029    Hallamonic        15
+4096    0.3579    7.5582   +7.2003    Hallamonic        15
+8192    0.3626   10.8174  +10.4547    Hallamonic        12
+CLEAN EVAL DONE
+Both datasets: no overlap with fineweb-edu training data
