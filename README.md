@@ -53,4 +53,12 @@ All runs on NVIDIA H100 80GB HBM3 via Modal cloud.
 
 ## Paper
 
-See [harmonic-ai](https://github.com/Omibranch/harmonic-ai) for the main repository and paper.
+See [Harmonic](https://github.com/Omibranch/Harmonic) for the main repository, code, and paper.
+Paper: [arxiv.org/abs/2606.24650](https://arxiv.org/abs/2606.24650) ·
+[hf.co/papers/2606.24650](https://huggingface.co/papers/2606.24650).
+
+## Hugging Face
+
+- Checkpoints: [harmonic-checkpoints-phase2-final](https://huggingface.co/Omibranch/harmonic-checkpoints-phase2-final) (final Hallamonic 1B model) ·
+  [harmonic-checkpoints-phase1](https://huggingface.co/Omibranch/harmonic-checkpoints-phase1) (intermediate)
+- Demo: [hallamonic-1b-demo](https://huggingface.co/spaces/Omibranch/hallamonic-1b-demo)
